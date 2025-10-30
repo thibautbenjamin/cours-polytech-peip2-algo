@@ -1,0 +1,12 @@
+\title{Enumération des nombres triangulaires}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-10-27T14:01:01Z}
+\import{basemacros}
+
+\p{
+\strong{Rappel:} Un nombre triangulaire est un nombre de la forme #{1+2+\ldots+n}
+\ol{
+\li{Ecrire un algorithme prenant en entrée un entier \code{n} positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à \code{n}}
+\li{Analyser la complexité de cet algorithme}
+}}

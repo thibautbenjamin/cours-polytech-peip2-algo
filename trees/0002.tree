@@ -1,0 +1,9 @@
+\title{Qu'est-ce qu'un algorithme?}
+\author{thibautbenjamin}
+\date{2025-10-07T09:26:02Z}
+
+\p{Ce cours est consacré aux algorithmes. La question de définir les algorithmes, et d'étudier leurs limite dépasse les attendus de ce cours. Il est néanmoins intéressant de commencer par une brève discussion pour comprendre de quoi l'on parle.}
+
+\transclude{0003}
+\transclude{0004}
+\transclude{0005}

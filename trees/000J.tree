@@ -1,0 +1,15 @@
+\title{Branchements conditionnels}
+\author{thibautbenjamin}
+\date{2025-10-07T16:32:13Z}
+\import{basemacros}
+
+
+
+\p{Les branchements conditionnels sont une [structure de contrôle](000N) permettant d'exécuter des parties de code seulement sous certaines conditions. Nous utiliserons deux sortes de conditionnelles
+\ol{
+\li{Les conditions \code{if-then-else}}
+\li{Les conditions \code{switch}}
+}
+}
+\transclude{000K}
+\transclude{000M}

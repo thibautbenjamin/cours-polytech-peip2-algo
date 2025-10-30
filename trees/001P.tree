@@ -1,0 +1,10 @@
+\title{Enumérations}
+\author{thibautbenjamin}
+\taxon{Recueil d'exercices}
+\date{2025-10-27T13:59:25Z}
+\import{basemacros}
+
+\p{Voici maintenant une collection d'exercices visant à énumérer tous les nombres satisfaisant certaines propriétés.}
+\transclude{001Q}
+\transclude{001R}
+\transclude{001S}

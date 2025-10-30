@@ -1,0 +1,13 @@
+\title{Boucles}
+\author{thibautbenjamin}
+\date{2025-10-08T07:43:48Z}
+\import{basemacros}
+
+\p{Les boucles sont une [structure de contrôle](000O) permettant de répéter d'autres instructions un certain nombre de fois, ou jusqu'à ce qu'une condition booléenne devienne valide. Nous utiliserons deux types de boucles
+\ol{
+\li{Les boucles \code{for}}
+\li{Les boucles \code{while}}
+}}
+
+\transclude{000P}
+\transclude{000Q}

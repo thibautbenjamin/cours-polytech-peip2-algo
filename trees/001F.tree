@@ -1,0 +1,22 @@
+\title{Seul le plus gros terme compte}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-10-27T10:48:40Z}
+\import{basemacros}
+
+\p{On considère une fonction #{f : \mathbb{N}\to \mathbb{R}}.
+\ol{
+\li{Supposons que #{f = \O(3n^2 + 650 n + 3000 \log (n))}. Montrer que #{f = \O(n^2)}}
+\li{Supposons que #{f = \Omega(3n^2 + 650 n + 3000 \log (n))}. Montrer que #{f = \Omega(n^2)}}
+\li{Supposons que #{f = \Theta(3n^2 + 650 n + 3000 \log (n))}. Montrer que #{f = \Theta(n^2)}}
+}
+\strong{indication:} On pourra utiliser le fait que #{\lim\limits_{n\to 0}\frac{\log(n)}{n} = 0}}
+
+\p{
+On cherche maintenant à généraliser ce résultat:
+\ol{
+\li{Supposons que #{f(n) = \O (g(n) + h(n))} avec #{h(n) = \O(g(n))}. Montrer que #{f = \O(g(n))}}
+\li{Supposons que #{f(n) = \Omega (g(n) + h(n))} avec #{h(n) = \O(g(n))}. Montrer que #{f = \Omega(g(n))}}
+\li{Supposons que #{f(n) = \Theta (g(n) + h(n))} avec #{h(n) = \O(g(n))}. Montrer que #{f = \Theta(g(n))}}
+}
+}

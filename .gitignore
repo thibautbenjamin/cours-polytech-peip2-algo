@@ -1,0 +1,6 @@
+output/
+/.direnv/
+*.tmp
+/_tmp/
+*.o
+*.out

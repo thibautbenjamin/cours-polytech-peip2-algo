@@ -1,0 +1,5 @@
+\title{Les opérations élémentaires}
+\author{thibautbenjamin}
+\date{2025-10-07T11:56:14Z}
+
+\p{La définition informelle d'algorithme que l'on a donné a ses limites: on n'a pas défini ce que sont les opérations élémentaires. Donner une définition exacte est l'objet d'un cours de [théorie de la calculabilité](https://fr.wikipedia.org/wiki/Théorie_de_la_calculabilité). Pour notre usage, on se limitera à l'intuition que les opérations élémentaires sont les opérations qu'un ordinateur peut réaliser de manière très simple et très rapide, comme par exemple additionner deux nombres. On verra que selon les cas, on pourra prendre quelques libertés et considérer des opérations plus complexes comme élémentaire, tout en restant conscient du temps que ces dernière prennent.}

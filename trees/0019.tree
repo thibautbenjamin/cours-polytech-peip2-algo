@@ -1,0 +1,17 @@
+\title{Logarithmique}
+\author{thibautbenjamin}
+\taxon{Ordre de grandeur}
+\date{2025-10-27T10:22:10Z}
+\import{basemacros}
+
+\p{Une fonction #{f} telle que #{f(n) = \O(\log(n))} est appelée une fonction logarithmique. Sa courbe ressemble à celle d'un logarithme.}
+\p{
+\tex{\usepackage{tikz}}{
+\begin{tikzpicture}[scale = 0.5]
+\draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
+\draw [smooth, samples=100, domain=-1.9:5, thick] plot(\x, {ln (\x + 2) + 1});
+\end{tikzpicture}
+}
+}

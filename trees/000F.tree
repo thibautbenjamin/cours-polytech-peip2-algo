@@ -1,0 +1,13 @@
+\title{Les types de données composés}
+\author{thibautbenjamin}
+\date{2025-10-07T15:47:16Z}
+\import{basemacros}
+
+
+\p{Aux types de données de base s'ajoutent d'autres types de données composés, que l'on construit à partir de ces types primitifs \ul{
+\li{Les couples et les enregistrements \mark{TODO}}
+\li{Les tableaux \mark{TODO}}
+\li{Les listes \mark{TODO}}
+\li{Les arbres \mark{TODO}}
+\li{Les chaînes de caractères \mark{TODO}}
+}}

@@ -1,0 +1,9 @@
+\title{Complexité en temps}
+\author{thibautbenjamin}
+\date{2025-10-07T12:54:21Z}
+
+\p{Dans ce cours, on s'intéresse principalement à la complexité en temps, même s'il est utile de garder en tête la notion complexité mémoire, et la possibilité de jongler entre les deux. Par la suite, lorsque l'on parle de complexité sans plus de précision, il s'agira toujours de complexité en temps.}
+
+\p{Il est très difficile de calculer exactement a priori combien de temps un algorithme va mettre pour s'exécuter suivant la taille de ses entrées. C'est pourquoi on utilise un proxy. C'est à dire que l'on va compter à la place  le nombre d'opérations élémentaires qu'un algorithme doit effectuer, et on va contenter de l'approximation que plus on doit effectuer d'opérations élémentaires, plus l'algorithme va prendre de temps à s'exécuter}
+
+\transclude{0007}

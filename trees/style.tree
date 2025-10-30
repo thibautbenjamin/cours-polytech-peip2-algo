@@ -1,0 +1,6 @@
+\<html:style>{
+.katex { white-space: nowrap }
+th { white-space: nowrap }
+td { padding-top: 10px;
+     padding-bottom: 10px }
+}

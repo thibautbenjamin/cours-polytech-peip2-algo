@@ -1,0 +1,9 @@
+\title{Les types de données}
+\author{thibautbenjamin}
+\date{2025-10-07T13:42:04Z}
+\import{basemacros}
+
+\p{Selon le proverbe, il ne faut pas mélanger les torchons et les serviettes. Ce sont là des types de données. Ils servent à se rappeler de quelle nature est l'objet qu'une variable doit représenter, afin d'éviter de faire des opérations n'ayant pas de sens, comme additionner une chaîne de caractères avec un nombre.}
+\transclude{000E}
+\transclude{000F}
+\p{L'on note l'absence de pointeurs: On y fera quelques mentions, mais ce n'est pas le point central de ce cours}

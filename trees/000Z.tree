@@ -1,0 +1,13 @@
+\title{Grand O}
+\author{thibautbenjamin}
+\taxon{Proporiétés}
+\date{2025-10-27T09:50:43Z}
+\import{basemacros}
+
+\p{La notation \O satisfait les propriétés suivantes
+\ul{
+\li{\strong{Réflexivité:} Toute fonction #{f} satisfait #{f(n) = \O(f(n))}}
+\li{\strong{Transitivité:} Si #{f(n) = \O(g(n))} et #{g(n) = \O(h(n))} alors #{f(n) = \O(h(n))}}
+\li{\strong{Multiplication par une constante:} Si #{f(n) = \O(g(n))} et #{k > 0} alors #{f(n) = \O(kg(n))}}
+}
+}

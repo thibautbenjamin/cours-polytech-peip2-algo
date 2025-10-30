@@ -1,0 +1,17 @@
+\title{Exponentielle}
+\author{thibautbenjamin}
+\taxon{Ordre de grandeur}
+\date{2025-10-27T10:41:04Z}
+\import{basemacros}
+
+\p{Une fonction #{f} telle que #{f(n) = \O(\exp(n))} est appelée une fonction exponentielle. Sa courbe ressemble à celle d'une fonction exponentielle.}
+\p{
+\tex{\usepackage{tikz}}{
+\begin{tikzpicture}[scale = 0.5]
+\draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
+\draw [smooth, samples=100, domain=-5:1.7, thick] plot(\x, {exp (\x)});
+\end{tikzpicture}
+}
+}

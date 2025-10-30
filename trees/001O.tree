@@ -1,0 +1,25 @@
+\title{Mysère}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2025-10-27T13:54:04Z}
+
+
+\p{
+\pre{\code{
+\startverb
+// Entrées: Un entier n >= 1
+// Sortie: Un booléen mystère
+bool mystere (int n){
+  int i = 2;
+  bool r = true;
+  while (i < n && r){
+    if (n%i == 0) {
+      r = false;
+    }
+    i = i+1;
+  }
+  return r;
+}
+\stopverb}
+}
+}

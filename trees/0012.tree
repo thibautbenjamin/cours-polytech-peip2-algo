@@ -1,0 +1,14 @@
+\title{Grand Omega}
+\author{thibautbenjamin}
+\taxon{Proporiétés}
+\date{2025-10-27T10:00:41Z}
+\import{basemacros}
+
+\p{La notation #{\Omega} satisfait les propriétés suivantes
+\ul{
+\li{\strong{Lien avec \O:} On a #{f(n) = \Omega(g(n))} si et seulement si #{g(n) = \O(f(n))}}
+\li{\strong{Réflexivité:} Toute fonction #{f} satisfait #{f(n) = \Omega(f(n))}}
+\li{\strong{Transitivité:} Si #{f(n) = \Omega(g(n))} et #{g(n) = \Omega(h(n))} alors #{f(n) = \Omega(h(n))}}
+\li{\strong{Multiplication par une constante:} Si #{f(n) = \Omega(g(n))} et #{k > 0} alors #{f(n) = \Omega(kg(n))}}
+}
+}

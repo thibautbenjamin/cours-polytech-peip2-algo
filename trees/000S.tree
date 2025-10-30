@@ -1,0 +1,9 @@
+\title{Premiers exemples: algorithmes itératifs, tuples et tableaux}
+\author{thibautbenjamin}
+\date{2025-10-08T09:33:29Z}
+\import{basemacros}
+
+\p{Cette section introduit les premiers exemples d'algorithmes, et utilise}
+
+\transclude{000T}
+\transclude{001U}

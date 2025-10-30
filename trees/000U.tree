@@ -1,0 +1,11 @@
+\title{Un peu de mathématiques: Les ordres de grandeurs}
+\author{thibautbenjamin}
+\date{2025-10-27T08:13:58Z}
+
+\p{On utilise les ordres de grandeur pour mesurer la [complexité asymptotique](0009)}
+\transclude{000W}
+\transclude{000X}
+\transclude{0010}
+\transclude{0013}
+\transclude{001B}
+\transclude{0016}

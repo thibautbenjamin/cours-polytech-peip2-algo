@@ -1,0 +1,9 @@
+\title{Grand O}
+\author{thibautbenjamin}
+\date{2025-10-27T09:40:23Z}
+\import{basemacros}
+
+\p{La notation la plus commune pour mesurer les ordres de grandeur est la notation \O ("grand O").}
+\transclude{000Y}
+\p{Conrètement, #{f(n) = \O(g(n))} signifie que asymptotiquement (c'est à dire lorsque #{n} devient très grand), la fonction #{f} reste toujours au dessous de la fonction #{g}, à une constante multiplicative près. L'idée d'autoriser une constante multiplicative, est que cela ne change pas la forme de la courbe. Par exemple, si la courbe de #{g} une droite, alors celle de #{Mg} l'est aussi. Si la courbe de #{g} est une parabole, alors la courbe de #{Mg} l'est aussi, etc.}
+\transclude{000Z}

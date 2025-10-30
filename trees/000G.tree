@@ -1,0 +1,15 @@
+\title{Variables et affectations}
+\author{thibautbenjamin}
+\date{2025-10-07T15:48:27Z}
+\import{basemacros}
+
+\p{Les variables permettent de stocker des valeur que l'on a besoin de manipuler lors de l'exécution de l'aglorithme. Elles sont déclarées en étant précédées de leur type de donnée (\mark{Code}) comme dans l'exemple suivant \pre{int x;} Pour affecter une valeur à une variable on utilisera le symbole \code{=}. Ainsi, l'extrait de code suivant déclare une variable \code{x} de type \code{int} et lui affecte la valeur \code{5} (\mark{Code})
+\pre{int x;
+x = 5;}
+On pourra abréger ce code en 1 seule ligne, en echaînant la déclaration et l'affectation, comme suit (\mark{Code})
+\pre{int x = 5;}
+On considérera qu'essayer d'accéder à une valeur qui a été déclarée mais à laquelle aucune valeur n'a été affectée est une erreur, même si \Cpp ne lève pas d'erreur et renvoie une valeur.}
+
+\p{Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+\<html:img>[src]{https://imgs.xkcd.com/comics/x.png}{}
+}

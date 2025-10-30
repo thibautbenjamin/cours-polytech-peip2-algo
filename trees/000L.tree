@@ -1,0 +1,21 @@
+\title{Conditions booléennes}
+\taxon{Remarque}
+\author{thibautbenjamin}
+\date{2025-10-08T07:39:07Z}
+\import{basemacros}
+
+\p{Notons que si \code{x} est une variable booléenne, il est fréquent de voir des élèves écrire la condition suivante \mark{Code}:
+\pre{
+\startverb if (x == true) then {
+  \* branche 1 *\
+}
+\stopverb
+}
+La condition \code{x == true} est une valeur booléenne qui vaut \code{true} lorsque \code{x} vaut \code{true}, et qui vaut \code{false} lorsque \code{x} vaut \code{false}. Autrement dit, la valeur booléenne \code{x == true} est égale à la valeur booléenne \code{x}. Pour cette raison on privilégiera plutôt le code équivalent \mark{Code}:
+\pre{
+\startverb if (x) then {
+  \* branche 1 *\
+}
+\stopverb
+}
+}

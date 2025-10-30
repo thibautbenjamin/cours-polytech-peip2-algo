@@ -1,0 +1,15 @@
+\title{La complexité des algorithmes}
+\author{thibautbenjamin}
+\date{2025-10-07T12:18:49Z}
+
+\p{De manière générale, étant donné un algorithme on s'intéresse à savoir s'il va s'exécuter en pratique même lorsqu'on l'appelle sur des entrées de grande taille. Si l'algorithme que l'on a écrit est correct, la validité du résultat ne dépend pas de la taille de ses entrées, et donc, si l'algorithme est correct et qu'il renvoie un résultat, ce résultat sera correct, même sur des données de grande taille. En revanche, il est possible que l'on n'arrive pas à obtenir de résultat. Cela peut être dû à deux problèmes:
+\ol{
+\li{L'algorithme prend trop de temps à s'exécuter: il faudrait attendre très longtemps pour obtenir un résultat: Si c'est plusieurs heures, on peut l'envisager. Si c'est plusieurs années, il est peut être encore possible de résoudre le problème en passant sur une machine plus puissante. Au delà de plusieurs siècles on n'a plus vraiment de solution, et dans les pire cas, il faudrait attendre plus longtemps que l'âge de l'univers!}
+\li{L'algorithme est trop gourmand en ressource: il est possible que l'algorithme remplisse complètement la mémoire vive de notre ordinateur, et est contraint de s'arrêter sans produire de résultat, faute de mémoire disponible. Dans les cas les plus bénins, on peut utiliser une machine plus puissante, mais dans les cas les plus extrêmes, l'aglorithme peut demander plus de RAM que tout ce qui a été produit depuis le début de l'humanité!}
+}
+}
+
+\transclude{0006}
+\transclude{0009}
+\transclude{000A}
+\transclude{000B}

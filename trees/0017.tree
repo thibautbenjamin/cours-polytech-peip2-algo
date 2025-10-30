@@ -1,0 +1,17 @@
+\title{Linéaire}
+\author{thibautbenjamin}
+\taxon{Ordre de grandeur}
+\date{2025-10-27T10:16:14Z}
+\import{basemacros}
+
+\p{Une fonction #{f} telle que #{f(n) = \O(n)} est appelée une fonction linéaire. Sa courbe est une droite}
+\p{
+\tex{\usepackage{tikz}}{
+\begin{tikzpicture}[scale = 0.5]
+\draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
+\draw[-,thick] (-5,-3) -- (2,5);
+\end{tikzpicture}
+}
+}

@@ -1,0 +1,9 @@
+\title{Grand Theta}
+\author{thibautbenjamin}
+\date{2025-10-27T10:04:23Z}
+\import{basemacros}
+
+\p{La notation #{\Theta} (grand theta) est une synthèse des notations [grand O](000X) et [grand omega](0010)}
+\transclude{0014}
+\p{Conrètement, #{f(n) = \Theta(g(n))} signifie que asymptotiquement (c'est à dire lorsque #{n} devient très grand), la fonction #{f} est comprise entre deux copies de #{g} multipliées par des constantes différentes. Cela signifie donc que la courbe de #{f} est de même "nature" que celle de #{g}. Par exemple, si la courbe de #{g} est une droite, alors celle de #{f} l'est également, si la courbe de #{g} est une parabole, alors celle de #{f} l'est également, etc.}
+\transclude{0015}

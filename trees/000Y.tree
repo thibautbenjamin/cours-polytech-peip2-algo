@@ -1,0 +1,7 @@
+\title{Grand O}
+\author{thibautbenjamin}
+\taxon{Définition}
+\date{2025-10-27T09:44:43Z}
+\import{basemacros}
+
+\p{Etant donné deux fonctions #{f,g : \mathbb{N}\to \mathbb{R}}, on écrit #{f(n) = \O(g(n))} si il existe une constante réelle #{M > 0} et un rang #{n_0 \in \mathbb{N}} tels que pour tout #{n \ge n_0}, l'on aie #{|f(n)| \le M |g(n)|}}

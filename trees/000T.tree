@@ -1,0 +1,12 @@
+\title{On commence en douceur: boucles et conditionnelles}
+\author{thibautbenjamin}
+\date{2025-10-27T08:08:24Z}
+\import{basemacros}
+
+\p{Commençons avec les premiers exemples d'algorithmes que nous allons analyser.}
+
+\transclude{001G}
+\transclude{001K}
+\transclude{001N}
+\transclude{001P}
+\transclude{001T}

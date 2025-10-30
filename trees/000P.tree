@@ -1,0 +1,24 @@
+\title{Boucles \code{for}}
+\author{thibautbenjamin}
+\date{2025-10-08T08:32:50Z}
+\import{basemacros}
+
+\p{Les boucles \code{for} permettent de répéter les intructions contenues dans le corps de la boucle un nombre certain nombre de fois. Pour ce faire, on définit une variable intermédiaire qui sert de compteur, et que l'on va incrémenter jusqu'à la valeur désirée. La syntaxe pour utiliser une boucle \code{for} est la suivante
+\pre{\code{
+\startverb for(int i = 1; i <= 8; i++){
+  // corps de la boucle
+}
+\stopverb}}
+Dans cet exemple, les intructions contenues dans le corps de la boucles sont répétées 8 fois. Décomposons rapidement les différents éléments de la boucle:
+\ul{
+\li{le code \code{int i = 1} déclare une variable \code{i} de type \code{int} et lui affecte la valeur \code{1}}
+\li{le code \code{i <= 8} indique que l'on va passer dans la boucle tant que la condition \code{i <= 8} est vraie}
+\li{le code \code{i++} donne une instruction à effectuer à la fin de chacun des passages dans la boucle, ici on incrémente la variable \code{i} de \code{1} (le code \code{i++} est équivalent à \code{i = i+1})}
+}
+Notons que dans le corps de la boucle, l'on a accès à la variable \code{i}, et l'on voit sa valeur changer au fil des passages dans la boucle. C'est pourquoi on sera ammené parfois à commencer à compter à partir d'un nombre différent de 1, ou par exemple de 3 en 3. Par exemple, la boucle suivante fait le même nombre d'itérations que la boucle précédente, mais donne des valeurs de la variable \code{i} différentes dans le corps de la boucle pour chacun des passages:
+\pre{\code{
+\startverb for(int i = 5; i <= 32; i = i+3){
+  // corps de la boucle
+}
+\stopverb}}
+}

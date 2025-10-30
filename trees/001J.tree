@@ -1,0 +1,20 @@
+\title{Constant}
+\author{thibautbenjamin}
+\taxon{Ordre de grandeur}
+\date{2025-10-27T13:09:15Z}
+\import{basemacros}
+
+\p{Une fonction #{f} telle que #{f(n) = \O(n)} est une dite (asymptotiquement) constante. Sa courbe est contenue entre deux droites horizontales}
+\p{
+\tex{\usepackage{tikz}}{
+\begin{tikzpicture}[scale = 0.5]
+\fill[gray!20] (-5,2) -- (5,2) -- (5,3) -- (-5,3);
+\draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
+\draw[-,thick] (-5,2) -- (5,2);
+\draw[-,thick] (-5,3) -- (5,3);
+
+\end{tikzpicture}
+}
+}

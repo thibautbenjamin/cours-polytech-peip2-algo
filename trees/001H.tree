@@ -1,0 +1,16 @@
+\title{Calcul de la somme de deux entiers positifs (directement)}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2025-10-27T10:50:25Z}
+\import{basemacros}
+
+\p{
+\mark{TODO: lien vers le code}
+\pre{\code{\startverb
+// Entrées: Deux entiers x et y
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  return x + y;
+}
+\stopverb
+}}}

@@ -1,0 +1,14 @@
+\title{Boucles \code{while}}
+\author{thibautbenjamin}
+\date{2025-10-08T08:52:35Z}
+\import{basemacros}
+
+\p{Les boucles \code{while} permettent de répéter les instructions contenues dans le corps de la boucle tant qu'une condition booléenne est vraie. On l'utilise avec la syntaxe suivante:
+\pre{\code{
+\startverb
+while (condition) {
+  // corps de la boucle
+}
+\stopverb
+}}
+Notons qu'il n'y a pas de garantie que la boucle s'arrête. Pour que la boucle s'arrête, il faut que le corps de la boucle modifie la condition de manière à la rendre fausse à un moment.}

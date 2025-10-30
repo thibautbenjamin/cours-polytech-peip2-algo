@@ -1,0 +1,13 @@
+\title{Calcul de logarithme}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-10-27T14:12:19Z}
+\import{basemacros}
+
+\p{
+\ol{
+\li{Ecrire un algorithme qui prend en entrée deux nombres entiers #{b,n} avec #{n > 1} et qui retourne la partie entière de #{\log_b(x)} à l'aide d'une boucle.}
+\strong{Indice:} On rappelle que c'est le plus grand entier #{q} tel que #{b ^ q \leq n}.
+\li{Quelle est la complexité de cet algorithme?}
+}
+}

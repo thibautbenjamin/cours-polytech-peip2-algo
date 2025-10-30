@@ -1,0 +1,7 @@
+\title{Complexité en temps et en espace}
+\author{thibautbenjamin}
+\date{2025-10-07T12:08:50Z}
+
+\p{La complexité en temps est l'évaluation quantitative du temps que va prendre un algorithme pour s'exécuter lorsque ses entrées deviennent très grandes, et la complexité en espace est l'évaluation quantitative de la mémoire dont un algorithme va avoir besoin pour s'exécuter lorsque ses entrées deviennent très grandes.}
+
+\p{Il est souvent possible de jongler avec ces deux paramètres. On se trouve régulièrement face à un choix, où quitte à utiliser plus de mémoire, l'on peut diminuer le temps d'exécution, ou inversement, l'on peut diminuer la consommation mémoire au prix d'un algorithme plus lent à s'exécuter. Il n'y a pas toujours de "bon choix", tout dépend des contraintes auxquelles on fait face (de quelle machine on dispose, de combien de temps on a).}

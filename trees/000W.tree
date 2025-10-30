@@ -1,0 +1,60 @@
+\title{Résumé rapide}
+\author{thibautbenjamin}
+\date{2025-10-27T08:22:27Z}
+\import{basemacros}
+
+\<html:style>{
+.katex { white-space: nowrap }
+th { white-space: nowrap }
+td { padding-top: 10px;
+     padding-bottom: 10px }
+}
+
+\p{Les notations que l'on utilise pour évaluer les ordres de grandeurs sont les suivantes: On considère une fonction #{f,g : \mathbb{N} \to \mathbb{R}}:
+\<html:table>{
+  \<html:tr>{
+    \<html:th>{
+    Notation
+    }
+    \<html:th>{
+    Signification formelle
+    }
+    \<html:th>{
+    Signification informelle
+    }
+  }
+  \<html:tr>{
+    \<html:td>{
+    #{f(n) = \O(g(n))}
+    }
+    \<html:td>{
+    Il existe #{M > 0} et #{n_0 \in \mathbb{N}} tel que pour tout #{n \ge n_0}, #{|f(n)| \le M |g(n)|}
+    }
+    \<html:td>{
+    #{f} croît en gros comme #{g} ou moins vite
+    }
+  }
+  \<html:tr>{
+    \<html:td>{
+    #{f(n) = \Omega(g(n))}
+    }
+    \<html:td>{
+    Il existe #{M > 0} et #{n_0 \in \mathbb{N}} tel que pour tout #{n \ge n_0}, #{|f(n)| \ge M |g(n)|}
+    }
+    \<html:td>{
+    #{f} croît en gros comme #{g} ou plus vite
+    }
+  }
+  \<html:tr>{
+    \<html:td>{
+    #{f(n) = \Theta(g(n))}
+    }
+    \<html:td>{
+    #{f(n) = \O(g(n))} et #{f(n) = \Omega(g(n))}
+    }
+    \<html:td>{
+    #{f} croît en gros comme #{g}
+    }
+  }
+}
+}

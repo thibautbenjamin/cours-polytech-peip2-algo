@@ -1,0 +1,10 @@
+\title{Calcul du produit de deux entiers positifs}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-10-27T13:20:35Z}
+\import{basemacros}
+
+
+\p{Comparer les deux algorithmes suivant pour calculer le produit de deux nombres entiers positifs, et évaluer leur complexité.}
+\transclude{001L}
+\transclude{001M}

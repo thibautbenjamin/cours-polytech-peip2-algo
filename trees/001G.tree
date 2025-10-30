@@ -1,0 +1,9 @@
+\title{Calcul de la somme de entiers positifs}
+\author{thibautbenjamin}
+\date{2025-10-27T10:48:41Z}
+\import{basemacros}
+
+\p{On va comparer deux algorithmes pour calculer la somme de deux entiers positifs}
+\transclude{001H}
+\transclude{001I}
+\p{Lorsque les deux nombres donnés sont positifs, les deux algorithmes permettent effectivement de calculer la somme des deux nombres. Pour évaluer la complexité, on va compter le nombre d'additions effectué par chacuns des deux algorithmes. Le premier algorithme effectue une seule addition \code{x+y} pour renvoyer le résultat, il est donc en temps constant. Le second algorithme effectue deux additions par passage dans la boucle (\code{x = x + 1} et \code{y = y - 1}). A chaque passage dans la boucle, la variable \code{y} est décrémentée de #{1}, et on s'arrête lorsque l'on atteint #{0}. Il y a donc autant de passages dans la boucle que la valeur initiale de \code{y}. On dira que le second algorithme est en #{\O(y)}, ou encore linéaire en son second argument.}

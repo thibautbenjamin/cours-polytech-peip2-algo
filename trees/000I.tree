@@ -1,0 +1,26 @@
+\title{Valeurs de base et comparaison}
+\author{thibautbenjamin}
+\date{2025-10-07T16:17:56Z}
+\import{basemacros}
+
+\p{Les valeurs de base sont les valeurs d'un [type de base](000E). Les trois principaux moyens d'obtenir une valeur de base sont les suivant:
+\ul{
+\li{Un litéral, qui peut être: \ol{
+\li{\code{true} ou \code{false} de type \code{bool}}
+\li{un entier \code{1}, \code{2}, \code{3},... de type \code{int}}
+\li{un caractère \code{'A'}, \code{'*'}, \code{'b'},... de type \code{char}}
+}}
+\li{Une variable, dont le type a été déclaré}
+\li{Un appel de fonction}
+}}
+
+\p{Pour comparer des valeurs de base, l'on utilise l'opérateur \code{==}, qui renvoie le booléen \code{true} si les deux valeurs sont égales, et \code{false} si les deux valeurs sont différentes. Ceci est illustré ci-dessous \mark{Code}
+\pre{\startverb
+int x = 5;
+x == 5 // cette comparaison est vraie
+\stopverb}
+\pre{\startverb
+int x = 6;
+x == 5 // cette comparaison est fausse
+\stopverb}
+}

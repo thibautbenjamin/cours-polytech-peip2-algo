@@ -1,0 +1,10 @@
+\title{Enumération des carrés parfaits}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-10-27T14:01:01Z}
+\import{basemacros}
+
+\p{\ol{
+\li{Ecrire un algorithme prenant en entrée un entier \code{n} positif et qui affiche tous les entiers carrés parfaits taille inférieur ou égale à \code{n}}
+\li{Analyser la complexité de cet algorithme}
+}}

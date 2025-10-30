@@ -1,0 +1,9 @@
+\title{Grand Omega}
+\author{thibautbenjamin}
+\date{2025-10-27T09:51:29Z}
+\import{basemacros}
+
+\p{La notation #{\Omega} (grand omega) est en quelque sorte l'inverse de la notation [grand O](000X)}
+\transclude{0011}
+\p{Conrètement, #{f(n) = \Omega(g(n))} signifie que asymptotiquement (c'est à dire lorsque #{n} devient très grand), la fonction #{f} reste toujours au dessus de la fonction #{g}, à une constante multiplicative près.}
+\transclude{0012}

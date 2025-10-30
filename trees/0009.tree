@@ -1,0 +1,5 @@
+\title{Complexité asymptotique}
+\author{thibautbenjamin}
+\date{2025-10-07T12:54:19Z}
+
+\p{On parle en général de complexité "lorsque les entrées deviennent très grande", ce que l'on résume souvent par le mot \em{asymptotique}. Sur une machine moderne, et avec des petites entrées, la majorité des algorithmes s'exécutent très rapidement, et il n'y a pas beaucoup d'intérêt à évaluer la complexité. En revanche lorsque l'on répète les opérations un grand nombre de fois et que les entrées que l'on traite deviennent très grandes, des différences importantes peuvent se faire sentir, et c'est là que les paramètres peuvent devenir limitant.}

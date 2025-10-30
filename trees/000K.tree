@@ -1,0 +1,30 @@
+\title{Les branchements conditionnels \code{if-then-else}}
+\author{thibautbenjamin}
+\date{2025-10-08T07:27:36Z}
+\import{basemacros}
+
+\p{Les branchements conditionnels \code{if-then-else} (en français: \code{si}, \code{alors} et \code{sinon}) permettent comme leur nom l'indique de tester une valeur booléenne (appelée \em{condition}), et de basculer sur une branche ou l'autre du code suivant que la condition est vraie ou fausse. La syntaxe pour utiliser ce genre de branchement conditionnel est la suivante \mark{Code}:
+\pre{
+\startverb if (condition) {
+  // branche 1
+} else {
+  // branche 2
+}\stopverb}
+Ici, \code{condition} est une [valeur booléenne](000I). Si cette valeur est \code{true}, alors le code présent dans la branche 1 est exécuté, et sinon, le code présent dans la branche 2 est exécuté. Notons que l'on peut également ommettre la seconde branche, et écrire simplement \mark{Code}:
+\pre{
+\startverb if (condition) {
+  // branche 1
+} \stopverb}
+Dans ce cas, si la valeur \code{condition} est \code{true}, alors le code présent dans la branche 1 est exécuté, et sinon, l'on continue à exécuter le programme sans passer par une seconde branche.}
+
+\p{Dans le cas où l'on veut enchaîner des branchements conditionnels, on pourra épargner quelques accolades et écrire \mark{Code}:
+\pre{\code{
+\startverb if (condition1) {
+  // branche 1
+} else if (condition2) {
+  // branche 2
+} else {
+  // branche 3
+}\stopverb}}
+}
+\transclude{000L}

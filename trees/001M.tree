@@ -1,0 +1,21 @@
+\title{Calcul de la somme de deux entiers positifs (avec une boucle)}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2025-10-27T13:21:57Z}
+\import{basemacros}
+
+\p{
+
+\pre{\code{\startverb
+// Entrées: Deux entiers x et y positifs
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  int result;
+  while (y  > 0){
+    result = result + x;
+    y = y - 1;
+  }
+  return result;
+}
+\stopverb
+}}}

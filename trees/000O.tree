@@ -1,0 +1,11 @@
+\title{Structure de contrôle}
+\author{thibautbenjamin}
+\date{2025-10-08T08:17:04Z}
+\import{basemacros}
+
+\p{Les [structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle) sont les instructions qui contrôlent comment les autres instructions sont exécutées. Pour ce cours, nous utiliserons les structures de contrôle suivantes:
+\ol{
+\li{[les appels de fonction](000H) qui contôlent l'exécution du corps de la fonction}
+\li{[les branchements conditionnels](000J) qui contrôlent quel branchement sera exécuté}
+\li{[les boucles](000N) qui contrôlent combien de fois le corps de la boucle sera exécutées}
+}}

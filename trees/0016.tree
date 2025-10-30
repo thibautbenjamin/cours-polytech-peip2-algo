@@ -1,0 +1,12 @@
+\title{Les ordres de grandeurs usuels}
+\author{thibautbenjamin}
+\date{2025-10-27T10:12:39Z}
+\import{basemacros}
+
+\p{Certains ordres de grandeurs ont des noms qu'il est habituels d'utiliser. On présente ici les principaux, avec leur noms, leur définition et la courbe qui leur correspond.}
+
+\transclude{001J}
+\transclude{0017}
+\transclude{0018}
+\transclude{0019}
+\transclude{001A}

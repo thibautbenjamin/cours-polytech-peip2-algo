@@ -1,0 +1,16 @@
+\title{Calcul du produit de deux entiers positifs (directement)}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2025-10-27T13:21:56Z}
+\import{basemacros}
+
+\p{
+
+\pre{\code{\startverb
+// Entrées: Deux entiers x et y
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  return x * y;
+}
+\stopverb
+}}}

@@ -1,0 +1,8 @@
+\title{Les types de données de base}
+\author{thibautbenjamin}
+\date{2025-10-07T15:46:27Z}
+\import{basemacros}
+
+\p{Les types de données de base de \Cpp que nous allons utiliser sont les booléens \code{bool} (qui ne peuvent prendre que 2 valeurs, \code{true} et \code{false}), les entiers \code{int}, et les caractères \code{char} (comme par exemple \code{'a'}, \code{'*'}, \code{'5'}...). Pour les besoins de ce cours, nous allons ignorer les limitations liées aux dépassement arithémtiques, et, sauf mention explicite du contraire, nous considérerons que les valeurs de type \code{int} peuvent être n'importe quel nombre entier. Nous ignorerons également que les caractères sont aussi des entiers, et considéreront donc par exemple qu'additionner deux caractères n'a pas de sens.}
+
+\p{Il existe en réalité beaucoup de types de données de base en \Cpp, en particulier les nombres flottants, permettant de représenter des nombres décimaux, mais ils ne nous seront pas utiles dans ce cours.}

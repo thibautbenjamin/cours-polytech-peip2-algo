@@ -1,0 +1,25 @@
+\title{Algorithmes et recettes de cuisine}
+\author{thibautbenjamin}
+\date{2025-10-07T11:55:39Z}
+
+
+\p{Une analogie que l'on donne couramment est celle d'une recette de cuisine: La recette donne typiquement une série d'instruction que le cuisinier va suivra afin de réaliser son plat (Ex: Faire bouillir de l'eau, ajouter une pincée de sel, ajouter 500g de pates, laisser bouillir pendant 12 min, égouter les pates). Cette analogie nous permet aussi de comprendre ce que l'on entend par "opération élémentaire": un cuisinier débutant aura besoin de la recette pour faire cuire les pates, tandis qu'un cuisinier chevroné se contentera d'une seule étape: "faire cuire des pates".}
+
+\p{Contrairement à ce que l'analogie des recettes de cuisine laisse penser, on s'intéresse ici à des algorithmes permettant de réaliser la même opération sur différentes données. Par exemple, lorsque l'on parle d'algorithme pour trier un tableau, on voudra utilier le même algorithme pour trier le tableau
+#{
+\begin{array}{|c|c|c|c|}
+\hline
+5 & 8 & 2 & 10 \\
+\hline
+\end{array}
+}
+et le tableau
+#{
+\begin{array}{|c|c|c|c|}
+\hline
+7 & 25 & 4 & 9 \\
+\hline
+\end{array}
+}.
+On dit alors que le tableau est une \em{entrée} de l'algorithme.
+}
