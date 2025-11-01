@@ -12,4 +12,6 @@
 \li{Quelle est sa complexité?}
 \li{Comment l'améliorer, et quelle est la complexité resultante?}
 }
-Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. C'est pourquoi il est capital de toujours bien spécifier les entrées et les sorties de l'algorithme, et de donner des noms compréhensibles et utiles aux variables.}
+Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. Cela illustre la remarque suivante}
+
+\transclude{001Y}

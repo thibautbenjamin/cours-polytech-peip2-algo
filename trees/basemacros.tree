@@ -3,3 +3,4 @@
 \def\mark[body]{\<html:mark>{\body}}
 \def\Cpp{\tex{\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}}{\CC}}
 \def\O{#{\mathcal{O}}}
+\def\cppdisplay[body]{\pre{\<html:cpp>{\body}}}

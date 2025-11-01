@@ -4,3 +4,4 @@ output/
 /_tmp/
 *.o
 *.out
+/build/

@@ -1,0 +1,10 @@
+\title{TD 2}
+\author{thibautbenjamin}
+\date{2025-10-27T14:28:40Z}
+
+\p{\strong{Objectif:} Ce TD a pour but de manipuler les notions de mathématiques nécessaire à l'analyse de complexité, pour être à l'aise avec les arguments que nous utiliseront par la suite. C'est le TD le plus formel et mathématique de ce cours, accrochez-vous, ça vaut le coup d'être à l'aise avec ces notions.}
+
+\transclude{001C}
+\transclude{001D}
+\transclude{001E}
+\transclude{001F}

@@ -1,0 +1,23 @@
+\title{Trouver le maximum dans un tableau d'entiers}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2025-11-01T14:46:09Z}
+\import{basemacros}
+
+\p{\cppdisplay{
+// Entrée : Un entier n > 0 et un tableau d'entier tableau de taille n
+// Sortie : Un entier représentant le maximum contenu dans tableau
+int maximum (int n, int[] tableau){
+  int max = tableau [0];
+  // A la fin de la boucle i, max contient le maximum
+  // de tableau situé entre les indices 0 et i
+  for (int i = 1; i < n; i++ ){
+    if (max < tableau[i]){
+      max = tableau[i];
+    }
+  }
+  return max;
+}
+}
+\strong{Complexité}: Pour analyser la complexité de cet algorithme, on compte le nombre de comparaison. A chaque passage dans la boucle, on effectue exactement une comparaison (\code{max < tableau[i]}), et on fait #{n-1} passages dans la boucle. Cette fonction fera donc toujours exactement #{n-1} comparaisons, ce qui donne une complexité en #{\O(n)} ([complexité linéaire](0017)).
+}

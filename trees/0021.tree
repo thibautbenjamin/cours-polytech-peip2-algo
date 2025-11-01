@@ -1,0 +1,14 @@
+\title{Branchements conditionnels imbriqués}
+\author{thibautbenjamin}
+\date{2025-11-01T13:00:49Z}
+\import{basemacros}
+
+\p{Dans le cas où l'on veut imbriquer des branchements conditionnels, on pourra utiliser l'opérateur \code{else if}:
+\cppdisplay{
+\startverb if (condition1) {
+  // branche 1
+} else if (condition2) {
+  // branche 2
+} else {
+  // branche 3
+}\stopverb}}

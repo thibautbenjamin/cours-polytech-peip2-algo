@@ -1,0 +1,27 @@
+\title{Matrices et tableaux multidimensionels}
+\author{thibautbenjamin}
+\date{2025-11-01T14:11:13Z}
+\import{basemacros}
+
+\p{On peut représenter des matrices, c'est à dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
+##{
+\begin{pmatrix}
+1&2&3&4 \\
+5&6&7&8 \\
+9&10&11&12
+\end{pmatrix}
+}
+on pourra écrire
+\cppdisplay{\startverb
+    int matrice[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+\stopverb}
+Pour ensuite accéder à l'élément dans la ligne #{0} et la colone #{2}, on écrira
+\cppdisplay{\startverb
+    matrice[0][2] // Cette valeur est 3
+\stopverb}
+Et pareillement pour l'affectaction. On peut aussi généraliser ce principe aux tableaux à #{n} dimensions, que l'on peut voir comme des tableaux de tableaux de tableaux... La syntaxe est similaire à celle des matrices, avec plus de crochets.
+}

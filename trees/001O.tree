@@ -2,10 +2,10 @@
 \author{thibautbenjamin}
 \taxon{Algorithme}
 \date{2025-10-27T13:54:04Z}
-
+\import{basemacros}
 
 \p{
-\pre{\code{
+\cppdisplay{
 \startverb
 // Entrées: Un entier n >= 1
 // Sortie: Un booléen mystère
@@ -21,5 +21,4 @@ bool mystere (int n){
   return r;
 }
 \stopverb}
-}
 }

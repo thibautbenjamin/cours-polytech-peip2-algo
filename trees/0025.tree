@@ -1,0 +1,21 @@
+\title{Déclaration et initialisation}
+\author{thibautbenjamin}
+\date{2025-11-01T13:50:36Z}
+\import{basemacros}
+
+\p{Pour initialiser un tableau, par exemple un tableau d'élements de type \code{int} de taille #{9} s'appelant \code{monTableau}, on utilisera la syntaxe suivante
+\cppdisplay{\startverb
+  int[9] monTableau;
+\stopverb
+}
+Bien sur, on peut adapter cet exemple, en changeant le type \code{int} en un autre primitif, et en changeant la taille et le nom du tableau. On peut également initialiser un tableau en même qu'on le déclare. Par exemple, le code suivant déclare le tableau \code{monTableau}, et initialise sa valeur à #{
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1\\
+\hline
+\end{array}
+}
+\cppdisplay{\startverb
+   int[9] monTableau = {9,8,7,6,5,4,3,2,1};
+\stopverb}
+}

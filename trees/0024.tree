@@ -1,0 +1,12 @@
+\title{A partir de où commence-t-on à compter}
+\author{thibautbenjamin}
+\taxon{Remarque}
+\date{2025-11-01T13:43:17Z}
+
+\p{En informatique, il est courrant de commencer à partir de #{0}, et donc, étant donné un tableau #{
+\begin{array}{|c|c|c|}
+\hline
+42 & 6 & 7 \\
+\hline
+\end{array}
+}, on dira que le nombre #{42} est en position #{0}, le nombre #{6} en position #{1}, et le nombre #{7} en position #{2}.}

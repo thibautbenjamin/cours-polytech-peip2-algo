@@ -1,0 +1,13 @@
+\title{TD 1}
+\author{thibautbenjamin}
+\date{2025-10-27T14:25:19Z}
+\import{basemacros}
+
+
+\p{\strong{Objectif:} Ce TD a pour but de se refamiliariser avec la syntaxe et la programmation en \Cpp, et de voir les premiers exemples d'analyse de complexité au passage.}
+
+\transclude{001K}
+\transclude{001N}
+\transclude{001P}
+\transclude{001T}
+\transclude{0027}

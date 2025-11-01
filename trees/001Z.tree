@@ -1,0 +1,6 @@
+\title{Affectation et comparaison}
+\author{thibautbenjamin}
+\taxon{Remarque}
+\date{2025-11-01T12:58:36Z}
+
+\p{Attention à ne pas comfondre les opérateurs d'affectation \code{=} et de comparaison \code{==}!}

@@ -3,8 +3,8 @@
 \date{2025-10-08T07:43:34Z}
 \import{basemacros}
 
-\p{Lorsque l'on veut faire un branchement avec plus que deux branches, on pourra utiliser un branchement \code{switch-case}, qui évite d'enchaîner pleins de [branchements \code{if-then-else}](000K). Par exemple, si \code{x} est une variable de type \code{int}, on pourra écrire \mark{Code}:
-\pre{\code{
+\p{Lorsque l'on veut faire un branchement avec plus que deux branches, on pourra utiliser un branchement \code{switch-case}, qui évite d'enchaîner pleins de [branchements \code{if-then-else}](000K). Par exemple, si \code{x} est une variable de type \code{int}, on pourra écrire:
+\cppdisplay{
 \startverb switch (x) {
   case 0:
     // branche 1
@@ -17,9 +17,9 @@
     break;
   default:
     // branche 4
-}\stopverb}}
-plutôt que \mark{Code}:
-\pre{\code{
+}\stopverb}
+plutôt que:
+\cppdisplay{
 \startverb if (x == 0) {
   // branche 1
 } else if (x == 1){
@@ -28,5 +28,5 @@ plutôt que \mark{Code}:
   // branche 3
 } else {
   // branche 4
-}\stopverb}}
+}\stopverb}
 On donne ici un exemple avec 4 branches, mais l'on peut utiliser un branchement \code{switch-case} avec un nombre de branches arbitraire}

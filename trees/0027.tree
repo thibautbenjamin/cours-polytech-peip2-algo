@@ -1,0 +1,17 @@
+\title{Manipulations de tableaux}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-01T14:05:25Z}
+\import{basemacros}
+
+\p{\ol{
+\li{Ecrire un programme qui initialise un tableau s'appelant \code{monTableau} de taille #{5}, contenant initialement les valeurs #{
+\begin{array}{|c|c|c|c|c|}
+\hline
+0&1&2&3&4\\
+\hline
+\end{array}
+}}
+\li{A l'aide d'une boucle, écrire une fonction \code{incrementeTout} qui prend en entrée un entier #{n} et tableau d'entier de taille #{n}, et qui renvoie une copie du tableau dans laquelle toutes les valeurs ont été incrémente de #{1}.}
+\li{On appelle la fonction \code{incrementeTout(5,monTableau)}, quel est le tableau renvoyé en résultat?}
+}}

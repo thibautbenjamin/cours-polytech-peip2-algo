@@ -5,12 +5,11 @@
 \import{basemacros}
 
 \p{
-
-\pre{\code{\startverb
+\cppdisplay{\startverb
 // Entrées: Deux entiers x et y
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   return x * y;
 }
 \stopverb
-}}}
+}}

@@ -1,0 +1,8 @@
+\title{Les opérations de base sur les tableaux}
+\author{thibautbenjamin}
+\date{2025-11-01T13:37:46Z}
+\import{basemacros}
+
+\p{Les tableaux sont des structures de données avec une taille statique, c'est-à-dire que lorsque l'on initialise un tableau, on doit à l'avance déclarer la taille que ce tableau aura, et celle ci ne changera jamais. Les tableaux permettent, en une seule opération d'accéder et de modifier une valeur placée en #{i^\textnormal{ème}} position pour tout entier #{i} inférieur à la taille du tableau.}
+
+\transclude{0024}

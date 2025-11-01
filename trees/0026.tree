@@ -1,0 +1,21 @@
+\title{Accès à une position et affectation}
+\author{thibautbenjamin}
+\date{2025-11-01T13:53:50Z}
+\import{basemacros}
+
+\p{Une fois un tableau déclaré, on peut accéder aux valeur stockées dans ce tableau. Par exemple, si l'on a déclaré un tableau s'appelant \code{monTableau} de taille #{9}, on pourra accéder à la position #{2} de ce tableau en écrivant
+\cppdisplay{
+\startverb
+monTableau[2]
+\stopverb
+}
+On pourra aussi modifier la valeur de la position #{2} de ce tableau, pour par exemple lui affecter la valeur 1729 en écrivant
+\cppdisplay{
+\startverb
+monTableau[2] = 1729;
+\stopverb
+}
+}
+\transclude{0027}
+\transclude{001W}
+\transclude{001X}

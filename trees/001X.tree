@@ -1,8 +1,16 @@
-\title{TD 2}
+\title{Valeur non initialisée}
 \author{thibautbenjamin}
-\date{2025-10-27T14:28:40Z}
+\taxon{Remarque}
+\date{2025-11-01T14:23:24Z}
+\import{basemacros}
 
-\transclude{001C}
-\transclude{001D}
-\transclude{001E}
-\transclude{001F}
+\p{On considérera qu'essayer d'accéder à une valeur avant qu'elle ait été initialisée est une erreur, même si en \Cpp c'est accepté et cela renvoie une valeur par défaut associé au type de donnée du tableau. Par exemple, on considérera le code suivant comme incorrect pour ce cours, même s'il s'agit d'un code \Cpp valide
+\cppdisplay{\startverb
+int[8] monTableau;
+if(monTableau[4] == 5){ // On considère cette ligne comme étant une erreur, car monTableau[4] n'a jamais été affecté.
+  return 0;
+}
+return;
+\stopverb
+}
+}

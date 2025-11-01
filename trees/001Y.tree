@@ -1,1 +1,10 @@
+\title{Conventions de nommage}
+\author{thibautbenjamin}
+\taxon{Remarque}
 \date{2025-10-27T14:30:21Z}
+
+
+
+\p{Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+\<html:img>[src]{https://imgs.xkcd.com/comics/x.png}{}
+}

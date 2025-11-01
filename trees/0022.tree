@@ -1,0 +1,9 @@
+\title{Syntaxe pour manipuler les tableaux}
+\author{thibautbenjamin}
+\date{2025-11-01T13:35:17Z}
+\import{basemacros}
+
+\p{On utilisera la syntaxe de \Cpp pour manipuler les tableaux}
+\transclude{0025}
+\transclude{0026}
+\transclude{0028}

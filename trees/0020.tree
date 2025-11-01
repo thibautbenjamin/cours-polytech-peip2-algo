@@ -1,0 +1,7 @@
+\title{Comparaison sur les entiers}
+\author{thibautbenjamin}
+\date{2025-11-01T13:00:28Z}
+\import{basemacros}
+
+
+\p{Pour les nombres, on utilisera également les opérateurs de comparaison habituels \code{<} ("strictement inférieur à"), \code{<=} ("inférieur ou égal à"), \code{>=} ("supérieur ou égal à") et \code{>} ("strictement supérieur à"). Dans ce cours, on réservera ces opérateurs au type \code{int}, et on considérera qu'ils n'ont pas de sens sur les types \code{char} et \code{bool}, même si c'est accepté en \Cpp.}

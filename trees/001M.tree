@@ -5,8 +5,7 @@
 \import{basemacros}
 
 \p{
-
-\pre{\code{\startverb
+\cppdisplay{\startverb
 // Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
@@ -18,4 +17,4 @@ int produit (int x , int y){
   return result;
 }
 \stopverb
-}}}
+}}

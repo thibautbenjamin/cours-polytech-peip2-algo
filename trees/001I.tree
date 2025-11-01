@@ -5,8 +5,8 @@
 \import{basemacros}
 
 \p{
-\mark{TODO: lien vers le code}
-\pre{\code{\startverb
+\cppdisplay{
+\startverb
 // Entrées: Deux entiers x et y positifs
 // Sortie: La somme des deux entrées
 int somme (int x , int y){
@@ -17,4 +17,4 @@ int somme (int x , int y){
   return x;
 }
 \stopverb
-}}}
+}}
