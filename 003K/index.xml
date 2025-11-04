@@ -3,23 +3,21 @@
 <fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
-      <fr:contributor>
+      <fr:author>
         <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-      </fr:contributor>
+      </fr:author>
     </fr:authors>
-    <fr:uri>http://localhost/welcome/</fr:uri>
-    <fr:display-uri>welcome</fr:display-uri>
-    <fr:route>/welcome/</fr:route>
-    <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>4</fr:day>
+    </fr:date>
+    <fr:uri>http://localhost/003K/</fr:uri>
+    <fr:display-uri>003K</fr:display-uri>
+    <fr:route>/003K/</fr:route>
+    <fr:title text="Cours d'algorithmique PEIP2">Cours d'algorithmique PEIP2</fr:title>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:p><html:strong>Structure du cours:</html:strong>
-Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil <fr:link href="https://www.forester-notes.org/index/index.xml" type="external">forester</fr:link>, et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela lui semble pertinent ou nécessaire. Bien sûr, il est beaucoup plus simple de suivre cette démarche avec le document au format numérique. Par exemple, le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.</html:p>
-    <html:p>
-      <html:strong>
-        <fr:link href="/001V/" title="Recueil des TD/TP" uri="http://localhost/001V/" display-uri="001V" type="local">La page des TD/TP</fr:link>
-      </html:strong>
-    </html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
         <fr:authors>
@@ -2478,38 +2476,38 @@ On cherche maintenant à généraliser ce résultat:
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:uri>http://localhost/index/</fr:uri>
+            <fr:display-uri>index</fr:display-uri>
+            <fr:route>/index/</fr:route>
+            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:strong>Structure du cours:</html:strong>
+Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil <fr:link href="https://www.forester-notes.org/index/index.xml" type="external">forester</fr:link>, et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela lui semble pertinent ou nécessaire. Bien sûr, il est beaucoup plus simple de suivre cette démarche avec le document au format numérique. Par exemple, le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.</html:p>
+            <html:p>
+              <html:strong>
+                <fr:link href="/003K/" title="Cours d'algorithmique PEIP2" uri="http://localhost/003K/" display-uri="003K" type="local">La page du cours</fr:link>
+              </html:strong>
+            </html:p>
+            <html:p>
+              <html:strong>
+                <fr:link href="/001V/" title="Recueil des TD/TP" uri="http://localhost/001V/" display-uri="001V" type="local">La page des TD/TP</fr:link>
+              </html:strong>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
         <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>10</fr:month>
-              <fr:day>27</fr:day>
-            </fr:date>
-            <fr:uri>http://localhost/001V/</fr:uri>
-            <fr:display-uri>001V</fr:display-uri>
-            <fr:route>/001V/</fr:route>
-            <fr:title text="Recueil des TD/TP">Recueil des TD/TP</fr:title>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p><html:ul><html:li><fr:link href="/Seance-TD1/" title="TD 1" uri="http://localhost/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
-<html:li><fr:link href="/Seance-TD2/" title="TD 2" uri="http://localhost/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
-<html:ul><html:li><fr:link href="/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://localhost/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li></html:ul></html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
