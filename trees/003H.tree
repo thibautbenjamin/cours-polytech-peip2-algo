@@ -3,4 +3,4 @@
 \date{2025-11-02T12:04:51Z}
 \import{basemacros}
 
-\p{\mark{TODO}}
+\p{Par défaut, les appels de fonction en \Cpp se font en [passage par valeur](003O), mais il est également possible de les déclarer en [passage par référence](003P). La valeur des [type de donné composé](000F) auxquels on s'intéresse est son adresse. Donc passer un argument d'un type composé à une fonction ressemble à un passage par référence.}

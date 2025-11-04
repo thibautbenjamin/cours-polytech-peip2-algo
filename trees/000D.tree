@@ -6,4 +6,4 @@
 \p{Selon le proverbe, il ne faut pas mélanger les torchons et les serviettes. Ce sont là des types de données. Ils servent à se rappeler de quelle nature est l'objet qu'une variable doit représenter, afin d'éviter de faire des opérations n'ayant pas de sens, comme additionner une chaîne de caractères avec un nombre.}
 \transclude{000E}
 \transclude{000F}
-\p{L'on note l'absence de pointeurs: On y fera quelques mentions, mais ce n'est pas le point central de ce cours}
+\p{Notons l'absence de [pointeurs](003U): On y fera quelques mentions, mais ce n'est pas le point central de ce cours. Les types de données composés présentés ci-dessus sont secrètement des pointeurs: une valeur de ce type est une adresse mémoire contenant les données prescrites.}

@@ -34,7 +34,29 @@
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003L/</fr:uri>
+            <fr:display-uri>003L</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003L/</fr:route>
+            <fr:title text="Contribuer">Contribuer</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Les contributions sont bienvenues, de la part de tout le monde! Le cours entier est en ligne sur <fr:link href="https://github.com/thibautbenjamin/cours-polytech-peip2-algo" type="external">github</fr:link>, et il suffit d'ouvrir une merge request pour proposer un changement. Si vous ne savez pas comment faire, vous pouvez contacter <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

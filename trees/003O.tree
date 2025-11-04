@@ -1,0 +1,8 @@
+\title{Passage par valeur}
+\author{thibautbenjamin}
+\date{2025-11-04T13:31:34Z}
+\import{basemacros}
+
+\p{Le passage par valeur est le comportement par défaut de \Cpp. Au point d'appel d'une fonction, le programme crée une copie locale des valeurs qu'on lui a donnée, et travaille dans la fonction à l'aide de ces copies.}
+
+\transclude{003R}

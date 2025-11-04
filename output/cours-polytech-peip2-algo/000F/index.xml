@@ -102,7 +102,7 @@
 <html:li>Les chaînes de caractères <html:mark>TODO</html:mark></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
-            <html:p>L'on note l'absence de pointeurs: On y fera quelques mentions, mais ce n'est pas le point central de ce cours</html:p>
+            <html:p>Notons l'absence de <fr:link href="/cours-polytech-peip2-algo/003U/" title="Les pointeurs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003U/" display-uri="003U" type="local">pointeurs</fr:link>: On y fera quelques mentions, mais ce n'est pas le point central de ce cours. Les types de données composés présentés ci-dessus sont secrètement des pointeurs: une valeur de ce type est une adresse mémoire contenant les données prescrites.</html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
@@ -113,6 +113,27 @@
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003H/</fr:uri>
+            <fr:display-uri>003H</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003H/</fr:route>
+            <fr:title text="Passage par valeur et passage par référence">Passage par valeur et passage par référence</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Par défaut, les appels de fonction en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> se font en <fr:link href="/cours-polytech-peip2-algo/003O/" title="Passage par valeur" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/" display-uri="003O" type="local">passage par valeur</fr:link>, mais il est également possible de les déclarer en <fr:link href="/cours-polytech-peip2-algo/003P/" title="Passage par référence" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/" display-uri="003P" type="local">passage par référence</fr:link>. La valeur des <fr:link href="/cours-polytech-peip2-algo/000F/" title="Les types de données composés" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000F/" display-uri="000F" type="local">type de donné composé</fr:link> auxquels on s'intéresse est son adresse. Donc passer un argument d'un type composé à une fonction ressemble à un passage par référence.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>

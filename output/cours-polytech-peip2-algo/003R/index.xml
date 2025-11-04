@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>4</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003R/</fr:uri>
+    <fr:display-uri>003R</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/003R/</fr:route>
+    <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+    <fr:taxon>Example</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+      <html:pre>
+        <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 0, b = 1
+  return 0;
+}]]>
+</html:cpp>
+      </html:pre>
+    </html:p>
+    <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/</fr:uri>
+            <fr:display-uri>003O</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003O/</fr:route>
+            <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Le passage par valeur est le comportement par défaut de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>. Au point d'appel d'une fonction, le programme crée une copie locale des valeurs qu'on lui a donnée, et travaille dans la fonction à l'aide de ces copies.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003R/</fr:uri>
+                <fr:display-uri>003R</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003R/</fr:route>
+                <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+                <fr:taxon>Example</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 0, b = 1
+  return 0;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+                <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

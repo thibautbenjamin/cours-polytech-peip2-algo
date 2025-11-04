@@ -1,0 +1,11 @@
+\title{Passage par valeur et passage par référence}
+\author{thibautbenjamin}
+\date{2025-11-04T13:28:14Z}
+\import{basemacros}
+
+\p{Il existe plusieurs manière de transmettre des arguments à une fonction, et elles ne sont pas équivalentes. Il est donc important de toujours comprendre dans quel cas on se place. En \Cpp, le défaut est que tous les arguments sont [passés par valeur](003O), mais il est aussi possible de déclarer un [passage par référence](003P). Il existe également une troisième option couramment utilisée en \Cpp, consistant à passer par [valeur un pointeur](003T).}
+
+\transclude{003Q}
+\transclude{003O}
+\transclude{003P}
+\transclude{003T}

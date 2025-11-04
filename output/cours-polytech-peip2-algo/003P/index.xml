@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>4</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/</fr:uri>
+    <fr:display-uri>003P</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/003P/</fr:route>
+    <fr:title text="Passage par référence">Passage par référence</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Il est possible en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> d'indiquer que certains arguments doivent être passés par référence, en ajoutant un <html:code>&amp;</html:code> devant le nom de la variable lors de la déclaration de la fonction. Lors d'un passage par référence, la variable est transmise au corps de la fonction au moyen de son adresse mémoire. Cela évite de faire une copie des arguments</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>11</fr:month>
+          <fr:day>4</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003S/</fr:uri>
+        <fr:display-uri>003S</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/003S/</fr:route>
+        <fr:title text="Passage par référence">Passage par référence</fr:title>
+        <fr:taxon>Exemple</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:pre>
+            <html:cpp>
+<![CDATA[void echanger (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+          </html:pre>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003N/</fr:uri>
+            <fr:display-uri>003N</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003N/</fr:route>
+            <fr:title text="Passage par valeur et passage par référence">Passage par valeur et passage par référence</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Il existe plusieurs manière de transmettre des arguments à une fonction, et elles ne sont pas équivalentes. Il est donc important de toujours comprendre dans quel cas on se place. En <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, le défaut est que tous les arguments sont <fr:link href="/cours-polytech-peip2-algo/003O/" title="Passage par valeur" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/" display-uri="003O" type="local">passés par valeur</fr:link>, mais il est aussi possible de déclarer un <fr:link href="/cours-polytech-peip2-algo/003P/" title="Passage par référence" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/" display-uri="003P" type="local">passage par référence</fr:link>. Il existe également une troisième option couramment utilisée en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, consistant à passer par <fr:link href="/cours-polytech-peip2-algo/003T/" title="Passage par valeur de pointeur et modification en place" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003T/" display-uri="003T" type="local">valeur un pointeur</fr:link>.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003Q/</fr:uri>
+                <fr:display-uri>003Q</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003Q/</fr:route>
+                <fr:title text="Passage par valeur et par référence">Passage par valeur et par référence</fr:title>
+                <fr:taxon>Exemple</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // avec un appel par valeur,
+  // a = 0, b = 1
+  // avec un appel par référence,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/</fr:uri>
+                <fr:display-uri>003O</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003O/</fr:route>
+                <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le passage par valeur est le comportement par défaut de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>. Au point d'appel d'une fonction, le programme crée une copie locale des valeurs qu'on lui a donnée, et travaille dans la fonction à l'aide de ces copies.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003R/</fr:uri>
+                    <fr:display-uri>003R</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003R/</fr:route>
+                    <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 0, b = 1
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                    <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/</fr:uri>
+                <fr:display-uri>003P</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003P/</fr:route>
+                <fr:title text="Passage par référence">Passage par référence</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Il est possible en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> d'indiquer que certains arguments doivent être passés par référence, en ajoutant un <html:code>&amp;</html:code> devant le nom de la variable lors de la déclaration de la fonction. Lors d'un passage par référence, la variable est transmise au corps de la fonction au moyen de son adresse mémoire. Cela évite de faire une copie des arguments</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003S/</fr:uri>
+                    <fr:display-uri>003S</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003S/</fr:route>
+                    <fr:title text="Passage par référence">Passage par référence</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echanger (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003T/</fr:uri>
+                <fr:display-uri>003T</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003T/</fr:route>
+                <fr:title text="Passage par valeur de pointeur et modification en place">Passage par valeur de pointeur et modification en place</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>On peut obtenir un comportement similaire à un appel par référence, en faisant un appel par valeur sur une valeur se trouvant être un <fr:link href="/cours-polytech-peip2-algo/003U/" title="Les pointeurs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003U/" display-uri="003U" type="local">pointeur</fr:link>. Dans ce cas, la valeur de la variable se trouve elle-même être une adresse mémoire. Bien que l'on ne va pas utiliser les pointeurs directement dans ce cours, les <fr:link href="/cours-polytech-peip2-algo/001U/" title="Tableaux" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001U/" display-uri="001U" type="local">tableaux</fr:link> en sont un exemple: la valeur d'une variable de type tableau est en fait l'adresse mémoire de la première case.</html:p>
+                <html:p>Dans ce cas de figure, une fonction peut modifier la structure de donnée qui lui est passée en argument, de manière visible à l'extérieur de la fonction.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003V/</fr:uri>
+                    <fr:display-uri>003V</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003V/</fr:route>
+                    <fr:title text="Modification en place des tableaux">Modification en place des tableaux</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echangerPremiers (int[] x){
+  int y = x[0];
+  x[0] = x[1];
+  x[1] = y;
+}
+
+int main (){
+  int a = {0,1};
+  echangerPremiers (a);
+  // a ce point du programme,
+  // a = {1,0}
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003W/</fr:uri>
+                    <fr:display-uri>003W</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003W/</fr:route>
+                    <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+                    <fr:taxon>Attention</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Attention à ne pas confondre passage par valeur d'un pointeur et passage par référence! Il est possible de simuler un passage par référence à l'aide d'un passage par valeur de pointeur, mais ce sont deux concepts différents. L'exemple suivant illustre la différence:</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>4</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003X/</fr:uri>
+                        <fr:display-uri>003X</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/003X/</fr:route>
+                        <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+                        <fr:taxon>Exemple</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+                          <html:pre>
+                            <html:cpp>
+<![CDATA[void echangerTableaux (int[] x, int[] y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = {0};
+  int b = {1};
+  echangerTableaux (a,b);
+  // même si a et b sont des tableaux (pointeurs),
+  // a ce point du programme,
+  // a = {0}, b = {1}
+  return 0;
+}]]>
+</html:cpp>
+                          </html:pre>
+                        </html:p>
+                        <html:p>
+                          <html:pre>
+                            <html:cpp>
+<![CDATA[void echangerRef (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echangerRef (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                          </html:pre>
+                        </html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003N/</fr:uri>
+            <fr:display-uri>003N</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003N/</fr:route>
+            <fr:title text="Passage par valeur et passage par référence">Passage par valeur et passage par référence</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Il existe plusieurs manière de transmettre des arguments à une fonction, et elles ne sont pas équivalentes. Il est donc important de toujours comprendre dans quel cas on se place. En <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, le défaut est que tous les arguments sont <fr:link href="/cours-polytech-peip2-algo/003O/" title="Passage par valeur" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/" display-uri="003O" type="local">passés par valeur</fr:link>, mais il est aussi possible de déclarer un <fr:link href="/cours-polytech-peip2-algo/003P/" title="Passage par référence" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/" display-uri="003P" type="local">passage par référence</fr:link>. Il existe également une troisième option couramment utilisée en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, consistant à passer par <fr:link href="/cours-polytech-peip2-algo/003T/" title="Passage par valeur de pointeur et modification en place" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003T/" display-uri="003T" type="local">valeur un pointeur</fr:link>.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003Q/</fr:uri>
+                <fr:display-uri>003Q</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003Q/</fr:route>
+                <fr:title text="Passage par valeur et par référence">Passage par valeur et par référence</fr:title>
+                <fr:taxon>Exemple</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // avec un appel par valeur,
+  // a = 0, b = 1
+  // avec un appel par référence,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/</fr:uri>
+                <fr:display-uri>003O</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003O/</fr:route>
+                <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le passage par valeur est le comportement par défaut de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>. Au point d'appel d'une fonction, le programme crée une copie locale des valeurs qu'on lui a donnée, et travaille dans la fonction à l'aide de ces copies.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003R/</fr:uri>
+                    <fr:display-uri>003R</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003R/</fr:route>
+                    <fr:title text="Passage par valeur">Passage par valeur</fr:title>
+                    <fr:taxon>Example</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echanger (int x, int y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 0, b = 1
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                    <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/</fr:uri>
+                <fr:display-uri>003P</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003P/</fr:route>
+                <fr:title text="Passage par référence">Passage par référence</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Il est possible en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> d'indiquer que certains arguments doivent être passés par référence, en ajoutant un <html:code>&amp;</html:code> devant le nom de la variable lors de la déclaration de la fonction. Lors d'un passage par référence, la variable est transmise au corps de la fonction au moyen de son adresse mémoire. Cela évite de faire une copie des arguments</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003S/</fr:uri>
+                    <fr:display-uri>003S</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003S/</fr:route>
+                    <fr:title text="Passage par référence">Passage par référence</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echanger (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echanger (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003T/</fr:uri>
+                <fr:display-uri>003T</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003T/</fr:route>
+                <fr:title text="Passage par valeur de pointeur et modification en place">Passage par valeur de pointeur et modification en place</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>On peut obtenir un comportement similaire à un appel par référence, en faisant un appel par valeur sur une valeur se trouvant être un <fr:link href="/cours-polytech-peip2-algo/003U/" title="Les pointeurs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003U/" display-uri="003U" type="local">pointeur</fr:link>. Dans ce cas, la valeur de la variable se trouve elle-même être une adresse mémoire. Bien que l'on ne va pas utiliser les pointeurs directement dans ce cours, les <fr:link href="/cours-polytech-peip2-algo/001U/" title="Tableaux" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001U/" display-uri="001U" type="local">tableaux</fr:link> en sont un exemple: la valeur d'une variable de type tableau est en fait l'adresse mémoire de la première case.</html:p>
+                <html:p>Dans ce cas de figure, une fonction peut modifier la structure de donnée qui lui est passée en argument, de manière visible à l'extérieur de la fonction.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003V/</fr:uri>
+                    <fr:display-uri>003V</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003V/</fr:route>
+                    <fr:title text="Modification en place des tableaux">Modification en place des tableaux</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:pre>
+                        <html:cpp>
+<![CDATA[void echangerPremiers (int[] x){
+  int y = x[0];
+  x[0] = x[1];
+  x[1] = y;
+}
+
+int main (){
+  int a = {0,1};
+  echangerPremiers (a);
+  // a ce point du programme,
+  // a = {1,0}
+  return 0;
+}]]>
+</html:cpp>
+                      </html:pre>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>4</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003W/</fr:uri>
+                    <fr:display-uri>003W</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003W/</fr:route>
+                    <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+                    <fr:taxon>Attention</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Attention à ne pas confondre passage par valeur d'un pointeur et passage par référence! Il est possible de simuler un passage par référence à l'aide d'un passage par valeur de pointeur, mais ce sont deux concepts différents. L'exemple suivant illustre la différence:</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>4</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003X/</fr:uri>
+                        <fr:display-uri>003X</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/003X/</fr:route>
+                        <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+                        <fr:taxon>Exemple</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+                          <html:pre>
+                            <html:cpp>
+<![CDATA[void echangerTableaux (int[] x, int[] y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = {0};
+  int b = {1};
+  echangerTableaux (a,b);
+  // même si a et b sont des tableaux (pointeurs),
+  // a ce point du programme,
+  // a = {0}, b = {1}
+  return 0;
+}]]>
+</html:cpp>
+                          </html:pre>
+                        </html:p>
+                        <html:p>
+                          <html:pre>
+                            <html:cpp>
+<![CDATA[void echangerRef (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echangerRef (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                          </html:pre>
+                        </html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003H/</fr:uri>
+            <fr:display-uri>003H</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003H/</fr:route>
+            <fr:title text="Passage par valeur et passage par référence">Passage par valeur et passage par référence</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Par défaut, les appels de fonction en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> se font en <fr:link href="/cours-polytech-peip2-algo/003O/" title="Passage par valeur" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/" display-uri="003O" type="local">passage par valeur</fr:link>, mais il est également possible de les déclarer en <fr:link href="/cours-polytech-peip2-algo/003P/" title="Passage par référence" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/" display-uri="003P" type="local">passage par référence</fr:link>. La valeur des <fr:link href="/cours-polytech-peip2-algo/000F/" title="Les types de données composés" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000F/" display-uri="000F" type="local">type de donné composé</fr:link> auxquels on s'intéresse est son adresse. Donc passer un argument d'un type composé à une fonction ressemble à un passage par référence.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>4</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003X/</fr:uri>
+    <fr:display-uri>003X</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/003X/</fr:route>
+    <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+    <fr:taxon>Exemple</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+      <html:pre>
+        <html:cpp>
+<![CDATA[void echangerTableaux (int[] x, int[] y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = {0};
+  int b = {1};
+  echangerTableaux (a,b);
+  // même si a et b sont des tableaux (pointeurs),
+  // a ce point du programme,
+  // a = {0}, b = {1}
+  return 0;
+}]]>
+</html:cpp>
+      </html:pre>
+    </html:p>
+    <html:p>
+      <html:pre>
+        <html:cpp>
+<![CDATA[void echangerRef (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echangerRef (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+      </html:pre>
+    </html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003W/</fr:uri>
+            <fr:display-uri>003W</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003W/</fr:route>
+            <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+            <fr:taxon>Attention</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Attention à ne pas confondre passage par valeur d'un pointeur et passage par référence! Il est possible de simuler un passage par référence à l'aide d'un passage par valeur de pointeur, mais ce sont deux concepts différents. L'exemple suivant illustre la différence:</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>4</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003X/</fr:uri>
+                <fr:display-uri>003X</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003X/</fr:route>
+                <fr:title text="Passage par valeur d'un pointeur et passage par référence">Passage par valeur d'un pointeur et passage par référence</fr:title>
+                <fr:taxon>Exemple</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[void echangerTableaux (int[] x, int[] y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = {0};
+  int b = {1};
+  echangerTableaux (a,b);
+  // même si a et b sont des tableaux (pointeurs),
+  // a ce point du programme,
+  // a = {0}, b = {1}
+  return 0;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[void echangerRef (int &x, int &y){
+  int z = x;
+  x = y;
+  y = z;
+}
+
+int main (){
+  int a = 0;
+  int b = 1;
+  echangerRef (a,b);
+  // a ce point du programme,
+  // a = 1, b = 0
+  return 0;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

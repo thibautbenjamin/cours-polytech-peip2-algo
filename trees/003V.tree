@@ -1,0 +1,23 @@
+\title{Modification en place des tableaux}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\date{2025-11-04T14:06:37Z}
+\import{basemacros}
+
+\p{\cppdisplay{
+\startverb
+void echangerPremiers (int[] x){
+  int y = x[0];
+  x[0] = x[1];
+  x[1] = y;
+}
+
+int main (){
+  int a = {0,1};
+  echangerPremiers (a);
+  // a ce point du programme,
+  // a = {1,0}
+  return 0;
+}
+\stopverb
+}}

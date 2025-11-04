@@ -1,0 +1,11 @@
+\title{Passage par valeur de pointeur et modification en place}
+\author{thibautbenjamin}
+\date{2025-11-04T13:56:08Z}
+\import{basemacros}
+
+\p{On peut obtenir un comportement similaire à un appel par référence, en faisant un appel par valeur sur une valeur se trouvant être un [pointeur](003U). Dans ce cas, la valeur de la variable se trouve elle-même être une adresse mémoire. Bien que l'on ne va pas utiliser les pointeurs directement dans ce cours, les [tableaux](001U) en sont un exemple: la valeur d'une variable de type tableau est en fait l'adresse mémoire de la première case.}
+
+\p{Dans ce cas de figure, une fonction peut modifier la structure de donnée qui lui est passée en argument, de manière visible à l'extérieur de la fonction.}
+
+\transclude{003V}
+\transclude{003W}

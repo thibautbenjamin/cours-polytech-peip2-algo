@@ -1,0 +1,8 @@
+\title{Passage par référence}
+\author{thibautbenjamin}
+\date{2025-11-04T13:31:35Z}
+\import{basemacros}
+
+\p{Il est possible en \Cpp d'indiquer que certains arguments doivent être passés par référence, en ajoutant un \code{&} devant le nom de la variable lors de la déclaration de la fonction. Lors d'un passage par référence, la variable est transmise au corps de la fonction au moyen de son adresse mémoire. Cela évite de faire une copie des arguments}
+
+\transclude{003S}

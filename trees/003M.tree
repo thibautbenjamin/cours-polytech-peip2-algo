@@ -1,0 +1,11 @@
+\title{Slides}
+\author{thibautbenjamin}
+\date{2025-11-04T12:56:02Z}
+
+
+\<html:reveal>{
+\<html:slides>{
+\<html:section>{Slide 1}
+\<html:section>{Slide 2}
+}
+}
