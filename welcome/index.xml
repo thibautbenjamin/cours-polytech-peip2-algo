@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/default.xsl"?>
-<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="true" base-url="/">
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors>
       <fr:contributor>
         <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
       </fr:contributor>
     </fr:authors>
-    <fr:uri>http://localhost/index/</fr:uri>
-    <fr:display-uri>index</fr:display-uri>
-    <fr:route>/index/</fr:route>
+    <fr:uri>http://localhost/welcome/</fr:uri>
+    <fr:display-uri>welcome</fr:display-uri>
+    <fr:route>/welcome/</fr:route>
     <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
   </fr:frontmatter>
   <fr:mainmatter>

@@ -2072,9 +2072,9 @@ int maximum (int n, int[] tableau){
                 <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
               </fr:contributor>
             </fr:authors>
-            <fr:uri>http://localhost/index/</fr:uri>
-            <fr:display-uri>index</fr:display-uri>
-            <fr:route>/index/</fr:route>
+            <fr:uri>http://localhost/welcome/</fr:uri>
+            <fr:display-uri>welcome</fr:display-uri>
+            <fr:route>/welcome/</fr:route>
             <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
           </fr:frontmatter>
           <fr:mainmatter>
