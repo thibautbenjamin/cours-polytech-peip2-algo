@@ -100,7 +100,7 @@
 <html:li>Les chaînes de caractères <html:mark>TODO</html:mark></html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
-            <html:p>L'on note l'absence de pointeurs: On y fera quelques mentions, mais ce n'est pas le point central de ce cours</html:p>
+            <html:p>Notons l'absence de <fr:link href="/cours-polytech-peip2-algo/003U/" title="Les pointeurs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003U/" display-uri="003U" type="local">pointeurs</fr:link>: On y fera quelques mentions, mais ce n'est pas le point central de ce cours. Les types de données composés présentés ci-dessus sont secrètement des pointeurs: une valeur de ce type est une adresse mémoire contenant les données prescrites.</html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
