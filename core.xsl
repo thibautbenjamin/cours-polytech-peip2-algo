@@ -126,12 +126,4 @@
     <xsl:value-of select="." />
     <xsl:text>\)</xsl:text>
   </xsl:template>
-
-  <!-- Customisation for the course -->
-  <xsl:template match="html:cpp">
-    <code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-      <xsl:apply-templates />
-    </code>
-  </xsl:template>
-
 </xsl:stylesheet>
