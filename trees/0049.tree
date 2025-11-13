@@ -1,0 +1,13 @@
+\title{Lister appariements}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T12:36:36Z}
+
+\p{\ol{
+\li{Ecrire une fonction \code{paires} prenant en entrée un nombre #{n} et un tableau de taille #{n} dont toutes les entrées sont différentes, et affichant toutes les paires d'élements du tableau. Pour cette question, on autorise qu'un élément soit apparié avec lui-même, et on veut lister toutes les paires, même celles qui ont les même éléments mais dans un ordre différent.}
+\li{Quelle est la complexité de cette précédente?}
+\li{Ecrire une fonction \code{ensemblesADeuxElts} prenant en entrée un nombre #{n} et un tableau de taille #{n} dont toutes les entrées sont différentes, et affichant tous les ensembles de deux éléments du tableau. Pour cette question, on considère qu'un élément ne peut pas former un ensemble avec lui même, et qu'on ne veut pas lister plusieur fois des ensembles contenant les mêmes éléments.}
+\li{Quelle est la complexité de cette fonction?}
+\li{Ecrire une fonction \code{triplets} similaire à \code{paires} mais affichant tous les triplets d'éléments du tableau. Quelle est sa complexité?}
+\li{Ecrire une fonction \code{ensembleATroisElts} similaire à \code{ensemblesADeuxElts} mais affichant tous les ensembles à trois éléments du tableau. Quelle est sa complexité?}
+}}

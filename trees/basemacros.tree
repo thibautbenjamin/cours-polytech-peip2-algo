@@ -30,3 +30,8 @@
                         "right-trim": true,
                 });}
         \pre{\<html:code>[class]{language-cpp rainbow-braces line-numbers}[data-prismjs-copy]{Copier}[data-prismjs-copy-error]{Erreur}[data-prismjs-copy-success]{Copié}{\body}}}
+
+\def\indice[body]{\<html:details>{
+\<html:summary>{\strong{[Indice]}}
+\body
+}}

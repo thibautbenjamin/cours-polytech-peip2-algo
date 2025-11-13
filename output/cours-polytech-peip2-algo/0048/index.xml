@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>13</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0048/</fr:uri>
+    <fr:display-uri>0048</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/0048/</fr:route>
+    <fr:title text="Impression d'une matrice">Impression d'une matrice</fr:title>
+    <fr:taxon>Exercice</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+      <html:ol><html:li>Ecrire un programme <html:code>afficherMatriceCarre</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et une matrice carré de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> représentée sous la forme d'un <fr:link href="/cours-polytech-peip2-algo/0028/" title="Matrices et tableaux multidimensionels" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0028/" display-uri="0028" type="local">tableau à double entrées</fr:link>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatriceCarre</html:code>?</html:li>
+<html:li>Ecrire un programme <html:code>afficherMatrice</html:code> qui prend en entrée deux entiers <fr:tex display="inline"><![CDATA[n]]></fr:tex> et <fr:tex display="inline"><![CDATA[m]]></fr:tex> et une matrice de taille <fr:tex display="inline"><![CDATA[n*m]]></fr:tex>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatrice</html:code>?</html:li></html:ol>
+    </html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>13</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0047/</fr:uri>
+            <fr:display-uri>0047</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0047/</fr:route>
+            <fr:title text="Boucles impriquées">Boucles impriquées</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est de consolider les bases d'analyses de complexité, en analysant des programmes présentant des boucles imbriquées.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0048/</fr:uri>
+                <fr:display-uri>0048</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0048/</fr:route>
+                <fr:title text="Impression d'une matrice">Impression d'une matrice</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire un programme <html:code>afficherMatriceCarre</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et une matrice carré de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> représentée sous la forme d'un <fr:link href="/cours-polytech-peip2-algo/0028/" title="Matrices et tableaux multidimensionels" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0028/" display-uri="0028" type="local">tableau à double entrées</fr:link>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatriceCarre</html:code>?</html:li>
+<html:li>Ecrire un programme <html:code>afficherMatrice</html:code> qui prend en entrée deux entiers <fr:tex display="inline"><![CDATA[n]]></fr:tex> et <fr:tex display="inline"><![CDATA[m]]></fr:tex> et une matrice de taille <fr:tex display="inline"><![CDATA[n*m]]></fr:tex>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatrice</html:code>?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0049/</fr:uri>
+                <fr:display-uri>0049</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0049/</fr:route>
+                <fr:title text="Lister appariements">Lister appariements</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>paires</html:code> prenant en entrée un nombre <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> dont toutes les entrées sont différentes, et affichant toutes les paires d'élements du tableau. Pour cette question, on autorise qu'un élément soit apparié avec lui-même, et on veut lister toutes les paires, même celles qui ont les même éléments mais dans un ordre différent.</html:li>
+<html:li>Quelle est la complexité de cette précédente?</html:li>
+<html:li>Ecrire une fonction <html:code>ensemblesADeuxElts</html:code> prenant en entrée un nombre <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> dont toutes les entrées sont différentes, et affichant tous les ensembles de deux éléments du tableau. Pour cette question, on considère qu'un élément ne peut pas former un ensemble avec lui même, et qu'on ne veut pas lister plusieur fois des ensembles contenant les mêmes éléments.</html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>triplets</html:code> similaire à <html:code>paires</html:code> mais affichant tous les triplets d'éléments du tableau. Quelle est sa complexité?</html:li>
+<html:li>Ecrire une fonction <html:code>ensembleATroisElts</html:code> similaire à <html:code>ensemblesADeuxElts</html:code> mais affichant tous les ensembles à trois éléments du tableau. Quelle est sa complexité?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>1</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0028/</fr:uri>
+            <fr:display-uri>0028</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0028/</fr:route>
+            <fr:title text="Matrices et tableaux multidimensionels">Matrices et tableaux multidimensionels</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>On peut représenter des matrices, c'est à dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
+<fr:tex display="block"><![CDATA[
+\begin {pmatrix}
+1&2&3&4 \\
+5&6&7&8 \\
+9&10&11&12
+\end {pmatrix}
+]]></fr:tex>
+on pourra écrire
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[    int matrice[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };]]></html:code></html:pre>
+Pour ensuite accéder à l'élément dans la ligne <fr:tex display="inline"><![CDATA[0]]></fr:tex> et la colone <fr:tex display="inline"><![CDATA[2]]></fr:tex>, on écrira
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[    matrice[0][2] // Cette valeur est 3]]></html:code></html:pre>
+Et pareillement pour l'affectaction. On peut aussi généraliser ce principe aux tableaux à <fr:tex display="inline"><![CDATA[n]]></fr:tex> dimensions, que l'on peut voir comme des tableaux de tableaux de tableaux... La syntaxe est similaire à celle des matrices, avec plus de crochets.
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

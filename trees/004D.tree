@@ -1,0 +1,24 @@
+\title{Multiplication des polynômes rapide avec l'algorithme de Karatsuba}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T14:36:48Z}
+\import{basemacros}
+
+\p{Pour écrire une fonction de multiplication avec les polynômes qui soit plus rapide, on utilise l'algorithme de Karatsuba. Dans un premier temps, on va supposer que les polynômes sont représentés par un tableau de même longueur #{n}, que l'on suppose également être de la forme #{2^i+1}. La stratégie de l'algorithme de Karatsuba est de couper chacun polynômes en 2 "morceaux", qui sont eux même des polynômes, et de calculer le produit des polynômes à partir du produit de leur morceaux. Il s'agit donc d'un algorithme récursif. Pour maximiser l'efficacité de l'algorithme, on veut séparer en deux morceaux qui soient de taille aussi proche que possible.}
+
+\p{\ol{
+\li{Etant donné un polynôme #{P} de degré #{n=2^i+1}, on sépare le polynôme en deux morceaux #{P_0} et #{P_1} de manière à ce que l'on ait #{P = P_0 + x^{\frac{n+1}{2}}P_1}. Ecrire les polynômes #{P_0} et #{P_1} correspondant au polynômes #{P} suivants:
+\ul{
+\li{#{P = 1 + x}}
+\li{#{P = 1 + x + x^2 +x^3}}
+\li{#{P = 1 + 2x + 3x^2 + 4x^3}}
+\li{#{P = 2 + x + x^3}}
+\li{#{P = 2 + 4x + x^2 + 3 x^3 + 7x^4 + 9x^5}}}}
+\li{Etant donné deux polynômes de même degrés écrits sous la forme précédente, calculer (avec une formule mathématique) le produit des deux polynômes en fonction des produits des polynômes apparaîssant dans leur décomposition.}
+\li{En déduire (et écrire le code) un algorithme récursif pour calculer la multiplication de deux polynômes de même degré #{n=2^i+1}. Pour couper les polynômes en deux morceaux, on évitera de créer de nouveaux tableaux, et à la place on fera seulement varier des bornes que l'on considère pour le tableau.}
+\li{Quelle est la complexité de l'algorithme précédent?}
+\li{Remarquer que l'on peut améliorer l'algorithme précédent en réduisant le nombre d'appels récursifs, grâce à la formule mathématique suivante sur les polynômes:
+##{(P_0 + P_1) \times (Q_0 + Q_1) = P_0 \times Q_1 + P_1 \times Q_0 + P_0 \times Q_0 + P_1 \times Q_1}
+}
+\li{\strong{(Difficile)}: Quelle est la complexité de l'algorithme amélioré?}
+\li{Dans le cas où les polynômes ne sont pas de la même taille, que cette taille n'est pas de la forme #{2^i+1}, quelle astuce peut-on utiliser pour se ramener aux cas précédent, et calculer la multiplication des polynômes de manière efficace?}}}

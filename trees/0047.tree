@@ -1,0 +1,9 @@
+\title{Boucles impriquées}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T12:11:14Z}
+\import{basemacros}
+
+\p{L'objectif de cet exercice est de consolider les bases d'analyses de complexité, en analysant des programmes présentant des boucles imbriquées.}
+\transclude{0048}
+\transclude{0049}

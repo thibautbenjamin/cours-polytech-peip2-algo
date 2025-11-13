@@ -1,0 +1,11 @@
+\title{Impression d'une matrice}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T12:13:55Z}
+
+\p{\ol{
+\li{Ecrire un programme \code{afficherMatriceCarre} qui prend en entrée un entier #{n} et une matrice carré de taille #{n} représentée sous la forme d'un [tableau à double entrées](0028), et qui affiche la matrice sous la forme d'un tableau de nombres.}
+\li{Quelle est la complexité de la fonction \code{afficherMatriceCarre}?}
+\li{Ecrire un programme \code{afficherMatrice} qui prend en entrée deux entiers #{n} et #{m} et une matrice de taille #{n*m}, et qui affiche la matrice sous la forme d'un tableau de nombres.}
+\li{Quelle est la complexité de la fonction \code{afficherMatrice}?}
+}}

@@ -1,0 +1,10 @@
+\title{Multiplication de polynômes}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T14:26:19Z}
+\import{basemacros}
+
+\p{L'objectif ce cet exercice est d'écrire la multiplication des polynômes de la manière la plus rapide possible. Pour représenter un polynôme, on utilisera un tablea contenant les coefficients du polynôme. Par exemple, pour représenter le polynôme #{5x^3 + 7 x^2 +2x +4}, on utilisera le tableau de taille 4 suivant {[4,2,7,5]}.}
+
+\transclude{004C}
+\transclude{004D}

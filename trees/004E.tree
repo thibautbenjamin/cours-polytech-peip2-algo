@@ -1,0 +1,11 @@
+\title{Recherche dichotomique}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2025-11-13T15:07:06Z}
+
+\p{L'objectif ce cet exercice est de rechercher un élément dans un tableau trié de manière efficace. Pour cela on utilise la recherche dichotomique, consistant à regarder si l'élément que l'on recherche est supérieur ou inférieur à l'élément se situant au milieu du tableau. Puis on ne garde que la moitié du tableau correspondant à l'endroit où se trouve l'élément, et on recommence la même procédure. Il s'agit donc d'une fonction récursive. C'est la meilleure fonction que l'on puisse faire, car elle élimine à chaque coup la moitié du tableau.}
+
+\p{\ol{
+\li{Ecrire une fonction récursive \code{rechercheDichotomique} qui prend en entrée un entier #{n}, un entier #{k} et un tableau d'entiers de taille #{n} et contenant #{k} et qui renvoie la position du tableau à laquelle se trouve l'entier #{k}.}
+\li{Quelle est la complexité de cette fonction?}
+}}
