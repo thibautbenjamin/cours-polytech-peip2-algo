@@ -20,7 +20,8 @@
   <fr:mainmatter>
     <html:p>
       <html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
-<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD3/" title="TD 3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD3/" display-uri="Seance-TD3" type="local">TD 3</fr:link></html:li></html:ul>
     </html:p>
   </fr:mainmatter>
   <fr:backmatter>
@@ -75,7 +76,8 @@
               <fr:mainmatter>
                 <html:p>
                   <html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
-<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD3/" title="TD 3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD3/" display-uri="Seance-TD3" type="local">TD 3</fr:link></html:li></html:ul>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -123,6 +125,283 @@
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>13</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD3/</fr:uri>
+            <fr:display-uri>Seance-TD3</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/Seance-TD3/</fr:route>
+            <fr:title text="TD 3">TD 3</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:strong>Objectif</html:strong>: Ce TD a pour but d'appliquer les techniques d'analyse de complexité à des exemples plus riches, et de se familiariser avec la récursion.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0046/</fr:uri>
+                <fr:display-uri>0046</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0046/</fr:route>
+                <fr:title text="Carrés magiques">Carrés magiques</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Un carré magique est une matrice carrée, que l'on peut représenter en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> par un <fr:link href="/cours-polytech-peip2-algo/0028/" title="Matrices et tableaux multidimensionels" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0028/" display-uri="0028" type="local">tableau à double entrées</fr:link>, dont toutes les colonnes, toutes les lignes et toutes les diagonales ont la même somme. L'objectif de cet exercice est d'écrire une fonction qui vérifie si un tableau donné est un carré magique.</html:p>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>sommeColonne</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[j]]></fr:tex> et une matrice carré de taille <fr:tex display="inline"><![CDATA[>j]]></fr:tex> et qui renvoie la somme de la <fr:tex display="inline"><![CDATA[j^e]]></fr:tex> colonne de la matrice. Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>sommeLigne</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[j]]></fr:tex> et une matrice carré de taille <fr:tex display="inline"><![CDATA[>j]]></fr:tex> et qui renvoie la somme de la <fr:tex display="inline"><![CDATA[j^e]]></fr:tex> ligne de la matrice. Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>sommeDiagonale1</html:code> qui prend en entrée une matrice carré et qui renvoie la somme de la première diagonale. Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>sommeDiagonale2</html:code> qui prend en entrée une matrice et qui renvoie la somme de la deuxième diagonale. Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>carreMagique</html:code> qui prend en entrée une matrice carré renvoie vrai si et seulement si l'entrée est un carré magique. Quelle est la complexité de cette fonction?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0047/</fr:uri>
+                <fr:display-uri>0047</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0047/</fr:route>
+                <fr:title text="Boucles impriquées">Boucles impriquées</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est de consolider les bases d'analyses de complexité, en analysant des programmes présentant des boucles imbriquées.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>13</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0048/</fr:uri>
+                    <fr:display-uri>0048</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0048/</fr:route>
+                    <fr:title text="Impression d'une matrice">Impression d'une matrice</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire un programme <html:code>afficherMatriceCarre</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et une matrice carré de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> représentée sous la forme d'un <fr:link href="/cours-polytech-peip2-algo/0028/" title="Matrices et tableaux multidimensionels" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0028/" display-uri="0028" type="local">tableau à double entrées</fr:link>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatriceCarre</html:code>?</html:li>
+<html:li>Ecrire un programme <html:code>afficherMatrice</html:code> qui prend en entrée deux entiers <fr:tex display="inline"><![CDATA[n]]></fr:tex> et <fr:tex display="inline"><![CDATA[m]]></fr:tex> et une matrice de taille <fr:tex display="inline"><![CDATA[n*m]]></fr:tex>, et qui affiche la matrice sous la forme d'un tableau de nombres.</html:li>
+<html:li>Quelle est la complexité de la fonction <html:code>afficherMatrice</html:code>?</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>13</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0049/</fr:uri>
+                    <fr:display-uri>0049</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0049/</fr:route>
+                    <fr:title text="Lister appariements">Lister appariements</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction <html:code>paires</html:code> prenant en entrée un nombre <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> dont toutes les entrées sont différentes, et affichant toutes les paires d'élements du tableau. Pour cette question, on autorise qu'un élément soit apparié avec lui-même, et on veut lister toutes les paires, même celles qui ont les même éléments mais dans un ordre différent.</html:li>
+<html:li>Quelle est la complexité de cette précédente?</html:li>
+<html:li>Ecrire une fonction <html:code>ensemblesADeuxElts</html:code> prenant en entrée un nombre <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> dont toutes les entrées sont différentes, et affichant tous les ensembles de deux éléments du tableau. Pour cette question, on considère qu'un élément ne peut pas former un ensemble avec lui même, et qu'on ne veut pas lister plusieur fois des ensembles contenant les mêmes éléments.</html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction <html:code>triplets</html:code> similaire à <html:code>paires</html:code> mais affichant tous les triplets d'éléments du tableau. Quelle est sa complexité?</html:li>
+<html:li>Ecrire une fonction <html:code>ensembleATroisElts</html:code> similaire à <html:code>ensemblesADeuxElts</html:code> mais affichant tous les ensembles à trois éléments du tableau. Quelle est sa complexité?</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004A/</fr:uri>
+                <fr:display-uri>004A</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004A/</fr:route>
+                <fr:title text="Exponentiation">Exponentiation</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est de calculer la fonction puissance sur les nombres entiers de manière efficace. On n'utilisera bien sur pas la fonction puissance de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>!</html:p>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction itérative <html:code>puissance(int x, int n)</html:code> qui renvoie le nombre <fr:tex display="inline"><![CDATA[x^n]]></fr:tex>.</html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li>
+<html:li>Traduire la fonction précédente en fonction récursive. <html:details>
+<html:summary><html:strong>[Indice]</html:strong></html:summary>
+Remarquer que l'on a la formule <fr:tex display="inline"><![CDATA[x^{n+1} = x^n \times  x]]></fr:tex>.
+</html:details></html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li>
+<html:li>Ecrire une fonction récursive plus efficace, et calculer sa complexité. <html:details>
+<html:summary><html:strong>[Indice]</html:strong></html:summary>
+Chercher une autre relation mathématique satisfaite par la fonction puissance. On pourra distinguer selon si <fr:tex display="inline"><![CDATA[n]]></fr:tex> est pair ou impair.
+</html:details></html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004E/</fr:uri>
+                <fr:display-uri>004E</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004E/</fr:route>
+                <fr:title text="Recherche dichotomique">Recherche dichotomique</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif ce cet exercice est de rechercher un élément dans un tableau trié de manière efficace. Pour cela on utilise la recherche dichotomique, consistant à regarder si l'élément que l'on recherche est supérieur ou inférieur à l'élément se situant au milieu du tableau. Puis on ne garde que la moitié du tableau correspondant à l'endroit où se trouve l'élément, et on recommence la même procédure. Il s'agit donc d'une fonction récursive. C'est la meilleure fonction que l'on puisse faire, car elle élimine à chaque coup la moitié du tableau.</html:p>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction récursive <html:code>rechercheDichotomique</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un entier <fr:tex display="inline"><![CDATA[k]]></fr:tex> et un tableau d'entiers de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> et contenant <fr:tex display="inline"><![CDATA[k]]></fr:tex> et qui renvoie la position du tableau à laquelle se trouve l'entier <fr:tex display="inline"><![CDATA[k]]></fr:tex>.</html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004B/</fr:uri>
+                <fr:display-uri>004B</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004B/</fr:route>
+                <fr:title text="Multiplication de polynômes">Multiplication de polynômes</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif ce cet exercice est d'écrire la multiplication des polynômes de la manière la plus rapide possible. Pour représenter un polynôme, on utilisera un tablea contenant les coefficients du polynôme. Par exemple, pour représenter le polynôme <fr:tex display="inline"><![CDATA[5x^3 + 7 x^2 +2x +4]]></fr:tex>, on utilisera le tableau de taille 4 suivant {[4,2,7,5]}.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>13</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004C/</fr:uri>
+                    <fr:display-uri>004C</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/004C/</fr:route>
+                    <fr:title text="La multiplication lente des polynômes">La multiplication lente des polynômes</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction <html:code>multiplication</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> vu comme un polynôme, un entier <fr:tex display="inline"><![CDATA[m]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[m]]></fr:tex> vu comme un polynôme et calcule le tableau correspondant au polynôme obtenu en multipliant les deux polynômes originaux.
+<html:details>
+<html:summary><html:strong>[Indice]</html:strong></html:summary>
+Commencer en déterminant le degré du polynôme résultant, et déterminer avec des exemples concrets les formules à utiliser.
+</html:details></html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>13</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004D/</fr:uri>
+                    <fr:display-uri>004D</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/004D/</fr:route>
+                    <fr:title text="Multiplication des polynômes rapide avec l'algorithme de Karatsuba">Multiplication des polynômes rapide avec l'algorithme de Karatsuba</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Pour écrire une fonction de multiplication avec les polynômes qui soit plus rapide, on utilise l'algorithme de Karatsuba. Dans un premier temps, on va supposer que les polynômes sont représentés par un tableau de même longueur <fr:tex display="inline"><![CDATA[n]]></fr:tex>, que l'on suppose également être de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>. La stratégie de l'algorithme de Karatsuba est de couper chacun polynômes en 2 "morceaux", qui sont eux même des polynômes, et de calculer le produit des polynômes à partir du produit de leur morceaux. Il s'agit donc d'un algorithme récursif. Pour maximiser l'efficacité de l'algorithme, on veut séparer en deux morceaux qui soient de taille aussi proche que possible.</html:p>
+                    <html:p>
+                      <html:ol><html:li>Etant donné un polynôme <fr:tex display="inline"><![CDATA[P]]></fr:tex> de degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>, on sépare le polynôme en deux morceaux <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> de manière à ce que l'on ait <fr:tex display="inline"><![CDATA[P = P_0 + x^{\frac {n+1}{2}}P_1]]></fr:tex>. Ecrire les polynômes <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> correspondant au polynômes <fr:tex display="inline"><![CDATA[P]]></fr:tex> suivants:
+<html:ul><html:li><fr:tex display="inline"><![CDATA[P = 1 + x]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + x + x^2 +x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + 2x + 3x^2 + 4x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + x + x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + 4x + x^2 + 3 x^3 + 7x^4 + 9x^5]]></fr:tex></html:li></html:ul></html:li>
+<html:li>Etant donné deux polynômes de même degrés écrits sous la forme précédente, calculer (avec une formule mathématique) le produit des deux polynômes en fonction des produits des polynômes apparaîssant dans leur décomposition.</html:li>
+<html:li>En déduire (et écrire le code) un algorithme récursif pour calculer la multiplication de deux polynômes de même degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>. Pour couper les polynômes en deux morceaux, on évitera de créer de nouveaux tableaux, et à la place on fera seulement varier des bornes que l'on considère pour le tableau.</html:li>
+<html:li>Quelle est la complexité de l'algorithme précédent?</html:li>
+<html:li>Remarquer que l'on peut améliorer l'algorithme précédent en réduisant le nombre d'appels récursifs, grâce à la formule mathématique suivante sur les polynômes:
+<fr:tex display="block"><![CDATA[(P_0 + P_1) \times  (Q_0 + Q_1) = P_0 \times  Q_1 + P_1 \times  Q_0 + P_0 \times  Q_0 + P_1 \times  Q_1]]></fr:tex></html:li>
+<html:li><html:strong>(Difficile)</html:strong>: Quelle est la complexité de l'algorithme amélioré?</html:li>
+<html:li>Dans le cas où les polynômes ne sont pas de la même taille, que cette taille n'est pas de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>, quelle astuce peut-on utiliser pour se ramener aux cas précédent, et calculer la multiplication des polynômes de manière efficace?</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>

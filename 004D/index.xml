@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>13</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004D/</fr:uri>
+    <fr:display-uri>004D</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/004D/</fr:route>
+    <fr:title text="Multiplication des polynômes rapide avec l'algorithme de Karatsuba">Multiplication des polynômes rapide avec l'algorithme de Karatsuba</fr:title>
+    <fr:taxon>Exercice</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Pour écrire une fonction de multiplication avec les polynômes qui soit plus rapide, on utilise l'algorithme de Karatsuba. Dans un premier temps, on va supposer que les polynômes sont représentés par un tableau de même longueur <fr:tex display="inline"><![CDATA[n]]></fr:tex>, que l'on suppose également être de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>. La stratégie de l'algorithme de Karatsuba est de couper chacun polynômes en 2 "morceaux", qui sont eux même des polynômes, et de calculer le produit des polynômes à partir du produit de leur morceaux. Il s'agit donc d'un algorithme récursif. Pour maximiser l'efficacité de l'algorithme, on veut séparer en deux morceaux qui soient de taille aussi proche que possible.</html:p>
+    <html:p>
+      <html:ol><html:li>Etant donné un polynôme <fr:tex display="inline"><![CDATA[P]]></fr:tex> de degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>, on sépare le polynôme en deux morceaux <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> de manière à ce que l'on ait <fr:tex display="inline"><![CDATA[P = P_0 + x^{\frac {n+1}{2}}P_1]]></fr:tex>. Ecrire les polynômes <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> correspondant au polynômes <fr:tex display="inline"><![CDATA[P]]></fr:tex> suivants:
+<html:ul><html:li><fr:tex display="inline"><![CDATA[P = 1 + x]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + x + x^2 +x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + 2x + 3x^2 + 4x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + x + x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + 4x + x^2 + 3 x^3 + 7x^4 + 9x^5]]></fr:tex></html:li></html:ul></html:li>
+<html:li>Etant donné deux polynômes de même degrés écrits sous la forme précédente, calculer (avec une formule mathématique) le produit des deux polynômes en fonction des produits des polynômes apparaîssant dans leur décomposition.</html:li>
+<html:li>En déduire (et écrire le code) un algorithme récursif pour calculer la multiplication de deux polynômes de même degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>. Pour couper les polynômes en deux morceaux, on évitera de créer de nouveaux tableaux, et à la place on fera seulement varier des bornes que l'on considère pour le tableau.</html:li>
+<html:li>Quelle est la complexité de l'algorithme précédent?</html:li>
+<html:li>Remarquer que l'on peut améliorer l'algorithme précédent en réduisant le nombre d'appels récursifs, grâce à la formule mathématique suivante sur les polynômes:
+<fr:tex display="block"><![CDATA[(P_0 + P_1) \times  (Q_0 + Q_1) = P_0 \times  Q_1 + P_1 \times  Q_0 + P_0 \times  Q_0 + P_1 \times  Q_1]]></fr:tex></html:li>
+<html:li><html:strong>(Difficile)</html:strong>: Quelle est la complexité de l'algorithme amélioré?</html:li>
+<html:li>Dans le cas où les polynômes ne sont pas de la même taille, que cette taille n'est pas de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>, quelle astuce peut-on utiliser pour se ramener aux cas précédent, et calculer la multiplication des polynômes de manière efficace?</html:li></html:ol>
+    </html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>13</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004B/</fr:uri>
+            <fr:display-uri>004B</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/004B/</fr:route>
+            <fr:title text="Multiplication de polynômes">Multiplication de polynômes</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif ce cet exercice est d'écrire la multiplication des polynômes de la manière la plus rapide possible. Pour représenter un polynôme, on utilisera un tablea contenant les coefficients du polynôme. Par exemple, pour représenter le polynôme <fr:tex display="inline"><![CDATA[5x^3 + 7 x^2 +2x +4]]></fr:tex>, on utilisera le tableau de taille 4 suivant {[4,2,7,5]}.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004C/</fr:uri>
+                <fr:display-uri>004C</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004C/</fr:route>
+                <fr:title text="La multiplication lente des polynômes">La multiplication lente des polynômes</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>multiplication</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> vu comme un polynôme, un entier <fr:tex display="inline"><![CDATA[m]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[m]]></fr:tex> vu comme un polynôme et calcule le tableau correspondant au polynôme obtenu en multipliant les deux polynômes originaux.
+<html:details>
+<html:summary><html:strong>[Indice]</html:strong></html:summary>
+Commencer en déterminant le degré du polynôme résultant, et déterminer avec des exemples concrets les formules à utiliser.
+</html:details></html:li>
+<html:li>Quelle est la complexité de cette fonction?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>13</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004D/</fr:uri>
+                <fr:display-uri>004D</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004D/</fr:route>
+                <fr:title text="Multiplication des polynômes rapide avec l'algorithme de Karatsuba">Multiplication des polynômes rapide avec l'algorithme de Karatsuba</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Pour écrire une fonction de multiplication avec les polynômes qui soit plus rapide, on utilise l'algorithme de Karatsuba. Dans un premier temps, on va supposer que les polynômes sont représentés par un tableau de même longueur <fr:tex display="inline"><![CDATA[n]]></fr:tex>, que l'on suppose également être de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>. La stratégie de l'algorithme de Karatsuba est de couper chacun polynômes en 2 "morceaux", qui sont eux même des polynômes, et de calculer le produit des polynômes à partir du produit de leur morceaux. Il s'agit donc d'un algorithme récursif. Pour maximiser l'efficacité de l'algorithme, on veut séparer en deux morceaux qui soient de taille aussi proche que possible.</html:p>
+                <html:p>
+                  <html:ol><html:li>Etant donné un polynôme <fr:tex display="inline"><![CDATA[P]]></fr:tex> de degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>, on sépare le polynôme en deux morceaux <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> de manière à ce que l'on ait <fr:tex display="inline"><![CDATA[P = P_0 + x^{\frac {n+1}{2}}P_1]]></fr:tex>. Ecrire les polynômes <fr:tex display="inline"><![CDATA[P_0]]></fr:tex> et <fr:tex display="inline"><![CDATA[P_1]]></fr:tex> correspondant au polynômes <fr:tex display="inline"><![CDATA[P]]></fr:tex> suivants:
+<html:ul><html:li><fr:tex display="inline"><![CDATA[P = 1 + x]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + x + x^2 +x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 1 + 2x + 3x^2 + 4x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + x + x^3]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[P = 2 + 4x + x^2 + 3 x^3 + 7x^4 + 9x^5]]></fr:tex></html:li></html:ul></html:li>
+<html:li>Etant donné deux polynômes de même degrés écrits sous la forme précédente, calculer (avec une formule mathématique) le produit des deux polynômes en fonction des produits des polynômes apparaîssant dans leur décomposition.</html:li>
+<html:li>En déduire (et écrire le code) un algorithme récursif pour calculer la multiplication de deux polynômes de même degré <fr:tex display="inline"><![CDATA[n=2^i+1]]></fr:tex>. Pour couper les polynômes en deux morceaux, on évitera de créer de nouveaux tableaux, et à la place on fera seulement varier des bornes que l'on considère pour le tableau.</html:li>
+<html:li>Quelle est la complexité de l'algorithme précédent?</html:li>
+<html:li>Remarquer que l'on peut améliorer l'algorithme précédent en réduisant le nombre d'appels récursifs, grâce à la formule mathématique suivante sur les polynômes:
+<fr:tex display="block"><![CDATA[(P_0 + P_1) \times  (Q_0 + Q_1) = P_0 \times  Q_1 + P_1 \times  Q_0 + P_0 \times  Q_0 + P_1 \times  Q_1]]></fr:tex></html:li>
+<html:li><html:strong>(Difficile)</html:strong>: Quelle est la complexité de l'algorithme amélioré?</html:li>
+<html:li>Dans le cas où les polynômes ne sont pas de la même taille, que cette taille n'est pas de la forme <fr:tex display="inline"><![CDATA[2^i+1]]></fr:tex>, quelle astuce peut-on utiliser pour se ramener aux cas précédent, et calculer la multiplication des polynômes de manière efficace?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
