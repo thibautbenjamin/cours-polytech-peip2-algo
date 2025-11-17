@@ -1,5 +1,6 @@
 \title{Algorithme de Rabin-Karp}
 \author{thibautbenjamin}
+\author{violettechateau}
 \taxon{Exercice}
 \import{basemacros}
 \date{2025-11-15T11:30:51Z}
@@ -32,7 +33,7 @@ On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant to
 \li{La première fonction de hachage que l'on va considérer est la fonction consistant à faire la somme de tous les caractères d'une chaîne de caractères.
 \ol{
 \li{Remplir la fonction \code{hachage} de manière à calculer le hach d'une chaîne de caractères.}
-\li{Remplir la fonction \code{nouveahHach} de manière à recalculer le hach de la chaîne #{s{i+1,\ldots,j}} à partir du hach de la chaîne #{s[i,\ldots,j-1]}, de #{i} et de #{j}. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction \code{hachage}.}
+\li{Remplir la fonction \code{nouveahHach} de manière à recalculer le hach de la chaîne #{s[i+1,\ldots,j]} à partir du hach de la chaîne #{s[i,\ldots,j-1]}, de #{i} et de #{j}. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction \code{hachage}.}
 \li{Télécharger les fichiers de test suivants dans le répertoire de travail.
   \ul{
     \li{\asset-link{TP/TP2/example1.txt}{fichier1}}
@@ -44,7 +45,7 @@ A l'aide de la [fonction de lecture dans un fichier](004K), rechercher toutes le
 \li{La seconde fonction de hachage consiste à représenter chacun des caractères comme un chiffre en base #{256} ( le nombre de symboles que l'on peut encoder dans un \code{char}), et à prendre l'ensemble modulo une constante, que l'on fixera à #{17}.
 \ol{
 \li{Remplir la fonction \code{hachage} de manière à calculer le hach d'une chaîne de caractères.}
-\li{Remplir la fonction \code{nouveahHach} de manière à recalculer le hach de la chaîne #{s[i+1,\ldots,j]} à partir du hach de la chaîne #{s[i,\ldots,j-1]}, de #{i} et de #{j}. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction \code{hachage}.}
+\li{Remplir la fonction \code{nouveauHach} de manière à recalculer le hach de la chaîne #{s[i+1,\ldots,j]} à partir du hach de la chaîne #{s[i,\ldots,j-1]}, de #{i} et de #{j}. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction \code{hachage}.}
 \li{Télécharger les fichiers de test suivants dans le répertoire de travail.
   \ul{
     \li{\asset-link{TP/TP2/example1.txt}{fichier1}}

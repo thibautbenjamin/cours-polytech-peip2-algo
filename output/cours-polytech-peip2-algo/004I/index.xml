@@ -56,6 +56,9 @@ Pensez à trouver le pire des cas, pour chacune des deux fonctions ci-dessus, et
               <fr:author>
                 <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
               </fr:author>
+              <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+              </fr:contributor>
             </fr:authors>
             <fr:date>
               <fr:year>2025</fr:year>
@@ -328,6 +331,9 @@ Pensez à trouver le pire des cas, pour chacune des deux fonctions ci-dessus, et
                   <fr:author>
                     <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                   </fr:author>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                  </fr:author>
                 </fr:authors>
                 <fr:date>
                   <fr:year>2025</fr:year>
@@ -383,7 +389,7 @@ int nouveauHach (int ancientHach, string s, int ancientDebut, int nouvelleFin){
 On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant toujours <html:code>0</html:code>, l'algorithme fonctionne, mais à aucun moment il ne détecte des haches différents. Pour coder la fonction de hachage, on va s'appuyer sur le fait que les caractères en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> sont aussi des entiers, et on va donc faire des opérations avec.
 <html:ol><html:li>La première fonction de hachage que l'on va considérer est la fonction consistant à faire la somme de tous les caractères d'une chaîne de caractères.
 <html:ol><html:li>Remplir la fonction <html:code>hachage</html:code> de manière à calculer le hach d'une chaîne de caractères.</html:li>
-<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s{i+1,\ldots ,j}]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
+<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
 <html:li>Télécharger les fichiers de test suivants dans le répertoire de travail.
   <html:ul><html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmia4efjfaw4eu56ga7cgaokqgf6psyiqrrjrx6dzmzact7ux2pjtpy.txt">fichier1</html:a></html:span></html:li>
     <html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmifin4uod3gxmqr7y4dqro7mvrfiv6zozx7uyrxozj5uowdivh37ey.txt">fichier2</html:a></html:span></html:li>
@@ -391,7 +397,7 @@ On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant to
 A l'aide de la <fr:link href="/cours-polytech-peip2-algo/004K/" title="Lire un fichier dans une chaîne de caractère" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004K/" display-uri="004K" type="local">fonction de lecture dans un fichier</fr:link>, rechercher toutes les occurrences du mot "algorithme" dans chacun de ces fichiers.</html:li></html:ol></html:li>
 <html:li>La seconde fonction de hachage consiste à représenter chacun des caractères comme un chiffre en base <fr:tex display="inline"><![CDATA[256]]></fr:tex> ( le nombre de symboles que l'on peut encoder dans un <html:code>char</html:code>), et à prendre l'ensemble modulo une constante, que l'on fixera à <fr:tex display="inline"><![CDATA[17]]></fr:tex>.
 <html:ol><html:li>Remplir la fonction <html:code>hachage</html:code> de manière à calculer le hach d'une chaîne de caractères.</html:li>
-<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
+<html:li>Remplir la fonction <html:code>nouveauHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
 <html:li>Télécharger les fichiers de test suivants dans le répertoire de travail.
   <html:ul><html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmia4efjfaw4eu56ga7cgaokqgf6psyiqrrjrx6dzmzact7ux2pjtpy.txt">fichier1</html:a></html:span></html:li>
     <html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmifin4uod3gxmqr7y4dqro7mvrfiv6zozx7uyrxozj5uowdivh37ey.txt">fichier2</html:a></html:span></html:li>
@@ -455,6 +461,9 @@ A l'aide de la <fr:link href="/cours-polytech-peip2-algo/004K/" title="Lire un f
               <fr:author>
                 <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
               </fr:author>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+              </fr:author>
             </fr:authors>
             <fr:date>
               <fr:year>2025</fr:year>
@@ -510,7 +519,7 @@ int nouveauHach (int ancientHach, string s, int ancientDebut, int nouvelleFin){
 On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant toujours <html:code>0</html:code>, l'algorithme fonctionne, mais à aucun moment il ne détecte des haches différents. Pour coder la fonction de hachage, on va s'appuyer sur le fait que les caractères en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> sont aussi des entiers, et on va donc faire des opérations avec.
 <html:ol><html:li>La première fonction de hachage que l'on va considérer est la fonction consistant à faire la somme de tous les caractères d'une chaîne de caractères.
 <html:ol><html:li>Remplir la fonction <html:code>hachage</html:code> de manière à calculer le hach d'une chaîne de caractères.</html:li>
-<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s{i+1,\ldots ,j}]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
+<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
 <html:li>Télécharger les fichiers de test suivants dans le répertoire de travail.
   <html:ul><html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmia4efjfaw4eu56ga7cgaokqgf6psyiqrrjrx6dzmzact7ux2pjtpy.txt">fichier1</html:a></html:span></html:li>
     <html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmifin4uod3gxmqr7y4dqro7mvrfiv6zozx7uyrxozj5uowdivh37ey.txt">fichier2</html:a></html:span></html:li>
@@ -518,7 +527,7 @@ On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant to
 A l'aide de la <fr:link href="/cours-polytech-peip2-algo/004K/" title="Lire un fichier dans une chaîne de caractère" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004K/" display-uri="004K" type="local">fonction de lecture dans un fichier</fr:link>, rechercher toutes les occurrences du mot "algorithme" dans chacun de ces fichiers.</html:li></html:ol></html:li>
 <html:li>La seconde fonction de hachage consiste à représenter chacun des caractères comme un chiffre en base <fr:tex display="inline"><![CDATA[256]]></fr:tex> ( le nombre de symboles que l'on peut encoder dans un <html:code>char</html:code>), et à prendre l'ensemble modulo une constante, que l'on fixera à <fr:tex display="inline"><![CDATA[17]]></fr:tex>.
 <html:ol><html:li>Remplir la fonction <html:code>hachage</html:code> de manière à calculer le hach d'une chaîne de caractères.</html:li>
-<html:li>Remplir la fonction <html:code>nouveahHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
+<html:li>Remplir la fonction <html:code>nouveauHach</html:code> de manière à recalculer le hach de la chaîne <fr:tex display="inline"><![CDATA[s[i+1,\ldots ,j]]]></fr:tex> à partir du hach de la chaîne <fr:tex display="inline"><![CDATA[s[i,\ldots ,j-1]]]></fr:tex>, de <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de <fr:tex display="inline"><![CDATA[j]]></fr:tex>. Attention à le recalculer de manière efficace, et donc à ne pas simplement utiliser la fonction <html:code>hachage</html:code>.</html:li>
 <html:li>Télécharger les fichiers de test suivants dans le répertoire de travail.
   <html:ul><html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmia4efjfaw4eu56ga7cgaokqgf6psyiqrrjrx6dzmzact7ux2pjtpy.txt">fichier1</html:a></html:span></html:li>
     <html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmifin4uod3gxmqr7y4dqro7mvrfiv6zozx7uyrxozj5uowdivh37ey.txt">fichier2</html:a></html:span></html:li>

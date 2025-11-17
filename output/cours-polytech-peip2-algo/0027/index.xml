@@ -221,6 +221,9 @@ return;]]>
               <fr:author>
                 <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
               </fr:author>
+              <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+              </fr:contributor>
             </fr:authors>
             <fr:date>
               <fr:year>2025</fr:year>
@@ -462,6 +465,9 @@ Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'o
                   <fr:author>
                     <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                   </fr:author>
+                  <fr:contributor>
+                    <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                  </fr:contributor>
                 </fr:authors>
                 <fr:date>
                   <fr:year>2025</fr:year>
@@ -532,6 +538,9 @@ Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'o
                       <fr:author>
                         <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                       </fr:author>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                      </fr:author>
                     </fr:authors>
                     <fr:date>
                       <fr:year>2025</fr:year>
@@ -546,7 +555,7 @@ Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'o
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p><html:strong>Rappel:</html:strong> Un nombre triangulaire est un nombre de la forme <fr:tex display="inline"><![CDATA[1+2+\ldots +n]]></fr:tex>
-<html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à <fr:tex display="inline"><![CDATA[n]]></fr:tex></html:li>
 <html:li>Analyser la complexité de cet algorithme</html:li></html:ol></html:p>
                   </fr:mainmatter>
                 </fr:tree>

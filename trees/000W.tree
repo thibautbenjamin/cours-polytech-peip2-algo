@@ -1,5 +1,6 @@
 \title{Résumé rapide}
 \author{thibautbenjamin}
+\author{violettechateau}
 \date{2025-10-27T08:22:27Z}
 \import{basemacros}
 
@@ -39,7 +40,7 @@ td { padding-top: 10px;
     #{f(n) = \Omega(g(n))}
     }
     \<html:td>{
-    Il existe #{M > 0} et #{n_0 \in \mathbb{N}} tel que pour tout #{n \ge n_0}, #{|f(n)| \ge M |g(n)|}
+    Il existe #{m > 0} et #{n_0 \in \mathbb{N}} tel que pour tout #{n \ge n_0}, #{|f(n)| \ge m |g(n)|}
     }
     \<html:td>{
     #{f} croît en gros comme #{g} ou plus vite
