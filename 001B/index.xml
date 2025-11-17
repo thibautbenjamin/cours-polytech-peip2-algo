@@ -245,6 +245,9 @@ On cherche maintenant à généraliser ce résultat:
                   <fr:author>
                     <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                   </fr:author>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                  </fr:author>
                 </fr:authors>
                 <fr:date>
                   <fr:year>2025</fr:year>
@@ -292,7 +295,7 @@ td { padding-top: 10px;
     <fr:tex display="inline"><![CDATA[f(n) = \Omega (g(n))]]></fr:tex>
     </html:td>
     <html:td>
-    Il existe <fr:tex display="inline"><![CDATA[M > 0]]></fr:tex> et <fr:tex display="inline"><![CDATA[n_0 \in  \mathbb {N}]]></fr:tex> tel que pour tout <fr:tex display="inline"><![CDATA[n \ge  n_0]]></fr:tex>, <fr:tex display="inline"><![CDATA[|f(n)| \ge  M |g(n)|]]></fr:tex>
+    Il existe <fr:tex display="inline"><![CDATA[m > 0]]></fr:tex> et <fr:tex display="inline"><![CDATA[n_0 \in  \mathbb {N}]]></fr:tex> tel que pour tout <fr:tex display="inline"><![CDATA[n \ge  n_0]]></fr:tex>, <fr:tex display="inline"><![CDATA[|f(n)| \ge  m |g(n)|]]></fr:tex>
     </html:td>
     <html:td>
     <fr:tex display="inline"><![CDATA[f]]></fr:tex> croît en gros comme <fr:tex display="inline"><![CDATA[g]]></fr:tex> ou plus vite
@@ -387,6 +390,9 @@ td { padding-top: 10px;
                   <fr:author>
                     <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                   </fr:author>
+                  <fr:contributor>
+                    <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                  </fr:contributor>
                 </fr:authors>
                 <fr:date>
                   <fr:year>2025</fr:year>
@@ -406,6 +412,9 @@ td { padding-top: 10px;
                       <fr:author>
                         <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
                       </fr:author>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/violettechateau/" title="Violette Chateau" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/violettechateau/" display-uri="violettechateau" type="local">Violette Chateau</fr:link>
+                      </fr:author>
                     </fr:authors>
                     <fr:date>
                       <fr:year>2025</fr:year>
@@ -419,7 +428,7 @@ td { padding-top: 10px;
                     <fr:taxon>Définition</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Etant donné deux fonctions <fr:tex display="inline"><![CDATA[f,g : \mathbb {N}\to  \mathbb {R}]]></fr:tex>, on écrit <fr:tex display="inline"><![CDATA[f(n) = \Omega (g(n))]]></fr:tex> si il existe une constante réelle <fr:tex display="inline"><![CDATA[M > 0]]></fr:tex> et un rang <fr:tex display="inline"><![CDATA[n_0 \in  \mathbb {N}]]></fr:tex> tels que pour tout <fr:tex display="inline"><![CDATA[n \ge  n_0]]></fr:tex>, l'on aie <fr:tex display="inline"><![CDATA[|f(n)| \ge  M |g(n)|]]></fr:tex></html:p>
+                    <html:p>Etant donné deux fonctions <fr:tex display="inline"><![CDATA[f,g : \mathbb {N}\to  \mathbb {R}]]></fr:tex>, on écrit <fr:tex display="inline"><![CDATA[f(n) = \Omega (g(n))]]></fr:tex> si il existe une constante réelle <fr:tex display="inline"><![CDATA[m > 0]]></fr:tex> et un rang <fr:tex display="inline"><![CDATA[n_0 \in  \mathbb {N}]]></fr:tex> tels que pour tout <fr:tex display="inline"><![CDATA[n \ge  n_0]]></fr:tex>, l'on aie <fr:tex display="inline"><![CDATA[|f(n)| \ge  m |g(n)|]]></fr:tex></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>Conrètement, <fr:tex display="inline"><![CDATA[f(n) = \Omega (g(n))]]></fr:tex> signifie que asymptotiquement (c'est à dire lorsque <fr:tex display="inline"><![CDATA[n]]></fr:tex> devient très grand), la fonction <fr:tex display="inline"><![CDATA[f]]></fr:tex> reste toujours au dessus de la fonction <fr:tex display="inline"><![CDATA[g]]></fr:tex>, à une constante multiplicative près.</html:p>
