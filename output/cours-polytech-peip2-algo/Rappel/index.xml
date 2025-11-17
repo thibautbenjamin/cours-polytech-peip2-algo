@@ -190,7 +190,7 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
         <fr:title text="Longueur d'une chaîne de caractères">Longueur d'une chaîne de caractères</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
-        <html:p>On rappelle que pour les chaînes de caractères, on peut ajouter <html:code><![CDATA[ #include<string.h>]]></html:code> en tête du fichier, et ensuite  utiliser la fonction <html:code>strlen</html:code> pour récupérer la longueur d'une chaîne de caractères</html:p>
+        <html:p>On rappelle que pour une chaîne de caractères <html:code>s</html:code>, on peut accéder à sa longueur en appelant la méthode <html:code>s.length()</html:code>.</html:p>
       </fr:mainmatter>
     </fr:tree>
   </fr:mainmatter>
@@ -438,7 +438,7 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Longueur d'une chaîne de caractères">Longueur d'une chaîne de caractères</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>On rappelle que pour les chaînes de caractères, on peut ajouter <html:code><![CDATA[ #include<string.h>]]></html:code> en tête du fichier, et ensuite  utiliser la fonction <html:code>strlen</html:code> pour récupérer la longueur d'une chaîne de caractères</html:p>
+                    <html:p>On rappelle que pour une chaîne de caractères <html:code>s</html:code>, on peut accéder à sa longueur en appelant la méthode <html:code>s.length()</html:code>.</html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
@@ -808,7 +808,7 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Longueur d'une chaîne de caractères">Longueur d'une chaîne de caractères</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>On rappelle que pour les chaînes de caractères, on peut ajouter <html:code><![CDATA[ #include<string.h>]]></html:code> en tête du fichier, et ensuite  utiliser la fonction <html:code>strlen</html:code> pour récupérer la longueur d'une chaîne de caractères</html:p>
+                    <html:p>On rappelle que pour une chaîne de caractères <html:code>s</html:code>, on peut accéder à sa longueur en appelant la méthode <html:code>s.length()</html:code>.</html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>

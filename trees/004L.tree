@@ -2,4 +2,4 @@
 \author{thibautbenjamin}
 \date{2025-11-15T13:29:35Z}
 
-\p{On rappelle que pour les chaînes de caractères, on peut ajouter \code{\startverb #include<string.h> \stopverb} en tête du fichier, et ensuite  utiliser la fonction \code{strlen} pour récupérer la longueur d'une chaîne de caractères}
+\p{On rappelle que pour une chaîne de caractères \code{s}, on peut accéder à sa longueur en appelant la méthode \code{s.length()}.}
