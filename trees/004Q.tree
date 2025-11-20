@@ -1,0 +1,219 @@
+\title{Modification en place d'un tableau}
+\author{thibautbenjamin}
+\taxon{Illustration}
+\import{basemacros}
+\date{2025-11-20T10:25:17Z}
+
+\p{On peut illustrer graphiquement l'algorithme précédent grâce à une série de schémas représentant la mémoire à différents moments de l'exécution du programme.
+\ol{
+\li{Dans la fonction \code{main}, avant appel à la fonction \code{echangerPremiers}, on a créé le tableau suivant en mémoire:
+\tex{\usepackage{tikz}\usetikzlibrary{arrows.meta, positioning, calc}}{
+\startverb
+\begin{tikzpicture}[font=\small]
+  % Parameters for drawing
+  \def\cellw{1.6}
+  \def\cellh{0.9}
+  \def\n{2}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+
+  % Draw cells for a[0..4]
+  \foreach \i in {0,...,1} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+    \node at (\base+\i*\cellw+0.8,\y+0.45) {\texttt{\i}};
+  }
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[thick] (\base+\n*\cellw+\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (a) at (\base+\n*\cellw+\cellw+0.8,\y+0.45) {\texttt{a}};
+
+  \fill[gray!20] (\base+\n*\cellw+2*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\y) -- (\base+\n*\cellw+5*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\cellh) -- (\base+\n*\cellw+5*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  \draw[->, thick] (a) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+\end{tikzpicture}
+\stopverb
+}
+}
+\li{Au moment de l'appel à la fonction \code{echangerPremiers}, une copie de la variable \code{a} est crée, que l'on note ici \code{x}, c'est la variable locale à la fonction \code{echangerPremiers} qui représente la valeur de son argument
+\tex{\usepackage{tikz}\usetikzlibrary{arrows.meta, positioning, calc}}{
+\startverb
+\begin{tikzpicture}[font=\small]
+  % Parameters for drawing
+  \def\cellw{1.6}
+  \def\cellh{0.9}
+  \def\n{2}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+
+  % Draw cells for a[0..4]
+  \foreach \i in {0,...,1} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+    \node at (\base+\i*\cellw+0.8,\y+0.45) {\texttt{\i}};
+  }
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[thick] (\base+\n*\cellw+\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (a) at (\base+\n*\cellw+\cellw+0.8,\y+0.45) {\texttt{a}};
+
+  \fill[gray!20] (\base+\n*\cellw+2*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\y) -- (\base+\n*\cellw+3*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\cellh) -- (\base+\n*\cellw+3*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {};
+
+  \draw[->, thick] (a) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+  \draw[thick] (\base+\n*\cellw+3*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (x) at (\base+\n*\cellw+3*\cellw+0.8,\y+0.45) {\texttt{x}};
+
+  \fill[gray!20] (\base+\n*\cellw+4*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+4*\cellw,\y) -- (\base+\n*\cellw+5*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+4*\cellw,\cellh) -- (\base+\n*\cellw+5*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {};
+
+  \draw[->, thick] (x) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+
+\end{tikzpicture}
+\stopverb
+}
+}
+\li{La fonction \code{echangerPremiers} performe l'échange des deux premiers éléments dans la zone mémoire pointée par \code{x}
+\tex{\usepackage{tikz}\usetikzlibrary{arrows.meta, positioning, calc}}{
+\startverb
+\begin{tikzpicture}[font=\small]
+  % Parameters for drawing
+  \def\cellw{1.6}
+  \def\cellh{0.9}
+  \def\n{2}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+
+  % Draw cells for a[0..4]
+  \foreach \i in {0,...,1} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.8,\y+0.45) {\texttt{1}};
+  \node at (\base+\cellw+0.8,\y+0.45) {\texttt{0}};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[thick] (\base+\n*\cellw+\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (a) at (\base+\n*\cellw+\cellw+0.8,\y+0.45) {\texttt{a}};
+
+  \fill[gray!20] (\base+\n*\cellw+2*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\y) -- (\base+\n*\cellw+3*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\cellh) -- (\base+\n*\cellw+3*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {};
+
+  \draw[->, thick] (a) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+  \draw[thick] (\base+\n*\cellw+3*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (x) at (\base+\n*\cellw+3*\cellw+0.8,\y+0.45) {\texttt{x}};
+
+  \fill[gray!20] (\base+\n*\cellw+4*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+4*\cellw,\y) -- (\base+\n*\cellw+5*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+4*\cellw,\cellh) -- (\base+\n*\cellw+5*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {};
+
+  \draw[->, thick] (x) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+\end{tikzpicture}
+\stopverb
+}
+}
+\li{Après appel à la fonction \code{echangerPremiers}, la variable \code{x} est effacée. Remarquez que la variable \code{a} pointe toujours vers la même zone mémoire, dans laquelle les valeurs \code{0} et \code{1} ont été échangées:
+\tex{\usepackage{tikz}\usetikzlibrary{arrows.meta, positioning, calc}}{
+\startverb
+\begin{tikzpicture}[font=\small]
+  % Parameters for drawing
+  \def\cellw{1.6}
+  \def\cellh{0.9}
+  \def\n{2}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+
+  % Draw cells for a[0..4]
+  \foreach \i in {0,...,1} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.8,\y+0.45) {\texttt{1}};
+  \node at (\base+\cellw+0.8,\y+0.45) {\texttt{0}};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[thick] (\base+\n*\cellw+\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (a) at (\base+\n*\cellw+\cellw+0.8,\y+0.45) {\texttt{a}};
+
+  \fill[gray!20] (\base+\n*\cellw+2*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\y) -- (\base+\n*\cellw+5*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\cellh) -- (\base+\n*\cellw+5*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+3.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  \draw[->, thick] (a) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+\end{tikzpicture}
+\stopverb
+}
+}
+}
+}

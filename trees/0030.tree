@@ -7,7 +7,7 @@
 \p{\cppdisplay{
 // Entrée : Un entier n > 0 et un tableau d'entier tableau de taille n
 // Sortie : Un entier représentant le maximum contenu dans tableau
-int maximum (int n, int[] tableau){
+int maximum (int n, int tableau[]){
   int max = tableau [0];
   // A la fin de la boucle i, max contient le maximum
   // de tableau situé entre les indices 0 et i

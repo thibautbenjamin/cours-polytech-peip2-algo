@@ -3,4 +3,12 @@
 \date{2025-11-02T11:59:26Z}
 \import{basemacros}
 
-\p{\mark{TODO}}
+\p{Les tableaux que l'on utilise en \Cpp sont statiques. C'est à dire que lors de l'initialisation, on déclare la taille du tableau, et le tableau ne changera jamais de taille. Cela permet au système d'exploitation, lors de la création d'un tableau, de réserver à l'avance une zone de la bonne taille dans la mémoire, qui servira à représenter notre tableau.
+}
+\transclude{004N}
+
+\p{Pour savoir comment accéder au tableau, le programme crée une variable séparée qui sert à stocker l'addresse de la mémoire où le tableau a été créé.}
+
+\transclude{004O}
+
+\transclude{003X}

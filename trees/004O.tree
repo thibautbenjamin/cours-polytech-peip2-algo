@@ -1,0 +1,51 @@
+\title{Représentation mémoire d'un tableau de taille 5}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\import{basemacros}
+\date{2025-11-20T09:35:45Z}
+
+\p{On peut améliorer la [représentation graphique](004N) du tableau \code{a} de taille #{5} en ajoutant le pointeur, comme ceci:
+\tex{\usepackage{tikz}\usetikzlibrary{arrows.meta, positioning, calc}}{
+\startverb
+\begin{tikzpicture}[font=\small]
+  % Parameters for drawing
+  \def\cellw{1.6}
+  \def\cellh{0.9}
+  \def\n{5}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+
+  % Draw cells for a[0..4]
+  \foreach \i in {0,...,4} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+    \node at (\base+\i*\cellw+0.8,\y+0.45) {\texttt{a[\i]}};
+  }
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {Autres\\variables};
+
+  % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[thick] (\base+\n*\cellw+\cellw,\y) rectangle ++(\cellw,\cellh);
+  \node (a) at (\base+\n*\cellw+\cellw+0.8,\y+0.45) {\texttt{a}};
+
+  \fill[gray!20] (\base+\n*\cellw+2*\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\y) -- (\base+\n*\cellw+3*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw+2*\cellw,\cellh) -- (\base+\n*\cellw+3*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+  \draw[->, thick] (a) to[out=-90, in=-90, looseness=0.35] (\base,\y);
+
+\end{tikzpicture}
+\stopverb
+}}

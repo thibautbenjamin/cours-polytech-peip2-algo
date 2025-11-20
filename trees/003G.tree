@@ -1,6 +1,10 @@
-\title{Algorithmes de tri}
+\title{Algorithmes de tri itératifs}
 \author{thibautbenjamin}
 \date{2025-11-02T12:03:04Z}
 \import{basemacros}
 
-\p{\mark{TODO}}
+\p{Etant donné un tableau contenant des nombres entiers, on souhaite trier ce tableau, c'est à dire changer la position des éléments dans le tableau, de manière à ce que ces derniers soient rangés par ordre croissant. Les algorithmes de tris sont de très bons exemples pour travailler sur la complexité des algorithmes, car il en existe de nombreux différents, qui ont tous des spécificités propres.}
+
+\transclude{0033}
+\transclude{0039}
+\transclude{0040}

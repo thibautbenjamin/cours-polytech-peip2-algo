@@ -1,44 +1,8 @@
-\title{Passage par valeur d'un pointeur et passage par référence}
+\title{Passage par valeur des tableaux}
 \author{thibautbenjamin}
-\taxon{Exemple}
-\date{2025-11-04T14:13:47Z}
 \import{basemacros}
+\date{2025-11-20}
 
-\p{\cppdisplay{
-\startverb
-void echangerTableaux (int[] x, int[] y){
-  int z = x;
-  x = y;
-  y = z;
-}
+\p{Lorsque l'on passe un tableau en argument d'une fonction, le tableau est [passé par valeur](003O). Cela signifie que la fonction crée une variable locale dans le tableau et copie la valeur du tableau dans sa variable locale. Afin d'éviter de recopier toutes les cases du tableau pour appeler la fonction (ce qui induirait un coût [linéaire](0017)), \Cpp part du principe que la "valeur" d'un tableau est la case mémoire contenant l'adresse de la position à laquelle le tableau est stocké.}
 
-int main (){
-  int a = {0};
-  int b = {1};
-  echangerTableaux (a,b);
-  // même si a et b sont des tableaux (pointeurs),
-  // a ce point du programme,
-  // a = {0}, b = {1}
-  return 0;
-}
-\stopverb
-}}
-
-\p{\cppdisplay{
-\startverb
-void echangerRef (int &x, int &y){
-  int z = x;
-  x = y;
-  y = z;
-}
-
-int main (){
-  int a = 0;
-  int b = 1;
-  echangerRef (a,b);
-  // a ce point du programme,
-  // a = 1, b = 0
-  return 0;
-}
-\stopverb
-}}
+\transclude{003V}

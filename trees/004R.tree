@@ -1,0 +1,6 @@
+\title{La récursivité}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-20T11:08:51Z}
+
+\p{Ce chapitre est consacré à la récursivité. La récursivité est un concept important de l'informatique, qui aide à mettre au point des algorithmes et à programmer. La récursivité permet souvent de rendre les algorithmes plus clairs et concis, mais elle aide aussi souvent à écrire des algorithmes plus efficaces, avec une complexité moins élevée. L'analyse de complexité des fonctions récursives fait intervenir des suites satisfaisant des relations de récurrence.}
