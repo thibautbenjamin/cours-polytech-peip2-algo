@@ -41,7 +41,7 @@
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 // Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
 // Sortie : Un entier représentant le maximum contenu dans tableau
-int maximum (int n, int[] tableau){
+int maximum (int n, int tableau[]){
   int max = tableau [0];
   // A la fin de la boucle i, max contient le maximum
   // de tableau situé entre les indices 0 et i
@@ -130,7 +130,7 @@ int maximum (int n, int[] tableau){
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 // Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
 // Sortie : Un entier représentant le maximum contenu dans tableau
-int maximum (int n, int[] tableau){
+int maximum (int n, int tableau[]){
   int max = tableau [0];
   // A la fin de la boucle i, max contient le maximum
   // de tableau situé entre les indices 0 et i
