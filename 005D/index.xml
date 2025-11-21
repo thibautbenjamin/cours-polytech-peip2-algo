@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>21</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005D/</fr:uri>
+    <fr:display-uri>005D</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/005D/</fr:route>
+    <fr:title text="La suite Q">La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex></fr:title>
+    <fr:taxon>Exercice</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+Q(1) &= 1 \\
+Q(2) &= 1 \\
+Q(n) &= Q(n-Q(n-1)) + Q(n-Q(n-2))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterQ</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li>
+<html:li>Proposer et implémenter une amélioration permettant de calculer la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> de manière plus rapide.</html:li></html:ol></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>21</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0057/</fr:uri>
+            <fr:display-uri>0057</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0057/</fr:route>
+            <fr:title text="Calcul des suites de Hofstadter">Calcul des suites de Hofstadter</fr:title>
+            <fr:taxon>Exercice (bonus)</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est d'implémenter les <fr:link href="https://fr.wikipedia.org/wiki/Suite_de_Hofstadter" type="external">suites de Hofstadter</fr:link>, des suites d'entiers définies par des relations de récurrence élaborées.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005A/</fr:uri>
+                <fr:display-uri>005A</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005A/</fr:route>
+                <fr:title text="La suite G">La suite <fr:tex display="inline"><![CDATA[G]]></fr:tex></fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>La suite <fr:tex display="inline"><![CDATA[G]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+G(0) &= 0 \\
+G(n) &= n - G(G(n-1))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterG</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[G]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0058/</fr:uri>
+                <fr:display-uri>0058</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0058/</fr:route>
+                <fr:title text="Les suites M et F">Les suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex></fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex> sont deux suites définies ensemble, par les formules suivantes
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+M(0) &= 0 \\
+M(n) &= n - F(M(n-1))
+\end {cases}
+\qquad 
+\begin {cases}
+F(0) &= 1 \\
+F(n) &= n - M(F(n-1))
+\end {cases}
+]]></fr:tex>
+Pour calculer ces suites, on utilisera donc deux fonctions <fr:link href="/cours-polytech-peip2-algo/0059/" title="Les fonctions mutuellement récursives" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0059/" display-uri="0059" type="local">mutuellement récursives</fr:link>!
+<html:ol><html:li>Implémenter des fonctions <html:code>hofstadterM</html:code> et <html:code>hofstadterF</html:code> permettant de cacluler la valeur des suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de chaque suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. </html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005B/</fr:uri>
+                <fr:display-uri>005B</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005B/</fr:route>
+                <fr:title text="La suite H">La suite <fr:tex display="inline"><![CDATA[H]]></fr:tex></fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>La suite <fr:tex display="inline"><![CDATA[H]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+H(0) &= 0 \\
+H(n) &= n - H(H(H(n-1)))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterH</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[H]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005C/</fr:uri>
+                <fr:display-uri>005C</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005C/</fr:route>
+                <fr:title text="Les suites R et S">Les suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex> sont deux suites définies ensembles, par les formules suivantes
+<fr:resource hash="a6deec03e4daf4c2a53a914fb3966e53"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/a6deec03e4daf4c2a53a914fb3966e53.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\usepackage {amsmath}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[$
+\begin{cases}
+R(1) &= 1 \\
+R(n) &= R(n-1) + S(n-1)
+\end{cases}
+\qquad
+\begin{cases}
+S(1) &= 2 \\
+S(n) & \text{est le $n$\textsuperscript{e} entier n'apparaissant}\\
+& \quad \text{pas dans la suite $R$}
+\end{cases}$
+]]></fr:resource-source></fr:resource>
+Pour calculer ces suites, on utilisera donc deux fonctions <fr:link href="/cours-polytech-peip2-algo/0059/" title="Les fonctions mutuellement récursives" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0059/" display-uri="0059" type="local">mutuellement récursives</fr:link>!
+<html:ol><html:li>Implémenter des fonctions <html:code>hofstadterR</html:code> et <html:code>hofstadterS</html:code> permettant de cacluler la valeur des suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de chaque suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. </html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005D/</fr:uri>
+                <fr:display-uri>005D</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005D/</fr:route>
+                <fr:title text="La suite Q">La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex></fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+Q(1) &= 1 \\
+Q(2) &= 1 \\
+Q(n) &= Q(n-Q(n-1)) + Q(n-Q(n-2))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterQ</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li>
+<html:li>Proposer et implémenter une amélioration permettant de calculer la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> de manière plus rapide.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
