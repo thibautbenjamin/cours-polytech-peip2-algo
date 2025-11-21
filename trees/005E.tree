@@ -1,0 +1,6 @@
+\title{Implémentation des fonctions mutuellement récursives}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-21T10:20:02Z}
+
+\p{En \Cpp, on ne peut pas appeler une fonction avant de l'avoir déclarée. Pour implémenter des fonctions mutuellement récursives, il faudra donc d'abord déclarer toutes les fonctions, puis ensuite les définir. Cela force à séparer la déclaration de la définition, ce que l'on ne fait pas habituellement pour les autres fonctions.}

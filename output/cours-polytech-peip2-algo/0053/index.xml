@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0053/</fr:uri>
+    <fr:display-uri>0053</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/0053/</fr:route>
+    <fr:title text="Choix du pivot">Choix du pivot</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0050/</fr:uri>
+            <fr:display-uri>0050</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0050/</fr:route>
+            <fr:title text="Principe du tri rapide">Principe du tri rapide</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Le tri rapide est un algorithme de tri récursif, qui fonctionne de manière duale au <fr:link href="/cours-polytech-peip2-algo/004T/" title="Principe du tri fusion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004T/" display-uri="004T" type="local">tri fusion</fr:link>. En effet, dans le tri fusion, on commence par appeler récursivement la fonction sur deux sous-tableaux, puis on assemble les résultats à l'aide de l'algorithme de fusion. Dans le tri rapide au contraire, on commence par faire un pré-traitement des données, puis on appelle l'algorithme récursivement sur deux sous tableaux. Grâce à notre pré-traitement, on n'aura pas besoin d'assembler les résultats des appels récursifs, car on assurera que si chacun des deux sous-tableaux est trié, alors le tableau complet est trié. Pour que cela soit possible, il faut que tous les éléments du sous-tableau de gauche soient plus petits que tous les éléments du sous-tableau de droite. Le pré-traitement, que l'on appèlera <html:em>partitionnement</html:em> s'assure que c'est bien le cas. Pour ce faire, on choisit un élément du tableau, que l'on appelle le <html:em>pivot</html:em>, et on créé deux sous-tableaux, l'un contenant tous les éléments plus petits que le pivot, et l'autre contenant tous les éléments plus grands que le pivot. Cela signifie qu'on ne connaît pas à l'avance les tailles des sous-tableaux.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0053/</fr:uri>
+                <fr:display-uri>0053</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0053/</fr:route>
+                <fr:title text="Choix du pivot">Choix du pivot</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

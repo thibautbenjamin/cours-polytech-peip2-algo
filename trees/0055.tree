@@ -1,0 +1,17 @@
+\title{Tri rapide avec partitionnement de Hoare}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-11-21T09:12:48Z}
+
+\p{L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Hoare. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son premier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices \code{petits} et \code{grands}. L'indice \code{petits} parcourt le tableau à l'endroit et représente la limite de tous les les éléments connus comme étant plus petits que le pivot, c'est à dire qu'à tout moment, tous les éléments d'indice plus petit que \code{petits}#{-1} sont effectivement plus petits que le pivot. L'indice \code{grands} est symmétrique: il parcourt le tableau à l'envers et représente la limite des éléments connus comme étant plus grands que le pivot, c'est à dire qu'à tout moment, les éléments d'indice plus grand que \code{grands}#{+1} sont tous plus grands que le pivot. Pour cette version, il est important de préciser que les éléments égaux au pivot peuvent être positionnés dans n'importe lequel des deux sous-tableaux. A chaque étape, on procède ainsi:
+\ul{
+\li{On incrémente \code{petits} jusqu'à tomber sur un élément supérieur ou égal au pivot, et on décrémente \code{j} jusqu'à tomber sur un élément inférieur ou égal au pivot}
+\li{On échange les éléments situés en position \code{petits} et \code{grands}}
+}
+Puis on répète jusqu'à ce que les indices \code{petits} et \code{grands} se rencontrent ou se croisent.
+\ol{
+\li{Ecrire une fonction \code{partition} qui prend en entrée un tableau et deux positions #{i} et #{j}, et qui modifie le tableau de manière à le séparer avec d'un côté tous les éléments plus petits que celui initialement situé en position #{i} et de l'autre tous les éléments plus grand que celui-ci. Cette fonction renverra un entier correspondant à l'indice du premier élément du sous-tableaux de droite.}
+\li{Ecrire la fonction \code{triRapide} qui effectue l'algorithme de tri rapide.}
+}
+}

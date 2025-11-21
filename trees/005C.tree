@@ -1,0 +1,28 @@
+\title{Les suites #{R} et #{S}}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-21T10:13:51Z}
+
+\p{Les suites #{R} et #{S} sont deux suites définies ensembles, par les formules suivantes
+\tex{\usepackage{amsmath}}{\startverb
+$
+\begin{cases}
+R(1) &= 1 \\
+R(n) &= R(n-1) + S(n-1)
+\end{cases}
+\qquad
+\begin{cases}
+S(1) &= 2 \\
+S(n) & \text{est le $n$\textsuperscript{e} entier n'apparaissant}\\
+& \quad \text{pas dans la suite $R$}
+\end{cases}$
+\stopverb
+}
+Pour calculer ces suites, on utilisera donc deux fonctions [mutuellement récursives](0059)!
+\ol{
+\li{Implémenter des fonctions \code{hofstadterR} et \code{hofstadterS} permettant de cacluler la valeur des suites #{R} et #{S}.}
+\li{Afficher les premiers éléments de chaque suite.}
+\li{Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. }
+}
+}

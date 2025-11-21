@@ -1,0 +1,9 @@
+\title{Les fonctions mutuellement récursives}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-21T10:03:46Z}
+
+\p{Les fonctions mutuellement récursives sont une généralisation des fonctions récursives, dans lesquelles on définit plusieurs fonctions en même temps. Une fonction récursive est une fonction qui fait appel à elle-même dans le corps de sa fonction. Des fonctions mutuellement récursives peuvent s'appeler mutuellement, créant un cycle d'appel récursifs.}
+\transclude{005F}
+\transclude{005E}
+\transclude{005G}

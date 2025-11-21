@@ -1,0 +1,7 @@
+\title{Les fonctions \code{estPair} et \code{estImpair}}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\import{basemacros}
+\date{2025-11-21T10:32:18Z}
+
+\p{On peut définir les fonctions \code{estPair} prenant un entier un entier positif et renvoyant \code{true} si ce nombre est pair et \code{false} sinon, mutuellement récursivement avec la fonction \code{estImpair}, prenant un entier un entier positif et renvoyant \code{false} si ce nombre est pair et \code{true} sinon. Le cas de base pour les fonction est le nombre #{0}, pour lequel la fonction \code{estPair} renvoie \code{true} et la fonction \code{estImpair} renvoie \code{false}. Pour des nombres positifs, on dira ensuite qu'appeler \code{estPair(n)} renvoie \code{estImpair(n-1)} et qu'appeler \code{estImpair(n)} renvoie \code{estPair(n-1)}, car un nombre #{n} est pair si et seulement si #{n-1} est impair.}

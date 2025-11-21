@@ -1,0 +1,19 @@
+\title{Comparaison expérimentale des implémentations du tri rapide}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-11-21T09:27:27Z}
+
+\p{
+\ol{
+\li{
+Mesurer expérimentalement le temps pris par chacune des versions du tri fusion, sur des tableaux de différentes tailles avec les propriétés suivantes:
+\ol{
+\li{Des tableaux générés aléatoirement}
+\li{Des tableaux déjà triés par ordre croissant}
+\li{Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer #{k} transpositions aléatoires, #{k} étant la taille du tableau divisée par #{10}).}
+\li{Des tableaux triés dans l'ordre décroissant.}}
+}
+\li{Quelle amélioration pouvez-vous proposer pour améliorer la complexité des algorithmes dans les 3 derniers cas. Implémentez et testez expérimentalement vos idées.}
+}
+}

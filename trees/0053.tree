@@ -1,0 +1,6 @@
+\title{Choix du pivot}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-20T16:22:48Z}
+
+\p{Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.}

@@ -1,0 +1,13 @@
+\title{Calcul des suites de Hofstadter}
+\author{thibautbenjamin}
+\taxon{Exercice (bonus)}
+\import{basemacros}
+\date{2025-11-21T09:55:46Z}
+
+\p{L'objectif de cet exercice est d'implémenter les [suites de Hofstadter](https://fr.wikipedia.org/wiki/Suite_de_Hofstadter), des suites d'entiers définies par des relations de récurrence élaborées.}
+
+\transclude{005A}
+\transclude{0058}
+\transclude{005B}
+\transclude{005C}
+\transclude{005D}

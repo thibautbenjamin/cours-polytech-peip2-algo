@@ -482,7 +482,7 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Illustrations du tri fusion">Illustrations du tri fusion</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Les animations suivantes peuvent aider à comprendre le tri fusion. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -611,6 +611,393 @@ Bien sûr, si l'on ne complète pas la fonction de fusion de manière adéquate,
 <html:li>Des tableaux déjà triés dans l'ordre croissant.</html:li>
 <html:li>Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer <fr:tex display="inline"><![CDATA[k]]></fr:tex> transpositions aléatoires, <fr:tex display="inline"><![CDATA[k]]></fr:tex> étant la taille du tableau divisée par <fr:tex display="inline"><![CDATA[10]]></fr:tex>).</html:li>
 <html:li>Des tableaux triés dans l'ordre décroissant.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004Z/</fr:uri>
+                <fr:display-uri>004Z</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004Z/</fr:route>
+                <fr:title text="Le tri rapide">Le tri rapide</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est d'implémenter le tri rapide, un autre algorithme autre de tri récursif, qui atteint la meilleure complexité théorique pour un algorithme de tri.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0050/</fr:uri>
+                    <fr:display-uri>0050</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0050/</fr:route>
+                    <fr:title text="Principe du tri rapide">Principe du tri rapide</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Le tri rapide est un algorithme de tri récursif, qui fonctionne de manière duale au <fr:link href="/cours-polytech-peip2-algo/004T/" title="Principe du tri fusion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004T/" display-uri="004T" type="local">tri fusion</fr:link>. En effet, dans le tri fusion, on commence par appeler récursivement la fonction sur deux sous-tableaux, puis on assemble les résultats à l'aide de l'algorithme de fusion. Dans le tri rapide au contraire, on commence par faire un pré-traitement des données, puis on appelle l'algorithme récursivement sur deux sous tableaux. Grâce à notre pré-traitement, on n'aura pas besoin d'assembler les résultats des appels récursifs, car on assurera que si chacun des deux sous-tableaux est trié, alors le tableau complet est trié. Pour que cela soit possible, il faut que tous les éléments du sous-tableau de gauche soient plus petits que tous les éléments du sous-tableau de droite. Le pré-traitement, que l'on appèlera <html:em>partitionnement</html:em> s'assure que c'est bien le cas. Pour ce faire, on choisit un élément du tableau, que l'on appelle le <html:em>pivot</html:em>, et on créé deux sous-tableaux, l'un contenant tous les éléments plus petits que le pivot, et l'autre contenant tous les éléments plus grands que le pivot. Cela signifie qu'on ne connaît pas à l'avance les tailles des sous-tableaux.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>20</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0053/</fr:uri>
+                        <fr:display-uri>0053</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/0053/</fr:route>
+                        <fr:title text="Choix du pivot">Choix du pivot</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <html:p>Pour un maximum d'efficacité, on voudrait que les deux sous-tableaux aient toujours une taille proche d'être la même, c'est à dire que le pivot soit la médiane du tableau. Si les tableaux que l'on cherche à trier sont aléatoires, ce sera en moyenne le cas, quelque soit le choix du pivot. Il peut arriver que l'on cherche à traiter des tableaux qui ne sont pas complètement aléatoires, auquel cas, on pourra adapter le choix du pivot pour un maximum d'efficacité. Des choix courants consistent à choisir le pivot comme étant soit le premier élément, le dernier élément, un élément aléatoire, ou même la médiane de trois éléments aléatoires. En générale, calculer la médiane du tableau entier pour l'utiliser comme pivot donne la meilleure complexité, mais est associé à une constante élevée qui fait que cela ne vaut pas le coup.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0051/</fr:uri>
+                    <fr:display-uri>0051</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0051/</fr:route>
+                    <fr:title text="Illustrations du tri rapide">Illustrations du tri rapide</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Les animations suivantes peuvent aider à comprendre le tri rapide. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0052/</fr:uri>
+                    <fr:display-uri>0052</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0052/</fr:route>
+                    <fr:title text="Le tri rapide avec le partitionnement naïf">Le tri rapide avec le partitionnement naïf</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement simple. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son dernier élément, et pour réaliser l'algorithme de partition, on crée un tableau annexe de même taille que notre tableau original, que l'on rempli en parcourant le tableau original de la manière suivante:
+<html:ul><html:li>Si l'élément que l'on considère est plus petit que le pivot, on le positionne à la première case non-initialisée du tableau annexe</html:li>
+<html:li>Si l'élément que l'on considère est plus grand que le pivot, on le positionne à la dernière case non-initialisée du tableau annexe</html:li></html:ul>
+Une fois cela fait, on recopie le tableau annexe dans le tableau courant.
+
+<html:ol><html:li>Ecrire une fonction <html:code>partition</html:code> qui prend en entrée un tableau et deux positions <fr:tex display="inline"><![CDATA[i]]></fr:tex> et <fr:tex display="inline"><![CDATA[j]]></fr:tex>, et qui modifie le tableau de manière à le séparer avec d'un côté tous les éléments plus petits que celui initialement situé en position <fr:tex display="inline"><![CDATA[j-1]]></fr:tex> et de l'autre tous les éléments plus grand que celui-ci. Cette fonction renverra un entier correspondant à la nouvelle position de l'élément initialement situé à la position <fr:tex display="inline"><![CDATA[j-1]]></fr:tex>.</html:li>
+<html:li>Ecrire la fonction <html:code>triRapide</html:code> qui effectue l'algorithme de tri rapide.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>20</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0054/</fr:uri>
+                    <fr:display-uri>0054</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0054/</fr:route>
+                    <fr:title text="Le tri rapide avec le partitionnement de Lomuto">Le tri rapide avec le partitionnement de Lomuto</fr:title>
+                    <fr:taxon>Exercice (optionnel)</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Lomuto. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son dernier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices <html:code>petits</html:code> et <html:code>i</html:code>. L'indice <html:code>petits</html:code> représente la limite de tous les éléments connus comme étant plus petits que le pivot. C'est à dire qu'à tout moment, tous les éléments d'indice plus petit que <html:code>petits</html:code><fr:tex display="inline"><![CDATA[-1]]></fr:tex> sont effectivement plus petits que le pivot. L'indice <html:code>i</html:code> représente l'endroit du tableau que l'on a exploré, il est toujours au moins aussi grand que <html:code>petits</html:code>. A chaque étape, on procède ainsi:
+<html:ul><html:li>Si l'indice positionné à <html:code>i</html:code> est plus petit que le pivot, on l'échange avec celui positionné à <html:code>petits</html:code> et on incrémente <html:code>petits</html:code> et <html:code>i</html:code></html:li>
+<html:li>Sinon, on incrémente seulement <html:code>i</html:code></html:li></html:ul>
+Après avoir parcouru tout le tableau sauf la dernière case, on échange la dernière case (le pivot) avec <html:code>petits</html:code>, pour placer le pivot à sa bonne position.
+<html:ol><html:li>Ecrire une fonction <html:code>partition</html:code> qui prend en entrée un tableau et deux positions <fr:tex display="inline"><![CDATA[i]]></fr:tex> et <fr:tex display="inline"><![CDATA[j]]></fr:tex>, et qui modifie le tableau de manière à le séparer avec d'un côté tous les éléments plus petits que celui initialement situé en position <fr:tex display="inline"><![CDATA[j-1]]></fr:tex> et de l'autre tous les éléments plus grand que celui-ci. Cette fonction renverra un entier correspondant à la nouvelle position de l'élément initialement situé à la position <fr:tex display="inline"><![CDATA[j-1]]></fr:tex>.</html:li>
+<html:li>Ecrire la fonction <html:code>triRapide</html:code> qui effectue l'algorithme de tri rapide.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0055/</fr:uri>
+                    <fr:display-uri>0055</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0055/</fr:route>
+                    <fr:title text="Tri rapide avec partitionnement de Hoare">Tri rapide avec partitionnement de Hoare</fr:title>
+                    <fr:taxon>Exercice (optionnel)</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Hoare. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son premier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices <html:code>petits</html:code> et <html:code>grands</html:code>. L'indice <html:code>petits</html:code> parcourt le tableau à l'endroit et représente la limite de tous les les éléments connus comme étant plus petits que le pivot, c'est à dire qu'à tout moment, tous les éléments d'indice plus petit que <html:code>petits</html:code><fr:tex display="inline"><![CDATA[-1]]></fr:tex> sont effectivement plus petits que le pivot. L'indice <html:code>grands</html:code> est symmétrique: il parcourt le tableau à l'envers et représente la limite des éléments connus comme étant plus grands que le pivot, c'est à dire qu'à tout moment, les éléments d'indice plus grand que <html:code>grands</html:code><fr:tex display="inline"><![CDATA[+1]]></fr:tex> sont tous plus grands que le pivot. Pour cette version, il est important de préciser que les éléments égaux au pivot peuvent être positionnés dans n'importe lequel des deux sous-tableaux. A chaque étape, on procède ainsi:
+<html:ul><html:li>On incrémente <html:code>petits</html:code> jusqu'à tomber sur un élément supérieur ou égal au pivot, et on décrémente <html:code>j</html:code> jusqu'à tomber sur un élément inférieur ou égal au pivot</html:li>
+<html:li>On échange les éléments situés en position <html:code>petits</html:code> et <html:code>grands</html:code></html:li></html:ul>
+Puis on répète jusqu'à ce que les indices <html:code>petits</html:code> et <html:code>grands</html:code> se rencontrent ou se croisent.
+<html:ol><html:li>Ecrire une fonction <html:code>partition</html:code> qui prend en entrée un tableau et deux positions <fr:tex display="inline"><![CDATA[i]]></fr:tex> et <fr:tex display="inline"><![CDATA[j]]></fr:tex>, et qui modifie le tableau de manière à le séparer avec d'un côté tous les éléments plus petits que celui initialement situé en position <fr:tex display="inline"><![CDATA[i]]></fr:tex> et de l'autre tous les éléments plus grand que celui-ci. Cette fonction renverra un entier correspondant à l'indice du premier élément du sous-tableaux de droite.</html:li>
+<html:li>Ecrire la fonction <html:code>triRapide</html:code> qui effectue l'algorithme de tri rapide.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0056/</fr:uri>
+                    <fr:display-uri>0056</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0056/</fr:route>
+                    <fr:title text="Comparaison expérimentale des implémentations du tri rapide">Comparaison expérimentale des implémentations du tri rapide</fr:title>
+                    <fr:taxon>Exercice (optionnel)</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>
+Mesurer expérimentalement le temps pris par chacune des versions du tri fusion, sur des tableaux de différentes tailles avec les propriétés suivantes:
+<html:ol><html:li>Des tableaux générés aléatoirement</html:li>
+<html:li>Des tableaux déjà triés par ordre croissant</html:li>
+<html:li>Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer <fr:tex display="inline"><![CDATA[k]]></fr:tex> transpositions aléatoires, <fr:tex display="inline"><![CDATA[k]]></fr:tex> étant la taille du tableau divisée par <fr:tex display="inline"><![CDATA[10]]></fr:tex>).</html:li>
+<html:li>Des tableaux triés dans l'ordre décroissant.</html:li></html:ol></html:li>
+<html:li>Quelle amélioration pouvez-vous proposer pour améliorer la complexité des algorithmes dans les 3 derniers cas. Implémentez et testez expérimentalement vos idées.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0057/</fr:uri>
+                <fr:display-uri>0057</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0057/</fr:route>
+                <fr:title text="Calcul des suites de Hofstadter">Calcul des suites de Hofstadter</fr:title>
+                <fr:taxon>Exercice (bonus)</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est d'implémenter les <fr:link href="https://fr.wikipedia.org/wiki/Suite_de_Hofstadter" type="external">suites de Hofstadter</fr:link>, des suites d'entiers définies par des relations de récurrence élaborées.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005A/</fr:uri>
+                    <fr:display-uri>005A</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/005A/</fr:route>
+                    <fr:title text="La suite G">La suite <fr:tex display="inline"><![CDATA[G]]></fr:tex></fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>La suite <fr:tex display="inline"><![CDATA[G]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+G(0) &= 0 \\
+G(n) &= n - G(G(n-1))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterG</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[G]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0058/</fr:uri>
+                    <fr:display-uri>0058</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0058/</fr:route>
+                    <fr:title text="Les suites M et F">Les suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex></fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Les suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex> sont deux suites définies ensemble, par les formules suivantes
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+M(0) &= 0 \\
+M(n) &= n - F(M(n-1))
+\end {cases}
+\qquad 
+\begin {cases}
+F(0) &= 1 \\
+F(n) &= n - M(F(n-1))
+\end {cases}
+]]></fr:tex>
+Pour calculer ces suites, on utilisera donc deux fonctions <fr:link href="/cours-polytech-peip2-algo/0059/" title="Les fonctions mutuellement récursives" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0059/" display-uri="0059" type="local">mutuellement récursives</fr:link>!
+<html:ol><html:li>Implémenter des fonctions <html:code>hofstadterM</html:code> et <html:code>hofstadterF</html:code> permettant de cacluler la valeur des suites <fr:tex display="inline"><![CDATA[M]]></fr:tex> et <fr:tex display="inline"><![CDATA[F]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de chaque suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. </html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005B/</fr:uri>
+                    <fr:display-uri>005B</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/005B/</fr:route>
+                    <fr:title text="La suite H">La suite <fr:tex display="inline"><![CDATA[H]]></fr:tex></fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>La suite <fr:tex display="inline"><![CDATA[H]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+H(0) &= 0 \\
+H(n) &= n - H(H(H(n-1)))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterH</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[H]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005C/</fr:uri>
+                    <fr:display-uri>005C</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/005C/</fr:route>
+                    <fr:title text="Les suites R et S">Les suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Les suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex> sont deux suites définies ensembles, par les formules suivantes
+<fr:resource hash="a6deec03e4daf4c2a53a914fb3966e53"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/a6deec03e4daf4c2a53a914fb3966e53.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\usepackage {amsmath}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[$
+\begin{cases}
+R(1) &= 1 \\
+R(n) &= R(n-1) + S(n-1)
+\end{cases}
+\qquad
+\begin{cases}
+S(1) &= 2 \\
+S(n) & \text{est le $n$\textsuperscript{e} entier n'apparaissant}\\
+& \quad \text{pas dans la suite $R$}
+\end{cases}$
+]]></fr:resource-source></fr:resource>
+Pour calculer ces suites, on utilisera donc deux fonctions <fr:link href="/cours-polytech-peip2-algo/0059/" title="Les fonctions mutuellement récursives" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0059/" display-uri="0059" type="local">mutuellement récursives</fr:link>!
+<html:ol><html:li>Implémenter des fonctions <html:code>hofstadterR</html:code> et <html:code>hofstadterS</html:code> permettant de cacluler la valeur des suites <fr:tex display="inline"><![CDATA[R]]></fr:tex> et <fr:tex display="inline"><![CDATA[S]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de chaque suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. </html:li></html:ol></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>21</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005D/</fr:uri>
+                    <fr:display-uri>005D</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/005D/</fr:route>
+                    <fr:title text="La suite Q">La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex></fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>La suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> est définie par récurrence de la manière suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+Q(1) &= 1 \\
+Q(2) &= 1 \\
+Q(n) &= Q(n-Q(n-1)) + Q(n-Q(n-2))
+\end {cases}]]></fr:tex>
+<html:ol><html:li>Implémenter la fonction <html:code>hofstadterQ</html:code> permettant de calculer la valeur de la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex>.</html:li>
+<html:li>Afficher les premiers éléments de la suite.</html:li>
+<html:li>Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.</html:li>
+<html:li>Proposer et implémenter une amélioration permettant de calculer la suite <fr:tex display="inline"><![CDATA[Q]]></fr:tex> de manière plus rapide.</html:li></html:ol></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>

@@ -1,0 +1,17 @@
+\title{Le tri rapide avec le partitionnement de Lomuto}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-11-20T16:30:01Z}
+
+\p{L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Lomuto. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son dernier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices \code{petits} et \code{i}. L'indice \code{petits} représente la limite de tous les éléments connus comme étant plus petits que le pivot. C'est à dire qu'à tout moment, tous les éléments d'indice plus petit que \code{petits}#{-1} sont effectivement plus petits que le pivot. L'indice \code{i} représente l'endroit du tableau que l'on a exploré, il est toujours au moins aussi grand que \code{petits}. A chaque étape, on procède ainsi:
+\ul{
+\li{Si l'indice positionné à \code{i} est plus petit que le pivot, on l'échange avec celui positionné à \code{petits} et on incrémente \code{petits} et \code{i}}
+\li{Sinon, on incrémente seulement \code{i}}
+}
+Après avoir parcouru tout le tableau sauf la dernière case, on échange la dernière case (le pivot) avec \code{petits}, pour placer le pivot à sa bonne position.
+\ol{
+\li{Ecrire une fonction \code{partition} qui prend en entrée un tableau et deux positions #{i} et #{j}, et qui modifie le tableau de manière à le séparer avec d'un côté tous les éléments plus petits que celui initialement situé en position #{j-1} et de l'autre tous les éléments plus grand que celui-ci. Cette fonction renverra un entier correspondant à la nouvelle position de l'élément initialement situé à la position #{j-1}.}
+\li{Ecrire la fonction \code{triRapide} qui effectue l'algorithme de tri rapide.}
+}
+}

@@ -1,0 +1,25 @@
+\title{Les suites #{M} et #{F}}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-21T10:00:51Z}
+
+\p{Les suites #{M} et #{F} sont deux suites définies ensemble, par les formules suivantes
+##{
+\begin{cases}
+M(0) &= 0 \\
+M(n) &= n - F(M(n-1))
+\end{cases}
+\qquad
+\begin{cases}
+F(0) &= 1 \\
+F(n) &= n - M(F(n-1))
+\end{cases}
+}
+Pour calculer ces suites, on utilisera donc deux fonctions [mutuellement récursives](0059)!
+\ol{
+\li{Implémenter des fonctions \code{hofstadterM} et \code{hofstadterF} permettant de cacluler la valeur des suites #{M} et #{F}.}
+\li{Afficher les premiers éléments de chaque suite.}
+\li{Mesurer expérimentalement le temps pris par ces fonctions lorsque les entrées deviennent grandes. }
+}
+}

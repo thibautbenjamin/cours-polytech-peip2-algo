@@ -1,0 +1,19 @@
+\title{La suite #{H}}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-21T10:11:08Z}
+
+
+\p{La suite #{H} est définie par récurrence de la manière suivante:
+##{
+\begin{cases}
+H(0) &= 0 \\
+H(n) &= n - H(H(H(n-1)))
+\end{cases}}
+\ol{
+\li{Implémenter la fonction \code{hofstadterH} permettant de calculer la valeur de la suite #{H}.}
+\li{Afficher les premiers éléments de la suite.}
+\li{Mesurer expérimentalement le temps pris par cette fonction lorsque les entrées deviennent grandes.}
+}
+}

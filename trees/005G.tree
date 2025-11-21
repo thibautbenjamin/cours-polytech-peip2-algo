@@ -1,0 +1,28 @@
+\title{Implémentation des fonctions \code{estPair} et \code{estImpair} par récursion mutuelle}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\import{basemacros}
+\date{2025-11-21T10:38:07Z}
+
+\p{
+\cppdisplay{
+\startverb
+bool estPair(int);
+bool estImpair(int);
+
+bool estPair (int n){
+    if (n==0){
+        return true;
+    }
+    return estImpair (n-1);
+}
+
+bool estImpair (int n){
+    if (n==0){
+        return false;
+    }
+    return estPair (n-1);
+}
+\stopverb
+}
+}
