@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+ <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+      <fr:contributor>
+        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+      </fr:contributor>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006L/</fr:uri>
+    <fr:display-uri>006L</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006L/</fr:route>
+    <fr:title text="La terminaison en pratique">La terminaison en pratique</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>En pratique, déterminer si un algorithme se termine repose sur les points clés suivants :</html:p>
+    <html:ul>
+        <html:li>On ne se préoccupe pas des opérations (affectations, additions, renvois, affichages, etc).</html:li>
+        <html:li>On vérifie si les boucles <html:code>for</html:code> sont bien construites (pas de modification de la variable incrémentée par exemple).</html:li>
+        <html:li>Il ne reste que les boucles <html:code>while</html:code> à vérifier. On utilise pour cela la méthode du <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006I/" type="local">variant de boucle</fr:link>.</html:li>
+    </html:ul>
+    <html:p><html:em>Remarque : </html:em>Lorsqu'on a affaire à des fonctions récursives, il faut aussi faire la technique du variant de boucle. Une fonction récursive qui se termine est une fonction qui possède un cas de base qui est toujours atteint au bout d'un moment.</html:p>
+</fr:mainmatter>
+  <fr:backmatter>
+
+  </fr:backmatter>
+</fr:tree>
