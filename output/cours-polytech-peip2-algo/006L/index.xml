@@ -27,7 +27,8 @@
         <html:li>On vérifie si les boucles <html:code>for</html:code> sont bien construites (pas de modification de la variable incrémentée par exemple).</html:li>
         <html:li>Il ne reste que les boucles <html:code>while</html:code> à vérifier. On utilise pour cela la méthode du <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006I/" type="local">variant de boucle</fr:link>.</html:li>
     </html:ul>
-    <html:p><html:em>Remarque : </html:em>Lorsqu'on a affaire à des fonctions récursives, il faut aussi faire la technique du variant de boucle. Une fonction récursive qui se termine est une fonction qui possède un cas de base qui est toujours atteint au bout d'un moment.</html:p>
+    <html:p><html:em>Remarque 1 : </html:em>Lorsqu'on a affaire à des fonctions récursives, il faut aussi faire la technique du variant de boucle. Une fonction récursive qui se termine est une fonction qui possède un cas de base qui est toujours atteint au bout d'un moment.</html:p>
+    <html:p><html:em>Remarque 2 : </html:em>La terminaison d'un algorithme NE prend PAS en compte la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0006/" type="local">complexité</fr:link>. L'important est de savoir si l'algorithme s'arrêtera, même s'il met 50 jours pour y arriver.</html:p>
 </fr:mainmatter>
   <fr:backmatter>
 
