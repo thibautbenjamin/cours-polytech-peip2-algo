@@ -19,6 +19,7 @@
     <fr:display-uri>006Z</fr:display-uri>
     <fr:route>/cours-polytech-peip2-algo/006Z/</fr:route>
     <fr:title text="Définition d'un variant de boucle">Définition d'un variant de boucle</fr:title>
+    <fr:taxon>Définition</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>Un <html:em>variant de boucle</html:em> est un nombre positif dont la valeur change à chaque itération d'une boucle. Si le nombre devient négatif (ou nul), cela signifie que la boucle s'arrête.</html:p>
