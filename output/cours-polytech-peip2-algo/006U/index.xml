@@ -24,8 +24,8 @@
   <fr:mainmatter>
     <html:p>On dit que l'on a effectué la <html:em>correction totale</html:em> d'un algorithme lorsqu'on a prouvé que :</html:p>
     <html:ul>
-        <html:li>l'algorithme renvoie un résultat (= se termine) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006A/" typ="local">terminaison</fr:link></html:li>
-        <html:li>et que ce résultat est bien ce qu'on attend de la fonction (= c'est le bon résultat) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/" typ="local">correction partielle</fr:link></html:li>
+        <html:li>l'algorithme renvoie un résultat (= se termine) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006A/" type="local">terminaison</fr:link></html:li>
+        <html:li>et que ce résultat est bien ce qu'on attend de la fonction (= c'est le bon résultat) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/" type="local">correction partielle</fr:link></html:li>
     </html:ul>
   </fr:mainmatter>
   <fr:backmatter>
