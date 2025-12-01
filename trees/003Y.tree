@@ -1,6 +1,7 @@
 \title{Liste des TD}
 \author{thibautbenjamin}
 \date{2025-11-05T13:46:36Z}
+\import{basemacros}
 
 \p{\ul{
 \li{[TD 1](Seance-TD1)}
@@ -8,3 +9,10 @@
 \li{[TD 3](Seance-TD3)}
 \li{[TD 4](Seance-TD4)}
 }}
+
+\p{\strong{Corrections}: Merci à \strong{Olivier Delfanne} pour la prise de notes des corrections des TD. C'est un travail personnel qu'il partage avec l'ensemble de la classe, et ne constituent en aucun cas des corrections officielles.
+\li{\asset-link{2025/TD1.zip}{\strong{Corrections du TD1}}}
+\li{\asset-link{2025/TD2.zip}{\strong{Corrections du TD2}}}
+\li{\asset-link{2025/TD3.zip}{\strong{Corrections du TD3}}}
+\li{\asset-link{2025/TD4.zip}{\strong{Corrections du TD4}}}
+}

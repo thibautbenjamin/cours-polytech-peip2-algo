@@ -42,6 +42,11 @@
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD3/" title="TD 3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD3/" display-uri="Seance-TD3" type="local">TD 3</fr:link></html:li>
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD4/" title="TD 4" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD4/" display-uri="Seance-TD4" type="local">TD 4</fr:link></html:li></html:ul>
         </html:p>
+        <html:p><html:strong>Corrections</html:strong>: Merci à <html:strong>Olivier Delfanne</html:strong> pour la prise de notes des corrections des TD. C'est un travail personnel qu'il partage avec l'ensemble de la classe, et ne constituent en aucun cas des corrections officielles.
+<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmibqttedcc66vbeyx6r57qye27csl72f3piycl2w4fc6isyxnvgpmy.zip"><html:strong>Corrections du TD1</html:strong></html:a></html:span></html:li>
+<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicqevkaa2lwvcb75ckdxpmsf2o2iducoroircqlpmfga6cqt7cpmi.zip"><html:strong>Corrections du TD2</html:strong></html:a></html:span></html:li>
+<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmibrtp2e5sqkfxxret4ymzufypyjdjifakarjyy6w76o34adfvtleq.zip"><html:strong>Corrections du TD3</html:strong></html:a></html:span></html:li>
+<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmice22wqgfv26f73ty2qp4rbffujq6kcwvzb6dja223brms3xxzoki.zip"><html:strong>Corrections du TD4</html:strong></html:a></html:span></html:li></html:p>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
