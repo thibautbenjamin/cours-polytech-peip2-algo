@@ -116,6 +116,11 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
                 <fr:link href="/cours-polytech-peip2-algo/003M/" title="Les diapositives de cours" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">La page des slides de cours</fr:link>
               </html:strong>
             </html:p>
+            <html:p>
+              <html:strong>
+                <fr:link href="/cours-polytech-peip2-algo/005T/" title="Cours d'informatique Option S3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/" display-uri="005T" type="local">La page du cours d'option S3</fr:link>
+              </html:strong>
+            </html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
