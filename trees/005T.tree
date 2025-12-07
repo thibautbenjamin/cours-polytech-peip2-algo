@@ -1,0 +1,8 @@
+\title{Cours d'informatique Option S3}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-12-07T11:41:58Z}
+
+\p{Cette page est consacrée au matériel du cours d'option informatique qui fait suite au cours d'informatique du semestre 3. Ce cours constitue une petite introduction au sujet de la vérification de programmes.}
+
+\p{\strong{\asset-link{2025/slides/option-1/main.pdf}{Cours 1}}: Présentation, et terminaison des boucles}

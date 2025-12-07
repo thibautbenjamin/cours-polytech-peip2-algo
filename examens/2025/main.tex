@@ -1,0 +1,333 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+
+%% Exercices environment
+\theoremstyle{definition}
+\newtheorem{exercice}{Exercice}
+
+%% Header
+\usepackage{fancyhdr}
+
+\fancyhead[L]{Polytech Paris-Saclay}
+\fancyhead[C]{PEIP 2 - InfoS3}
+\fancyhead[R]{2025}
+\pagestyle{fancy}
+
+
+\colorlet{main-color}{black}
+\colorlet{back-color}{blue!02}
+\definecolor{string-color}{rgb}{0.3333, 0.5254, 0.345}
+\colorlet{key-color}{purple!50!black}
+\colorlet{comment-color}{gray!50!black}
+
+\lstset{
+    language=C++, % choose the language of the code
+    basicstyle=\fontfamily{pcr}\selectfont\color{main-color},
+    commentstyle=\itshape\color{comment-color},
+    keywordstyle=\color{key-color}\bfseries, % style for keywords
+    stringstyle = {\color{string-color}},
+    numbers=none, % where to put the line-numbers
+    numberstyle=\tiny, % the size of the fonts that are used for the line-numbers
+    backgroundcolor=\color{back-color},
+    showspaces=false, % show spaces adding particular underscores
+    showstringspaces=false, % underline spaces within strings
+    showtabs=false, % show tabs within strings adding particular underscores
+    frame=single, % adds a frame around the code
+    tabsize=2, % sets default tabsize to 2 spaces
+    keywordstyle = [2]{\color{lime}},
+    keywordstyle = [3]{\color{yellow}},
+    keywordstyle = [4]{\color{teal}},
+    otherkeywords = {;,<<,>>,++},
+    morekeywords = [2]{;},
+    morekeywords = [3]{<<, >>},
+    morekeywords = [4]{++},
+}
+
+\begin{document}
+\noindent
+\textbf{Tous les documents papiers sont autorisés. Les documents électroniques sont
+interdits, les ordinateurs, tablettes, téléphones, montres connectés, écouteurs,
+et autre appareils intelligents doivent être rangés dans les sacs.}
+
+\vspace{.5cm}
+\noindent
+\textbf{Conseils:} Cet examen est constitué de 4 exercices de difficulté
+croissante. Les questions de programmations sont des programmes courts (pas plus
+d'une vingtaine de ligne), et vous ne serez pas évalués sur l'exactitude de la
+syntaxe, tant que vos programmes ressemblent suffisamment à du C++. Pour les
+questions d'analyses de complexité, il vous est demandé de justifier du mieux
+possible. Vous pouvez indiquer des numéro de lignes, ou mettre des marqueurs
+dans vos programmes, pour vous aider à désigner un endroit précis. Dans les 4
+exercices, vous êtes guidés sur ce qu'il faut faire, et il n'est pas attendu que
+vous introduisiez vous-même des fonctions ou des arguments auxiliaires. L'examen
+contient également une question bonus et un exercice bonus qui sont hors barême,
+\textbf{donc à ne regarder que si vous avez fini tout le reste}. Ces questions
+sont beaucoup moins guidés, il vous sera demandé de la prise d'initiative.
+
+\noindent
+\vspace{.5cm}
+
+\noindent
+\textbf{Remarque:} On omettra toujours les lignes
+\begin{lstlisting}
+  #include<iostream>
+  using namespace std;;
+\end{lstlisting}
+Vous pourrez toujours supposer qu'elles sont là au début de tous les programmes.
+
+\vspace{.5cm}
+
+\begin{exercice}[Mise en jambes]
+  Cet exercice est un échauffement pour vous aider à vous mettre dans le bain,
+  et vous rappeler des fonctions sur les tableaux.
+  \begin{enumerate}
+  \item On commence par écrire une fonction permettant d'afficher un tableau
+    \begin{enumerate}
+    \item \'Ecrivez une fonction
+\begin{lstlisting}
+void afficherTableau (int n, int tab[])
+\end{lstlisting}
+      qui prend en argument un entier \(n>0\) et un tableau de longueur \(n\) et
+      qui affiche les éléments du tableau.
+    \item Analysez la complexité de la fonction de la question précédente.
+    \end{enumerate}
+  \item On souhaite ensuite calculer la somme d'un tableau
+    \begin{enumerate}
+    \item \'Ecrivez une fonction
+\begin{lstlisting}
+int sommeTableau (int n, int tab[])
+\end{lstlisting}
+      qui prend en argument un entier \(n>0\) et un tableau de longueur \(n\) et
+      qui renvoie la somme des éléments du tableau.
+    \item Analysez la complexité de la fonction de la question précédente.
+    \end{enumerate}
+  \item Finalement, on termine par un algorithme pour échanger deux éléments
+    dans un tableau.
+    \begin{enumerate}
+    \item \'Ecrivez une fonction
+\begin{lstlisting}
+void echange (int i, int j, int tab[])
+\end{lstlisting}
+      qui prend en argument deux entiers \(i,j>0\) et un tableau de longueur
+      \(>\max{i,j}\) et qui échange les éléments du tableau en position \(i\) et
+      \(j\).
+    \item Analysez la complexité de la fonction de la question précédente.
+    \end{enumerate}
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Tableau des sommes partielles d'un tableau]
+  L'objectif de cet exercice est d'écrire un programme permettant de calculer et
+  d'afficher les sommes partielles associé à un tableau. Par exemple, étant
+  donné le tableau suivant:
+  \[
+    \begin{array}{|c|c|c|c|c|}
+      \hline
+      1 & 3 & 4 & 5 & 7\\
+      \hline
+    \end{array}
+  \]
+  on voudra que le programme affiche:
+\begin{verbatim}
+1 4 8 13 20
+\end{verbatim}
+Le nombre \(1\) est l'élément en position \(0\), le nombre \(4\) est la somme
+des éléments en position \(0\) et \(1\), le nombre \(8\) est la somme des
+éléments en position \(0\), \(1\) et \(2\) etc.
+
+\begin{enumerate}
+\item On donne le programme suivant pour afficher les sommes partielles:
+  \lstinputlisting[language=C++, firstline = 4, lastline=14,
+  numbers=left]{code/sommes-partielles.cpp} Analysez la complexité de ce
+  programme. Vous pouvez vous aider des numéros de ligne pour justifier votre
+  réponse.
+\item On souhaite maintenant améliorer le programme précédent qui n'est pas
+  optimal. En effet, pour calculer la troisième somme par exemple, on ajoute les
+  \(3\) premiers nombres, au lieu de réutiliser le résultat de la somme des
+  \(2\) premiers nombres calculé à l'étape précédente.
+  \begin{enumerate}
+  \item Donnez un programme itératif avec une complexité plus petite pour
+    réaliser la même tache.
+  \item Justifiez la complexité du programme que vous avez proposé.
+  \end{enumerate}
+\item On voudrais maintenant donner une version récursive du programme plus
+  efficace. Il faudra pour cela reformuler le problème et définir une fonction
+  récursive auxilliaire qui manipule plus d'arguments, et qui renvoie un
+  résultat.
+  \begin{enumerate}
+  \item\label{qu:sommes-partielles-rec} Ecrivez un programme récursif
+\begin{lstlisting}
+int sommesPartiellesRec(int n, int tab[])
+\end{lstlisting}
+    prenant en argument un
+    entier \(n>0\) et un tableau de taille \(\ge n\), et qui affiche \textbf{et
+      renvoie} la somme des \(n\) premières entrées du tableau.
+  \item\label{qu:sommes-partielles-rec-complexite} Analysez la complexité de votre
+    algorithme récursif en fonction de \(n\), en résolvant une suite définie par
+    récurrence.
+  \item Ecrivez un programme
+\begin{lstlisting}
+void sommesPartielles(int n, int tab[])
+\end{lstlisting}
+    qui prend en argument un entier \(n>0\) et un tableau de taille \(n\), et
+    qui affiche toutes les sommes partielles, en appelant la fonction définie
+    dans la question~\ref{qu:sommes-partielles-rec}
+  \item Donnez la complexité de cet algorithme, en vous aidant du résultat de la
+    question~\ref{qu:sommes-partielles-rec-complexite}
+  \end{enumerate}
+\end{enumerate}
+
+\end{exercice}
+
+\begin{exercice}[Tri par sélection miroir]
+  On rappelle le principe du tri par sélection, consistant dans un premier temps
+  à calculer la position du minimum du tableau, et à échanger le premier élément
+  avec le minimum, de manière à positionner le minimum en première position,
+  puis à calculer la position du minimum parmi les éléments restants et à
+  échanger ce dernier avec le deuxième élément, de manière à placer le deuxième
+  plus petit élément en deuxième position, et ainsi de suite. L'objectif de cet
+  exercice est d'écrire une version miroir de ce tri, c'est à dire que l'on va
+  chercher la position du maximum du tableau et on va l'échanger avec le dernier
+  élément du tableau, de manière à placer correctement le maximum en dernière
+  position, puis on va chercher la position du maximum parmi les éléments
+  restants et l'échanger avec l'avant-dernière position du tableau de manière à
+  correctement placer le deuxième plus grand élément, et ainsi de suite.
+  \begin{enumerate}
+  \item On commence par la fonction de recherche de minimum:
+    \begin{enumerate}
+    \item \'Ecrire une fonction
+\begin{lstlisting}
+int indiceMax(int n, int tab[])
+\end{lstlisting}
+      prenant en argument un entier \(n>0\) et un tableau de taille \(\ge n\), et
+      qui renvoie l'indice de l'élément maximum parmi les \(n\) premiers éléments
+      du tableau.
+    \item Analysez la complexité de la fonction \lstinline{indiceMax}.
+    \end{enumerate}
+  \item On procède ensuite au tri par insertion en miroir, de manière itérative
+    \begin{enumerate}
+    \item \'Ecrire une fonction
+\begin{lstlisting}
+void triInsertionMiroir(int n, int tab[])
+\end{lstlisting}
+      qui prend en entrée un entier \(n>0\) et un tableau de longueur \(n\), et
+      qui effectue le tri par insertion en miroir sur le tableau. Vous pouvez
+      réutiliser la fonction \lstinline|echange| de l'Exercice 1.
+    \item Analysez la complexité de cette fonction, en justifiant bien vôtre
+      réponse.
+    \end{enumerate}
+  \item On termine en remarquant qu'il est également possible d'implémenter cet
+    algorithme de manière récursive. Pour cela en reformule le problème en
+    disant que l'on cherche à trier les \(n\) premiers éléments du tableau, et
+    on remarque pour le cas récursif qu'effectuer le tri par insertion en miroir
+    revient à d'abord placer correctement le maximum parmi les \(n\) premiers
+    éléments en position \(n-1\) dans le tableau, puis effectuer un tri par
+    insertion miroir de manière récursive sur les \(n-1\) premiers éléments du
+    tableau.
+    \begin{enumerate}
+    \item \'Ecrivez une fonction
+\begin{lstlisting}
+triInsertionMiroir (int n, int tab[])
+\end{lstlisting}
+      qui implémente la version récursive du tri par insertion. Vous pouvez
+      réutiliser la fonction \lstinline|echange| de l'Exercice 1.
+    \item Analysez la complexité de cette fonction, en résolvant une suite
+      définie par récurrence.
+    \end{enumerate}
+  \end{enumerate}
+
+\end{exercice}
+
+\begin{exercice}
+  L'objectif de cet exercice est de calculer toutes les sommes possibles (avec
+  répétition potentielle) réalisables à partir des éléments d'un tableau. Par
+  exemple, en partant du tableau suivant:
+  \[
+    \begin{array}{|c|c|c|c|c|}
+      \hline
+      1 & 3 & 4 & 5 & 7\\
+      \hline
+    \end{array}
+  \]
+  on voudra que le programme affiche (pas nécessairement dans le même ordre):
+\begin{verbatim}
+0 1 3 4 4 5 7 8 5 6 8 9 9 10 12 13 7 8 10 11 11 12 14
+15 12 13 15 16 16 17 19 20
+\end{verbatim}
+  Dans cet exemple le nombre \(17\) est obtenu comme la somme \(1+4+5+7\), le
+  nombre \(4\) est affiché deux fois, car il est obtenu à la fois comme la somme
+  \(1+3\) et comme la somme \(4\). Le nombre \(20\) est la somme de tous les
+  éléments, et le nombre \(0\) est la somme obtenue en ne prenant aucun élément.
+  On va programmer cette fonction de manière.
+  \begin{enumerate}
+  \item \'Ecrivez une fonction récursive
+\begin{lstlisting}
+void sommesRec (int n, int tab[], int sommeCourante)
+\end{lstlisting}
+    qui prend en argument un entier \(n>0\), un tableau de taille \(\geq n\), et
+    un entier \lstinline|sommeCourante|, et qui renvoie toutes les sommes
+    possibles obtenues à partir de sommeCourante en ajoutant des éléments parmi
+    les \(n\) premiers du tableau. Pour cela la stratégie consiste à remarquer
+    que pour obtenir toutes les sommes possibles, il suffit d'afficher toutes
+    les sommes possibles dans lesquelles \lstinline|tab[n-1]| n'apparaît pas
+    ainsi que toutes les sommes possibles dans lesquelles \lstinline|tab[n-1]|
+    apparaît.
+  \item \'Ecrivez une fonction
+\begin{lstlisting}
+void sommes (int n, int tab[])
+\end{lstlisting}
+    qui prend en argument un entier \(n>0\), un tableau de taille \(\geq n\), et
+    qui renvoie toutes les sommes possibles obtenues en ajoutant des éléments du
+    tableau en appelant la fonction de la question précédente.
+  \item Analysez la complexité de cet algorithme en posant et résolvant une
+    suite définie par récurrence.
+  \item \textbf{(Question bonus)} Donnez un argument d'énumération mathématique
+    indiquant pourquoi il n'est pas possible d'écrire un programme avec une
+    meilleure complexité, en dénombrant les sommes possibles en fonction de la
+    longueur du tableau.
+  \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[\textbf{Bonus}]
+  L'objectif de cet exercice est de calculer toutes les valeurs possibles (avec
+  répétition potentielle) réalisables à partir des éléments d'un tableau grâce
+  aux opérations de d'additions et de soustraction. Par exemple, en partant du
+  tableau suivant:
+  \[
+    \begin{array}{|c|c|c|c|c|}
+      \hline
+      1 & 3 & 4 & 5 & 7\\
+      \hline
+    \end{array}
+  \]
+  on voudra que le programme affiche (pas nécessairement dans le même ordre):
+\begin{verbatim}
+0 1 -1 3 4 2 -3 -2 -4 4 5 3 7 8 6 1 2 0 -4 -3 -5 -1 0 -2 -7 -6
+-8 5 6 4 8 9 7 2 3 1 9 10 8 12 13 11 6 7 5 1 2 0 4 5 3 -2 -1
+-3 -5 -4 -6 -2 -1 -3 -8 -7 -9 -1 0 -2 2 3 1 -4 -3 -5 -9 -8 -10
+-6 -5 -7 -12 -11 -13 7 8 6 10 11 9 4 5 3 11 12 10 14 15 13 8 9
+7 3 4 2 6 7 5 0 1 -1 12 13 11 15 16 14 9 10 8 16 17 15 19 20 18
+13 14 12 8 9 7 11 12 10 5 6 4 2 3 1 5 6 4 -1 0 -2 6 7 5 9 10 8
+3 4 2 -2 -1 -3 1 2 0 -5 -4 -6 -7 -6 -8 -4 -3 -5 -10 -9 -11 -3 -2
+-4 0 1 -1 -6 -5 -7 -11 -10 -12 -8 -7 -9 -14 -13 -15 -2 -1 -3 1 2
+0 -5 -4 -6 2 3 1 5 6 4 -1 0 -2 -6 -5 -7 -3 -2 -4 -9 -8 -10 -12
+-11 -13 -9 -8 -10 -15 -14 -16 -8 -7 -9 -5 -4 -6 -11 -10 -12 -16
+-15 -17 -13 -12 -14 -19 -18 -20
+\end{verbatim}
+  \'Ecrivez une fonction permettant de réaliser cette opérations de manière
+  récursive, et analysez sa complexité. Pensez à introduire des fonctions
+  auxiliaires si besoin et à spécifier les entrées et sorties de vos fonctions.
+\end{exercice}
+
+\end{document}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

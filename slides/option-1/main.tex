@@ -1,0 +1,397 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+\usetikzlibrary {graphs,graphdrawing}
+\usegdlibrary{trees}
+\usepackage{pgfplots}
+
+\usetheme{metropolis}
+
+\newtheorem{exercice}{Exercice}
+
+\usepackage{macros}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    \NewTCBInputListing{\slideinputlisting}{ O{0} O{9999999} m }{
+      listing file = #3,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1, lastline=#2},
+      width=\textwidth
+}
+
+
+\NewDocumentCommand{\codeslide}{ O{4} O{9999999} m}{
+  \slideinputlisting[#1][#2]{#3}
+  \onslide<2>
+  \slideinputlisting[0]{#3.res}}
+
+
+\title{Introduction à la vérification de programmes}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique Option S3}
+\author{Thibaut Benjamin, Henry Saudubray, Philippe Volte--Vieira}
+\date{11 Décembre 2025}
+\institute{Cours 1}
+\begin{document}
+
+\maketitle
+
+\section{Objectifs et modalités}
+
+\begin{frame}
+  \frametitle{Déroulé du cours}
+  \begin{itemize}
+  \item 3 cours/TD
+  \item 2 TP
+  \item Un contrôle lors du dernier TP
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Question centrale}
+
+  \begin{itemize}
+  \item Dans le cours d'info S3, vous avez vu comment on pouvait analyser la
+    complexité d'un programme pour déterminer combien de temps il allait mettre.
+  \item Dans ce cours on va se poser la question de comment s'assurer qu'un
+    programme est correct.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pourquoi pas juste le tester?}
+
+  \begin{itemize}
+  \item Si le lance mon programme de tri sur un tableau et qu'il me renvoie bien
+    le tableau trié
+
+    \alert{Mon programme est-il correct, ou est-ce qu'il contient une erreur,
+      mais j'ai eu de la chance de ne pas tomber dessus?}
+
+  \item Si je lance un programme et qu'il est encore en train de tourner
+
+    \alert{Est-ce j'ai fait une boucle infinie, ou est-ce qu'il faut juste que
+      j'attende encore?}
+
+  \item Dans certaines situations, on ne veux pas vraiment lancer des tests
+
+    \alert{Guidage d'une fusée, gestion d'une centrale nucléaire...}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deux grands axes}
+
+  \begin{itemize}
+  \item Le programme ne contient pas de bugs
+
+    \alert{Qu'est-ce qu'un bug?}
+
+  \item Le programme fait bien ce qu'il est censé faire
+
+    \alert{Comment définir ce que le programme est censé faire, et comment le
+      vérifier?}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Absence de bug}
+  \begin{itemize}
+  \item Pas de boucles infinies \textbf{\alert{(Séance 1 : les variants)}}
+  \item Pas de dépassements arithmétiques
+  \item Pas de d'accès à des zones mémoires non initialisées ou libérées
+  \item Pas de déréférencement de pointeur nul
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Le programme fait bien ce qu'il est censé faire}
+  \begin{itemize}
+  \item Spécification: définir ce que le programme est censé faire
+    \begin{itemize}
+    \item \textbf{\alert{Séance 2: Les contrats de fonction}}
+    \end{itemize}
+
+  \item Vérification: le programme implémente bien sa spécification
+    \begin{itemize}
+    \item Parfois partiellement automatisée:
+      \textbf{\alert{Séance 3: Les invariants}}, model checking, solveurs smt,
+      interprétation abstraite
+    \item Parfois manuelle
+      Les assistants de preuve interactifs.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Séance du jour: Variants de boucle et terminaison des programmes}
+
+  \begin{itemize}
+  \item La notion de variant de boucle
+  \item Exercices de calcul de variants
+  \item Bonus pour aller plus loin: problème de l'arrêt, ordres bien fondés
+  \end{itemize}
+
+\end{frame}
+
+\section{Variants de boucles et terminaison des programmes}
+
+\begin{frame}
+  \frametitle{Premier exemple}
+  \slideinputlisting[4]{code/exemple1.cpp}
+
+  \alert{comment justifier que la boucle va toujours s'arrêter?}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Et pour celle-ci?}
+  \slideinputlisting[4]{code/exemple2.cpp}
+
+  \onslide<2->\alert{Cette boucle est infinie! Il faut trouver un critère qui
+    permette de distinguer les deux!}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La notion de variant}
+  \begin{itemize}
+  \item Un variant est en entier positif qui décroît à chaque passage au point
+    d'entrée dans la boule.
+
+  \item Toute suite d'entier décroissante est nécessairement finie, donc on fait
+    au plus un nombre fini de passages dans la boucle!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Premier exemple de variant}
+  \slideinputlisting[4]{code/exemple3.cpp}
+
+  La quantité \lstinline|10-i| est toujours positive et décroit à chaque passage
+  au point où le variant est indiqué.
+
+  \onslide<2->\alert{\href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1int2main7HI7J1forA7npzi7yz07wq7x010qqA7KKI7L7OO15variantoA7sAonD79H4returnjqNq}{Démonstration avec Why3}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple de programme qui ne termine pas}
+  \slideinputlisting[4]{code/exemple4.cpp}
+
+  La quantité \lstinline|10-i| est toujours positive mais ne décroit pas à
+  chaque passage.
+
+  \onslide<2->\alert{\href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1int2main7HI7J1forA7npzi7yz07wq7x010qqA7KKI7L7OO15variantoA7sAonHsA7MMwD79H4returnioNq}{Démonstration avec Why3}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Affichage des valeurs d'un tableau}
+  \begin{exercice}
+    Donner un variant pour la boucle dans le programme suivant:
+    \slideinputlisting[4]{code/exercice1.cpp}
+  \end{exercice}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sommes partielles d'un tableau}
+  \begin{exercice}
+    Donner un variant pour les boucles dans le programme suivant:
+    \slideinputlisting[4]{code/exercice2.cpp}
+  \end{exercice}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La fonction fusion du tri fusion}
+  \begin{exercice}
+    Donner un variant pour les boucles dans le programme suivant:
+    \slideinputlisting[4]{code/exercice3.cpp}
+  \end{exercice}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Enumération des nombres triangulaires}
+  \begin{exercice}
+    Donner un variant pour les boucles dans le programme suivant:
+    \slideinputlisting[4][11]{code/exercice4.cpp}
+  \alert{Pour prouver ce variant, il faudra s'appuyer sur une propriété qui
+    reste vraie le long de l'exécution du programme.}
+  \end{exercice}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Le PGCD, version itérative}
+  \begin{exercice}
+    Donner un variant pour les boucles dans le programme suivant:
+    \slideinputlisting[4]{code/exercice5.cpp}
+  \alert{Pour prouver ce variant, il faudra s'appuyer sur une propriété qui
+    reste vraie le long de l'exécution du programme.}
+  \end{exercice}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Le PGCD, version itérative}
+  \begin{exercice}
+    Donner un variant pour les boucles dans le programme suivant:
+    \slideinputlisting[5][13]{code/exercice6.cpp}
+  \alert{Pour prouver ce variant, il faudra s'appuyer sur une propriété qui
+    reste vraie le long de l'exécution du programme.}
+  \end{exercice}
+\end{frame}
+
+\section{Bonus: Le problème de l'arrêt}
+\begin{frame}
+  \frametitle{Pourquoi s'embêter?}
+  \begin{itemize}
+  \item Pourquoi y-a-t-il besoin de donner un variant un variant à la main?
+    Est-ce que le programme ne pourrait pas deviner tout seul qui est le
+    variant?
+  \item Plus généralement: on voudrait programme qui prend en entrée n'importe
+    quel programme avec des entrées et décide si ce programme termine sur ces
+    entrées.
+
+    \alert{Problème de l'arrêt}
+  \item Un tel programme ne peut pas exister
+
+    \alert{Le progblème de l'arrêt est
+      indécidable.}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pourquoi un tel programme n'existe pas}
+  \slideinputlisting{code/arret.cpp}
+  Que fait \lstinline{contradiction(contradiction)}?
+\end{frame}
+
+\section{Bonus: Les ordres bien fondés}
+\begin{frame}
+  \frametitle{Variants et ordres bien fondés}
+  \begin{itemize}
+  \item Il n'existe pas de suite infinie décroissante d'entiers positifs
+  \item On peut généraliser cela. Un ordre bien fondé est un ensemble équipé
+    d'une relation d'ordre pour laquelle il n'existe pas de suite infinie
+    décroissante.
+  \item Plutôt que de donner des variants entiers positifs, on peut les donner
+    pour n'importe quel ordre bien fondé.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple (pour la culture): les suites de Goodstein}
+  \begin{itemize}
+  \item Une suite de Goodstein
+    \begin{itemize}
+    \item On part d'un nombre écrit en binaire
+      \[
+        \alert{a_{m}2^{m} + \ldots + a_{1}2^{1} + a_{0}2^{0}}
+      \]
+    \item On change tous les \(2\) en \(3\) et on soustrait \(1\)
+       \[
+        \alert{a_{m}3^{m} + \ldots + a_{1}3^{1} + a_{0}3^{0} - 1}
+      \]
+    \item On répète l'opération, on change tous les \(3\) en \(4\) et on
+      soustrait \(1\), etc.
+    \end{itemize}
+  \item Théorème: Toutes les suites de Goodstein finissent par tomber à \(0\)
+    \begin{itemize}
+    \item Si on écrit un programme pour calculer tous les éléments d'une suite
+      de Goodstein, et que l'on veut prouver que ce programme termine:
+    \item On est obligé d'introduire des variants dans les ordinaux.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% TeX-engine: luatex
+%%% End:
