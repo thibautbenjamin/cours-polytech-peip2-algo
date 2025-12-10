@@ -123,7 +123,7 @@ void echange (int i, int j, int tab[])
   \end{enumerate}
 \end{exercice}
 
-\begin{exercice}[Tableau des sommes partielles d'un tableau]
+\begin{exercice}[Sommes partielles d'un tableau]
   L'objectif de cet exercice est d'écrire un programme permettant de calculer et
   d'afficher les sommes partielles associé à un tableau. Par exemple, étant
   donné le tableau suivant:
@@ -211,14 +211,14 @@ int indiceMax(int n, int tab[])
       du tableau.
     \item Analysez la complexité de la fonction \lstinline{indiceMax}.
     \end{enumerate}
-  \item On procède ensuite au tri par insertion en miroir, de manière itérative
+  \item On procède ensuite au tri par sélection en miroir, de manière itérative
     \begin{enumerate}
     \item \'Ecrire une fonction
 \begin{lstlisting}
-void triInsertionMiroir(int n, int tab[])
+void triSelectionMiroir(int n, int tab[])
 \end{lstlisting}
       qui prend en entrée un entier \(n>0\) et un tableau de longueur \(n\), et
-      qui effectue le tri par insertion en miroir sur le tableau. Vous pouvez
+      qui effectue le tri par sélection en miroir sur le tableau. Vous pouvez
       réutiliser la fonction \lstinline|echange| de l'Exercice 1.
     \item Analysez la complexité de cette fonction, en justifiant bien vôtre
       réponse.
@@ -226,17 +226,17 @@ void triInsertionMiroir(int n, int tab[])
   \item On termine en remarquant qu'il est également possible d'implémenter cet
     algorithme de manière récursive. Pour cela en reformule le problème en
     disant que l'on cherche à trier les \(n\) premiers éléments du tableau, et
-    on remarque pour le cas récursif qu'effectuer le tri par insertion en miroir
+    on remarque pour le cas récursif qu'effectuer le tri par sélection en miroir
     revient à d'abord placer correctement le maximum parmi les \(n\) premiers
     éléments en position \(n-1\) dans le tableau, puis effectuer un tri par
-    insertion miroir de manière récursive sur les \(n-1\) premiers éléments du
+    sélection miroir de manière récursive sur les \(n-1\) premiers éléments du
     tableau.
     \begin{enumerate}
     \item \'Ecrivez une fonction
 \begin{lstlisting}
-triInsertionMiroir (int n, int tab[])
+void triSelectionMiroir (int n, int tab[])
 \end{lstlisting}
-      qui implémente la version récursive du tri par insertion. Vous pouvez
+      qui implémente la version récursive du tri par sélection. Vous pouvez
       réutiliser la fonction \lstinline|echange| de l'Exercice 1.
     \item Analysez la complexité de cette fonction, en résolvant une suite
       définie par récurrence.
@@ -272,7 +272,7 @@ triInsertionMiroir (int n, int tab[])
 void sommesRec (int n, int tab[], int sommeCourante)
 \end{lstlisting}
     qui prend en argument un entier \(n>0\), un tableau de taille \(\geq n\), et
-    un entier \lstinline|sommeCourante|, et qui renvoie toutes les sommes
+    un entier \lstinline|sommeCourante|, et qui affiche toutes les sommes
     possibles obtenues à partir de sommeCourante en ajoutant des éléments parmi
     les \(n\) premiers du tableau. Pour cela la stratégie consiste à remarquer
     que pour obtenir toutes les sommes possibles, il suffit d'afficher toutes
@@ -284,7 +284,7 @@ void sommesRec (int n, int tab[], int sommeCourante)
 void sommes (int n, int tab[])
 \end{lstlisting}
     qui prend en argument un entier \(n>0\), un tableau de taille \(\geq n\), et
-    qui renvoie toutes les sommes possibles obtenues en ajoutant des éléments du
+    qui affiche toutes les sommes possibles obtenues en ajoutant des éléments du
     tableau en appelant la fonction de la question précédente.
   \item Analysez la complexité de cet algorithme en posant et résolvant une
     suite définie par récurrence.
