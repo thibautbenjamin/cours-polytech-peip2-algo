@@ -73,6 +73,11 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
     </html:p>
     <html:p>
       <html:strong>
+        <fr:link href="/cours-polytech-peip2-algo/006J/" title="Recueil d'examens" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006J/" display-uri="006J" type="local">Recueil d'examens passés</fr:link>
+      </html:strong>
+    </html:p>
+    <html:p>
+      <html:strong>
         <fr:link href="/cours-polytech-peip2-algo/005T/" title="Cours d'informatique Option S3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/" display-uri="005T" type="local">La page du cours d'option S3</fr:link>
       </html:strong>
     </html:p>
@@ -105,6 +110,34 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>12</fr:month>
+              <fr:day>10</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006J/</fr:uri>
+            <fr:display-uri>006J</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/006J/</fr:route>
+            <fr:title text="Recueil d'examens">Recueil d'examens</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Cette page est un recueil d'examens sur lesquels vous entraîner.</html:p>
+            <html:p>
+              <html:strong>
+                <html:span class="link local">
+                  <html:a href="/cours-polytech-peip2-algo/bafkrmibi6dzp4jokhei3c6rvurjxjd62s3u4haq7yqnczu7jyhhrsxunhi.pdf">2025</html:a>
+                </html:span>
+              </html:strong>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
