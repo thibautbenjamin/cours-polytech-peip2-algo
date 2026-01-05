@@ -1,1 +1,13 @@
+\title{Preuves d'implémentations du tri par sélection}
+\taxon{TP}
+\author{thibautbenjamin}
 \date{2026-01-05T09:50:37Z}
+
+
+\p{L'objectif de ce TP est spécifier une implémentation du tri fusion, afin de montrer qu'elle renvoient toujours un tableau trié. L'implémentation que l'on considère ici n'est pas efficace d'un point de vue l'utilisation de la mémoire, mais cela permet de la rendre spécifiable simplement.}
+
+\transclude{006S}
+\transclude{006L}
+\transclude{006X}
+\transclude{006Y}
+\transclude{006Z}

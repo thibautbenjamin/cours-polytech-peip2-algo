@@ -1,0 +1,21 @@
+\title{Preuve de la fonction de fusion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T12:13:14Z}
+
+\p{
+On termine en prouvant le [contrat que l'on a donné](006X) pour la fonction de fusion
+\ol{
+\li{Donner un variant pour chacune des boucles, pour prouver qu'elles terminent.}
+\li{Donner pour chacune des boucles les invariants permettant de montrer que tous les accès aux tableaux sont corrects.}
+\li{Donner pour chacune des boucles un invariant permettant de relier la valeur de \code{i} avec celle de \code{gauche} et \code{droite}.}
+\li{Donner pour chacune des boucles un invariant spécifiant que le tableau \code{resultat} est trié jusqu'à un certain point.}
+\li{Donner pour chacune des boucles deux invariants permettant de comparer les valeurs déjà placées dans le résultat avec les valeurs restantes dans les deux tableaux.
+
+\indice{Pensez à la manière dont s'exécute le programme, prenez un exemple et essayez de caractériser complètement l'état du programme au milieu de son exécution.}
+}
+\li{Pour les deux dernières boucles, donner un invariant supplémentaires permettant de s'assurer que l'un des deux indice a atteint le bout du tableau qu'il parcourt.}
+\li{Vérifier que Why3 est capable de prouver toutes vos spécifications.}
+}
+}

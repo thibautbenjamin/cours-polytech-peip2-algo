@@ -1,0 +1,38 @@
+\title{Spécification et preuve du tri fusion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T12:13:07Z}
+
+\p{
+On considère la fonction suivante, qui effectue le tri fusion sur le tableau donné en entrée. Pour cela elle crée deux sous tableaux, qui sont des copies des deux moitiés du tableau donné en entrée. Puis elle appelle récursivement le tri fusion sur chacune des deux copies, et fusionne le résultat, en le stockant dans le tableau original.
+\cppdisplay{
+\startverb
+void triFusion (int tab[], int n){
+    if (n <= 1) {}
+    else{
+        int m = n / 2;
+
+        int gauche [m];
+        for(int i = 0; i < m; i++){
+            gauche[i] = tab[i];
+        }
+        triFusion(gauche, m);
+
+        int droite [n - m];
+        for(int i = 0; i < n-m; i++){
+            droite[i] = tab[m+i];
+        }
+        triFusion(droite, n-m);
+
+        fusion(gauche, m, droite, n-m, tab);
+    }
+}
+\stopverb
+}
+\ol{
+\li{Donner le contrat de cette fonction, constitué d'une précondition spécifiant la taille du tableau, d'une post-condition assurant que le tableau est trié, et d'un variant pour montrer que la fonction termine toujours.}
+\li{Donner les variants pour chacune des deux boucles.}
+\li{Donner les invariants pour chacune des deux boucles, permettant de s'assurer que tous les accès dans les tableaux sont valides.}
+}
+}

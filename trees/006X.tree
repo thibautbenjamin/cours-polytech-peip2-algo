@@ -1,0 +1,43 @@
+\title{Spécification de la fonction de fusion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T12:13:04Z}
+
+\p{
+On considère la fonction suivante, qui prend en entrée un tableau \code{tabGauche} avec sa longueur \code{lGauche}, un tableau \code{tabDroite} avec sa longueur \code{lDroite} et un tableau \code{resultat}, et qui effectue la fusion des deux tableau \code{tabGauche} et \code{tabDroite} dans le tableau \code{resultat}.
+\cppdisplay{
+\startverb
+void fusion (int tabGauche[], int lGauche, int tabDroite[], int lDroite, int resultat[]){
+    int i = 0;
+    int gauche = 0;
+    int droite = 0;
+    while(gauche < lGauche && droite < lDroite){
+        if (tabGauche[gauche] <= tabDroite[droite]){
+            resultat[i] = tabGauche[gauche];
+            gauche++;
+        }
+        else {
+            resultat[i] = tabDroite[droite];
+            droite++;
+        }
+        i++;
+    }
+    while(gauche < lGauche){
+        resultat[i] = tabGauche[gauche];
+        gauche++;
+        i++;
+    }
+    while(droite < lDroite){
+        resultat[i] = tabDroite[droite];
+        droite++;
+        i++;
+    }
+}
+\stopverb
+}
+\ol{
+\li{Donner les préconditions de cette fonction, indiquant que les deux tableaux en entrée doivent être de la bonne longueur, qu'ils doivent être triés, et spécifiant la longueur du résultat.}
+\li{Donner la post-condition garantissant que le résultat est trié à la fin de la fonction.}
+}
+}
