@@ -8,23 +8,30 @@
       </fr:author>
     </fr:authors>
     <fr:date>
-      <fr:year>2025</fr:year>
-      <fr:month>12</fr:month>
-      <fr:day>7</fr:day>
+      <fr:year>2026</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>5</fr:day>
     </fr:date>
-    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/</fr:uri>
-    <fr:display-uri>005T</fr:display-uri>
-    <fr:route>/cours-polytech-peip2-algo/005T/</fr:route>
-    <fr:title text="Cours d'informatique Option S3">Cours d'informatique Option S3</fr:title>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006S/</fr:uri>
+    <fr:display-uri>006S</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006S/</fr:route>
+    <fr:title text="Utilisation de Why3">Utilisation de Why3</fr:title>
+    <fr:taxon>Rappel</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:p>Cette page est consacrée au matériel du cours d'option informatique qui fait suite au cours d'informatique du semestre 3. Ce cours constitue une petite introduction au sujet de la vérification de programmes.</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieagbkhfr3uklxb6gs3mhkq3lzphqecpbhr2wucpwysw3kox7a3lq.pdf">Cours 1</html:a></html:span></html:strong>: Présentation, et terminaison des boucles</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmig4z5ce4e264rvqcjc76e4bi4itpnuu3m7xq7r432wmbs2x57ehby.pdf">Cours 2</html:a></html:span></html:strong>: Contrats de fonctions et terminaison des fonctions récursives</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmihcel2cfikni6g2tdcvub3sgp35jllzy7jaorhspdqxleyp5b634y.pdf">Cours 3</html:a></html:span></html:strong>: Invariants de boucles et preuves de programmes itératifs</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006K/" title="Preuves d'implémentations du tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006K/" display-uri="006K" type="local">TP1</fr:link></html:strong>: Preuves d'implémentations du tri par insertion</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006Q/" title="Preuves d'implémentations du tri par sélection" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006Q/" display-uri="006Q" type="local">TP2</fr:link></html:strong>: Preuves d'implémentations du tri par sélection</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006R/" title="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/" display-uri="006R" type="local">TP3 (Bonus)</fr:link></html:strong>: Preuves d'implémentations du tri fusion</html:p>
+    <html:p>Nous utiliseront <fr:link href="https://www.why3.org/try" type="external">la version en ligne de Why3</fr:link>. N'oubliez pas de vous mettre en langage <html:code>micro-c</html:code>, de vérifier régulièrement que Why3 accepte ce que vous écrivez, et de <html:strong>sauvegarder régulièrement</html:strong> votre travail. Voici un petit récapitulatif de ce que l'on peut faire avec Why3:
+<html:ul><html:li><html:code>//@variant</html:code>: Déclarer un variant pour une boucle ou une fonction récursive.</html:li>
+<html:li><html:code>//@requires</html:code>: Déclarer une pré-condition pour une boucle.</html:li>
+<html:li><html:code>//@ensures</html:code>: Déclarer une post-condition.</html:li>
+<html:li><html:code>//@predicate P (int tab[], int i) = ...</html:code>: Définir un prédicat <html:code>P</html:code> prenant en paramètre un tableau <html:code>tab</html:code> et un entier <html:code>i</html:code>.</html:li>
+<html:li><html:code>//@function int f(int tab[], int i) = ...</html:code>: Définir une fonction <html:code>f</html:code> prenant en paramètre un tableau <html:code>tab</html:code> et un entier <html:code>i</html:code></html:li>
+<html:li><html:code>result</html:code>: (Dans un contrat de fonction) accéder au résultat renvoyé par la fonction.</html:li>
+<html:li><html:code>length(tab)</html:code>: Retourner la longueur du tableau <html:code>tab</html:code>.</html:li>
+<html:li><html:code>forall i . Q (i)</html:code>: Quantification universelle</html:li>
+<html:li><html:code>exists i . Q (i)</html:code> : Quantification existentielle</html:li>
+<html:li><html:code>old(e)</html:code>: (Dans une post-condition) Accéder à la valeur de l'expression <html:code>e</html:code> au moment de l'appel de la fonction.</html:li>
+<html:li><html:code>//@label</html:code> : Déclarer un label.</html:li>
+<html:li><html:code>at(e,L)</html:code> : Accéder à la valeur de l'expression <html:code>e</html:code> au point du programme indiqué par le label <html:code>L</html:code>.</html:li></html:ul></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
@@ -39,119 +46,7 @@
         <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Backlinks">Backlinks</fr:title>
-      </fr:frontmatter>
       <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/index/</fr:uri>
-            <fr:display-uri>index</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/index/</fr:route>
-            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>11</fr:month>
-                  <fr:day>4</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003K/</fr:uri>
-                <fr:display-uri>003K</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/003K/</fr:route>
-                <fr:title text="Structure du cours">Structure du cours</fr:title>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil <fr:link href="https://www.forester-notes.org/index/index.xml" type="external">forester</fr:link>, et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela semble pertinent ou nécessaire. Le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.</html:p>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>11</fr:month>
-                      <fr:day>4</fr:day>
-                    </fr:date>
-                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003L/</fr:uri>
-                    <fr:display-uri>003L</fr:display-uri>
-                    <fr:route>/cours-polytech-peip2-algo/003L/</fr:route>
-                    <fr:title text="Contribuer">Contribuer</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>Les contributions sont bienvenues, de la part de tout le monde! Le cours entier est en ligne sur <fr:link href="https://github.com/thibautbenjamin/cours-polytech-peip2-algo" type="external">github</fr:link>, et il suffit d'ouvrir une merge request pour proposer un changement. Si vous ne savez pas comment faire, vous pouvez contacter <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link></html:p>
-                  </fr:mainmatter>
-                </fr:tree>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/Cours/" title="Cours d'algorithmique PEIP2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Cours/" display-uri="Cours" type="local">La page du cours</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/001V/" title="Recueil des TD/TP" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001V/" display-uri="001V" type="local">La page des TD/TP</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Les diapositives de cours" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">La page des slides de cours</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/006J/" title="Recueil d'examens" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006J/" display-uri="006J" type="local">Recueil d'examens passés</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/005T/" title="Cours d'informatique Option S3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/" display-uri="005T" type="local">La page du cours d'option S3</fr:link>
-              </html:strong>
-            </html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Related">Related</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:date>
-              <fr:year>2026</fr:year>
-              <fr:month>1</fr:month>
-              <fr:day>5</fr:day>
-            </fr:date>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/</fr:uri>
-            <fr:display-uri>006R</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/006R/</fr:route>
-          </fr:frontmatter>
-          <fr:mainmatter />
-        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
@@ -759,6 +654,20 @@ N'oubliez pas de relier les sections du tableau avec la valeur <html:code>val</h
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
