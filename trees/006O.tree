@@ -1,0 +1,18 @@
+\title{Spécifications du tri par insertion itératif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-02T11:24:24Z}
+
+\p{On donne la fonction suivante, permettant de réaliser le tri par insertion de manière itérative. Donner les contrats et les invariants permettant d'assurer qu'à la fin du tri par insertion, le tableau est bien trié.
+\cppdisplay{
+\startverb
+void triInsertionIteratif(int tab[], int n){
+    for(int i = 1; i <= n; i++){
+        insertion(tab,i);
+    }
+}
+\stopverb
+}
+Vérifier à l'aide de Why3 que les contrats pour cette fonction peuvent bien être prouvés grâce aux invariants donnés.
+}

@@ -1,0 +1,10 @@
+\title{Prédicats utiles}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2026-01-02T11:09:10Z}
+
+\p{On commence l'exercice en définissant des prédicats utiles à montrer que le tableau est trié
+\ol{
+\li{Donner en Why3 la définition d'un prédicat \code{trieJusque(int a[],int n)} qui indique que les \code{n} premiers éléments du tableau \code{a} sont correctement triés.}
+\li{Donner en Why3 la définition d'un prédicat \code{trie(int a[])} qui indique que le tableau \code{a} est entièrement trié, en utilisant le prédicat précédent.}}
+}

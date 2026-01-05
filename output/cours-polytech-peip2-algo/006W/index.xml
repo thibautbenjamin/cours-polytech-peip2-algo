@@ -8,23 +8,59 @@
       </fr:author>
     </fr:authors>
     <fr:date>
-      <fr:year>2025</fr:year>
-      <fr:month>12</fr:month>
-      <fr:day>7</fr:day>
+      <fr:year>2026</fr:year>
+      <fr:month>1</fr:month>
+      <fr:day>5</fr:day>
     </fr:date>
-    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/</fr:uri>
-    <fr:display-uri>005T</fr:display-uri>
-    <fr:route>/cours-polytech-peip2-algo/005T/</fr:route>
-    <fr:title text="Cours d'informatique Option S3">Cours d'informatique Option S3</fr:title>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006W/</fr:uri>
+    <fr:display-uri>006W</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006W/</fr:route>
+    <fr:title text="Spécification du tri par sélection récursif">Spécification du tri par sélection récursif</fr:title>
+    <fr:taxon>Exercice</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:p>Cette page est consacrée au matériel du cours d'option informatique qui fait suite au cours d'informatique du semestre 3. Ce cours constitue une petite introduction au sujet de la vérification de programmes.</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieagbkhfr3uklxb6gs3mhkq3lzphqecpbhr2wucpwysw3kox7a3lq.pdf">Cours 1</html:a></html:span></html:strong>: Présentation, et terminaison des boucles</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmig4z5ce4e264rvqcjc76e4bi4itpnuu3m7xq7r432wmbs2x57ehby.pdf">Cours 2</html:a></html:span></html:strong>: Contrats de fonctions et terminaison des fonctions récursives</html:p>
-    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmihcel2cfikni6g2tdcvub3sgp35jllzy7jaorhspdqxleyp5b634y.pdf">Cours 3</html:a></html:span></html:strong>: Invariants de boucles et preuves de programmes itératifs</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006K/" title="Preuves d'implémentations du tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006K/" display-uri="006K" type="local">TP1</fr:link></html:strong>: Preuves d'implémentations du tri par insertion</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006Q/" title="Preuves d'implémentations du tri par sélection" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006Q/" display-uri="006Q" type="local">TP2</fr:link></html:strong>: Preuves d'implémentations du tri par sélection</html:p>
-    <html:p><html:strong><fr:link href="/cours-polytech-peip2-algo/006R/" title="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/" display-uri="006R" type="local">TP3 (Bonus)</fr:link></html:strong>: Preuves d'implémentations du tri fusion</html:p>
+    <html:p>
+On termine avec la version récursive du tri par sélection.
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[void triSelectionAux (int tab[], int i, int n){
+    if (i == n) {}
+    else {
+        int m = indiceMin (tab, i, n);
+        echange(tab, i, m);
+        triSelectionAux (tab, i+1, n);
+    }
+}
+
+void triSelectionRec (int tab[], int n){
+    triSelectionAux(tab,0,n);
+}]]>
+</html:code></html:pre>
+<html:ol><html:li>Donner le contrat de la fonction <html:code>triSelectionRec</html:code>.</html:li>
+<html:li>Donner la post-condition de la fonction <html:code>triSelectionAux</html:code>.</html:li>
+<html:li>Donner le variant de la fonction <html:code>triSelectionAux</html:code>.</html:li>
+<html:li>Donner les pré-conditions correspondant aux indices de la fonction <html:code>triSelectionAux</html:code>.</html:li>
+<html:li>Donner des pré-conditions supplémentaires à la fonction <html:code>triSelectionAux</html:code>, en vous inspirant des invariants trouvés lors de <fr:link href="/cours-polytech-peip2-algo/006V/" title="Spécification du tri par sélection itératif" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006V/" display-uri="006V" type="local">l'exercice précédent</fr:link>.</html:li>
+<html:li>Vérifier que Why3 réussit bien à vérifier tous les buts.</html:li></html:ol></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
@@ -39,119 +75,7 @@
         <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Backlinks">Backlinks</fr:title>
-      </fr:frontmatter>
       <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/index/</fr:uri>
-            <fr:display-uri>index</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/index/</fr:route>
-            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>11</fr:month>
-                  <fr:day>4</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003K/</fr:uri>
-                <fr:display-uri>003K</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/003K/</fr:route>
-                <fr:title text="Structure du cours">Structure du cours</fr:title>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>
-Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil <fr:link href="https://www.forester-notes.org/index/index.xml" type="external">forester</fr:link>, et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela semble pertinent ou nécessaire. Le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.</html:p>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>11</fr:month>
-                      <fr:day>4</fr:day>
-                    </fr:date>
-                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003L/</fr:uri>
-                    <fr:display-uri>003L</fr:display-uri>
-                    <fr:route>/cours-polytech-peip2-algo/003L/</fr:route>
-                    <fr:title text="Contribuer">Contribuer</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>Les contributions sont bienvenues, de la part de tout le monde! Le cours entier est en ligne sur <fr:link href="https://github.com/thibautbenjamin/cours-polytech-peip2-algo" type="external">github</fr:link>, et il suffit d'ouvrir une merge request pour proposer un changement. Si vous ne savez pas comment faire, vous pouvez contacter <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link></html:p>
-                  </fr:mainmatter>
-                </fr:tree>
-              </fr:mainmatter>
-            </fr:tree>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/Cours/" title="Cours d'algorithmique PEIP2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Cours/" display-uri="Cours" type="local">La page du cours</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/001V/" title="Recueil des TD/TP" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001V/" display-uri="001V" type="local">La page des TD/TP</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Les diapositives de cours" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">La page des slides de cours</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/006J/" title="Recueil d'examens" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006J/" display-uri="006J" type="local">Recueil d'examens passés</fr:link>
-              </html:strong>
-            </html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/005T/" title="Cours d'informatique Option S3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005T/" display-uri="005T" type="local">La page du cours d'option S3</fr:link>
-              </html:strong>
-            </html:p>
-          </fr:mainmatter>
-        </fr:tree>
-      </fr:mainmatter>
-    </fr:tree>
-    <fr:tree show-metadata="false" hidden-when-empty="true">
-      <fr:frontmatter>
-        <fr:authors />
-        <fr:title text="Related">Related</fr:title>
-      </fr:frontmatter>
-      <fr:mainmatter>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors />
-            <fr:date>
-              <fr:year>2026</fr:year>
-              <fr:month>1</fr:month>
-              <fr:day>5</fr:day>
-            </fr:date>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/</fr:uri>
-            <fr:display-uri>006R</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/006R/</fr:route>
-          </fr:frontmatter>
-          <fr:mainmatter />
-        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
@@ -473,6 +397,21 @@ void triSelectionRec (int tab[], int n){
             </fr:tree>
           </fr:mainmatter>
         </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
@@ -483,94 +422,17 @@ void triSelectionRec (int tab[], int n){
             <fr:date>
               <fr:year>2026</fr:year>
               <fr:month>1</fr:month>
-              <fr:day>2</fr:day>
+              <fr:day>5</fr:day>
             </fr:date>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006K/</fr:uri>
-            <fr:display-uri>006K</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/006K/</fr:route>
-            <fr:title text="Preuves d'implémentations du tri par insertion">Preuves d'implémentations du tri par insertion</fr:title>
-            <fr:taxon>TP</fr:taxon>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006V/</fr:uri>
+            <fr:display-uri>006V</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/006V/</fr:route>
+            <fr:title text="Spécification du tri par sélection itératif">Spécification du tri par sélection itératif</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <html:p>L'objectif de ce TP est de revoir et compléter les spécifications des différentes implémentations du tri par insertion que nous avons vues en cours, afin de montrer que ces fonctions de tri par insertion renvoient toujours un tableau trié.</html:p>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>5</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006S/</fr:uri>
-                <fr:display-uri>006S</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006S/</fr:route>
-                <fr:title text="Utilisation de Why3">Utilisation de Why3</fr:title>
-                <fr:taxon>Rappel</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>Nous utiliseront <fr:link href="https://www.why3.org/try" type="external">la version en ligne de Why3</fr:link>. N'oubliez pas de vous mettre en langage <html:code>micro-c</html:code>, de vérifier régulièrement que Why3 accepte ce que vous écrivez, et de <html:strong>sauvegarder régulièrement</html:strong> votre travail. Voici un petit récapitulatif de ce que l'on peut faire avec Why3:
-<html:ul><html:li><html:code>//@variant</html:code>: Déclarer un variant pour une boucle ou une fonction récursive.</html:li>
-<html:li><html:code>//@requires</html:code>: Déclarer une pré-condition pour une boucle.</html:li>
-<html:li><html:code>//@ensures</html:code>: Déclarer une post-condition.</html:li>
-<html:li><html:code>//@predicate P (int tab[], int i) = ...</html:code>: Définir un prédicat <html:code>P</html:code> prenant en paramètre un tableau <html:code>tab</html:code> et un entier <html:code>i</html:code>.</html:li>
-<html:li><html:code>//@function int f(int tab[], int i) = ...</html:code>: Définir une fonction <html:code>f</html:code> prenant en paramètre un tableau <html:code>tab</html:code> et un entier <html:code>i</html:code></html:li>
-<html:li><html:code>result</html:code>: (Dans un contrat de fonction) accéder au résultat renvoyé par la fonction.</html:li>
-<html:li><html:code>length(tab)</html:code>: Retourner la longueur du tableau <html:code>tab</html:code>.</html:li>
-<html:li><html:code>forall i . Q (i)</html:code>: Quantification universelle</html:li>
-<html:li><html:code>exists i . Q (i)</html:code> : Quantification existentielle</html:li>
-<html:li><html:code>old(e)</html:code>: (Dans une post-condition) Accéder à la valeur de l'expression <html:code>e</html:code> au moment de l'appel de la fonction.</html:li>
-<html:li><html:code>//@label</html:code> : Déclarer un label.</html:li>
-<html:li><html:code>at(e,L)</html:code> : Accéder à la valeur de l'expression <html:code>e</html:code> au point du programme indiqué par le label <html:code>L</html:code>.</html:li></html:ul></html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>2</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006L/</fr:uri>
-                <fr:display-uri>006L</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006L/</fr:route>
-                <fr:title text="Prédicats utiles">Prédicats utiles</fr:title>
-                <fr:taxon>Exercice</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>On commence l'exercice en définissant des prédicats utiles à montrer que le tableau est trié
-<html:ol><html:li>Donner en Why3 la définition d'un prédicat <html:code>trieJusque(int a[],int n)</html:code> qui indique que les <html:code>n</html:code> premiers éléments du tableau <html:code>a</html:code> sont correctement triés.</html:li>
-<html:li>Donner en Why3 la définition d'un prédicat <html:code>trie(int a[])</html:code> qui indique que le tableau <html:code>a</html:code> est entièrement trié, en utilisant le prédicat précédent.</html:li></html:ol></html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>2</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/</fr:uri>
-                <fr:display-uri>006M</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006M/</fr:route>
-                <fr:title text="Spécifications de la fonction d'insertion">Spécifications de la fonction d'insertion</fr:title>
-                <fr:taxon>Exercice</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>Donner le contrat pour la fonction d'insertion <html:strong>seulement les contrats pour le moment, pas de preuves</html:strong>
+            <html:p>
+On s'intéresse maintenant à la version itérative du tri par sélection.
 
         <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
         <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
@@ -592,170 +454,25 @@ void triSelectionRec (int tab[], int n){
                         "right-trim": true,
                 });</html:script>
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[void insertion (int tab[], int n){
-     if (n==1){}
-     else{
-        int val = tab[n-1];
-        int j = n-1;
-        while (j > 0 && val < tab [j-1]){
-              tab[j] = tab[j-1];
-              j = j-1;
-        }
-        tab[j] = val;
-     }
-}]]>
-</html:code></html:pre></html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>2</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006N/</fr:uri>
-                <fr:display-uri>006N</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006N/</fr:route>
-                <fr:title text="Spécifications du tri par insertion récursif">Spécifications du tri par insertion récursif</fr:title>
-                <fr:taxon>Exercice</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>On donne les fonctions suivantes, permettant de réaliser le tri par insertion de manière récursive. Donner les contrats permettant d'assurer qu'à la fin du tri par insertion, le tableau est bien trié.
-
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
-        <html:script>
-                Prism.plugins.NormalizeWhitespace.setDefaults({
-                        "remove-trailing": true,
-                        "remove-indent": true,
-                        "left-trim": true,
-                        "right-trim": true,
-                });</html:script>
-        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[void triInsertionAux (int tab[], int n){
-     if(n==0){}
-     else{
-        triInsertionAux(tab, n-1);
-        insertion(tab,n);
-     }
-}
-
-void triInsertionRec (int tab[], int n){
-     triInsertionAux(tab, n);
-}]]>
-</html:code></html:pre>
-Vérifier à l'aide de Why3 que ces contrats sont bien valides.
-</html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>2</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006O/</fr:uri>
-                <fr:display-uri>006O</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006O/</fr:route>
-                <fr:title text="Spécifications du tri par insertion itératif">Spécifications du tri par insertion itératif</fr:title>
-                <fr:taxon>Exercice</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>On donne la fonction suivante, permettant de réaliser le tri par insertion de manière itérative. Donner les contrats et les invariants permettant d'assurer qu'à la fin du tri par insertion, le tableau est bien trié.
-
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
-        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
-        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
-        <html:script>
-                Prism.plugins.NormalizeWhitespace.setDefaults({
-                        "remove-trailing": true,
-                        "remove-indent": true,
-                        "left-trim": true,
-                        "right-trim": true,
-                });</html:script>
-        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[void triInsertionIteratif(int tab[], int n){
-    for(int i = 1; i <= n; i++){
-        insertion(tab,i);
+<![CDATA[void triSelection(int tab[], int n){
+    for(int i = 0; i < n; i++){
+        int m = indiceMin(tab, i, n);
+        echange(tab, i, m);
     }
 }]]>
 </html:code></html:pre>
-Vérifier à l'aide de Why3 que les contrats pour cette fonction peuvent bien être prouvés grâce aux invariants donnés.
-</html:p>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2026</fr:year>
-                  <fr:month>1</fr:month>
-                  <fr:day>2</fr:day>
-                </fr:date>
-                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006P/</fr:uri>
-                <fr:display-uri>006P</fr:display-uri>
-                <fr:route>/cours-polytech-peip2-algo/006P/</fr:route>
-                <fr:title text="Preuve de la fonction d'insertion">Preuve de la fonction d'insertion</fr:title>
-                <fr:taxon>Exercice</fr:taxon>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>Le but de cet exercice est maintenant de donner invariants permettant de prouver les contrats pour la fonction d'insertion
-<html:ol><html:li>Donner un variant pour montrer que la boucle termine</html:li>
-<html:li>Regarder les obligations de preuves générées par Why3 correspondant aux accès des tableaux, et ajouter les invariants permettant de montrer que les accès sont toujours dans les bornes.</html:li>
-<html:li>Donner les invariants permettant de prouver les post-conditions de la fonction
-<html:ul><html:li><html:details>
+<html:ol><html:li>Donner les préconditions de cette fonction.</html:li>
+<html:li>Donner le variant de la boucle.</html:li>
+<html:li>Donner les invariants de la boucle permettant de garantir que toutes les préconditions des fonctions précédentes sont bien vérifiées.</html:li>
+<html:li>Donner la post-condition assurant qu'à la fin de cette fonction le tableau est trié.</html:li>
+<html:li>Donner les invariants permettant de vérifier cette post-condition
+
+<html:details>
 <html:summary><html:strong>[Indice]</html:strong></html:summary>
-Réfléchissez en terme de sections du tableau, et vérifiez quelles conditions ils satifont.
+Il vous faudra deux invariants pour prouver cette condition, qui traduisent ce qui se passe lors du tri par sélection. Pour vous aider, vous pouvez reprendre la <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=selection-sort" type="external">visualisation</fr:link> et mettre en pause pendant le tri.
 </html:details></html:li>
-<html:li><html:details>
-<html:summary><html:strong>[Indice]</html:strong></html:summary>
-Il faut considérer 2 sections dans le tableau: les indices avant <html:code>j</html:code> et ceux après <html:code>j</html:code>.
-</html:details></html:li>
-<html:li><html:details>
-<html:summary><html:strong>[Indice]</html:strong></html:summary>
-Il faut une condition permettant de comparer la section de gauche et la section de droite.
-</html:details></html:li>
-<html:li><html:details>
-<html:summary><html:strong>[Indice]</html:strong></html:summary>
-N'oubliez pas de relier les sections du tableau avec la valeur <html:code>val</html:code>.
-</html:details></html:li></html:ul></html:li></html:ol></html:p>
-              </fr:mainmatter>
-            </fr:tree>
+
+<html:li>Vérifier que Why3 réussit bien à vérifier tous les buts.</html:li></html:ol></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>

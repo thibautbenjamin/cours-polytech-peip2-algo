@@ -7,3 +7,7 @@
 
 \p{\strong{\asset-link{2025/slides/option-1/main.pdf}{Cours 1}}: Présentation, et terminaison des boucles}
 \p{\strong{\asset-link{2025/slides/option-2/main.pdf}{Cours 2}}: Contrats de fonctions et terminaison des fonctions récursives}
+\p{\strong{\asset-link{2025/slides/option-3/main.pdf}{Cours 3}}: Invariants de boucles et preuves de programmes itératifs}
+\p{\strong{[TP1](006K)}: Preuves d'implémentations du tri par insertion}
+\p{\strong{[TP2](006Q)}: Preuves d'implémentations du tri par sélection}
+\p{\strong{[TP3 (Bonus)](006R)}: Preuves d'implémentations du tri fusion}

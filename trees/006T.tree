@@ -1,0 +1,24 @@
+\title{Spécification de la fonction d'échange}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T10:04:10Z}
+
+\p{
+On commence par spécifier la fonction d'échange suivante:
+\cppdisplay{
+\startverb
+void echange (int tab[], int i, int j){
+    int tmp = tab[i];
+    tab[i] = tab[j];
+    tab[j] = tmp;
+}
+\stopverb
+}
+\ol{
+\li{Donner les préconditions permettant de s'assurer que les deux positions que l'on cherche à échanger sont valides dans le tableau.}
+\li{Donner les post-conditions assurant que les valeurs correspondant aux indices du tableau ont bien été changées}
+\li{Donner une post-condition supplémentaire, garantissant que les autres valeurs du tableau n'ont pas changé}
+\li{Vérifier que Why3 peut prouver ces post-conditions sans indications supplémentaires}
+}
+}

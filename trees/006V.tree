@@ -1,0 +1,31 @@
+\title{Spécification du tri par sélection itératif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T10:19:34Z}
+
+\p{
+On s'intéresse maintenant à la version itérative du tri par sélection.
+\cppdisplay{
+\startverb
+void triSelection(int tab[], int n){
+    for(int i = 0; i < n; i++){
+        int m = indiceMin(tab, i, n);
+        echange(tab, i, m);
+    }
+}
+\stopverb
+}
+\ol{
+\li{Donner les préconditions de cette fonction.}
+\li{Donner le variant de la boucle.}
+\li{Donner les invariants de la boucle permettant de garantir que toutes les préconditions des fonctions précédentes sont bien vérifiées.}
+\li{Donner la post-condition assurant qu'à la fin de cette fonction le tableau est trié.}
+\li{Donner les invariants permettant de vérifier cette post-condition
+
+\indice{Il vous faudra deux invariants pour prouver cette condition, qui traduisent ce qui se passe lors du tri par sélection. Pour vous aider, vous pouvez reprendre la [visualisation](https://mszula.github.io/visual-sorting/?algorithm=selection-sort) et mettre en pause pendant le tri.}
+}
+
+\li{Vérifier que Why3 réussit bien à vérifier tous les buts.}
+}
+}

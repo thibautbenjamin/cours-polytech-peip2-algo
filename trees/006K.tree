@@ -1,0 +1,13 @@
+\title{Preuves d'implémentations du tri par insertion}
+\taxon{TP}
+\author{thibautbenjamin}
+\date{2026-01-02T11:01:34Z}
+
+\p{L'objectif de ce TP est de revoir et compléter les spécifications des différentes implémentations du tri par insertion que nous avons vues en cours, afin de montrer que ces fonctions de tri par insertion renvoient toujours un tableau trié.}
+
+\transclude{006S}
+\transclude{006L}
+\transclude{006M}
+\transclude{006N}
+\transclude{006O}
+\transclude{006P}

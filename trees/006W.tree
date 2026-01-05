@@ -1,0 +1,33 @@
+\title{Spécification du tri par sélection récursif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T10:26:24Z}
+
+\p{
+On termine avec la version récursive du tri par sélection.
+\cppdisplay{
+\startverb
+void triSelectionAux (int tab[], int i, int n){
+    if (i == n) {}
+    else {
+        int m = indiceMin (tab, i, n);
+        echange(tab, i, m);
+        triSelectionAux (tab, i+1, n);
+    }
+}
+
+void triSelectionRec (int tab[], int n){
+    triSelectionAux(tab,0,n);
+}
+\stopverb
+}
+\ol{
+\li{Donner le contrat de la fonction \code{triSelectionRec}.}
+\li{Donner la post-condition de la fonction \code{triSelectionAux}.}
+\li{Donner le variant de la fonction \code{triSelectionAux}.}
+\li{Donner les pré-conditions correspondant aux indices de la fonction \code{triSelectionAux}.}
+\li{Donner des pré-conditions supplémentaires à la fonction \code{triSelectionAux}, en vous inspirant des invariants trouvés lors de [l'exercice précédent](006V).}
+\li{Vérifier que Why3 réussit bien à vérifier tous les buts.}
+}
+}

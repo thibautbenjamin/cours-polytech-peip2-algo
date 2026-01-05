@@ -1,0 +1,24 @@
+\title{Spécifications du tri par insertion récursif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-02T11:24:19Z}
+
+\p{On donne les fonctions suivantes, permettant de réaliser le tri par insertion de manière récursive. Donner les contrats permettant d'assurer qu'à la fin du tri par insertion, le tableau est bien trié.
+\cppdisplay{
+\startverb
+void triInsertionAux (int tab[], int n){
+     if(n==0){}
+     else{
+        triInsertionAux(tab, n-1);
+        insertion(tab,n);
+     }
+}
+
+void triInsertionRec (int tab[], int n){
+     triInsertionAux(tab, n);
+}
+\stopverb
+}
+Vérifier à l'aide de Why3 que ces contrats sont bien valides.
+}

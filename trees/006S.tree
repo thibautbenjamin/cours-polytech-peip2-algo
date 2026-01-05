@@ -1,0 +1,21 @@
+\title{Utilisation de Why3}
+\taxon{Rappel}
+\author{thibautbenjamin}
+\date{2026-01-05T09:52:18Z}
+
+\p{Nous utiliseront [la version en ligne de Why3](https://www.why3.org/try). N'oubliez pas de vous mettre en langage \code{micro-c}, de vérifier régulièrement que Why3 accepte ce que vous écrivez, et de \strong{sauvegarder régulièrement} votre travail. Voici un petit récapitulatif de ce que l'on peut faire avec Why3:
+\ul{
+\li{\code{//@variant}: Déclarer un variant pour une boucle ou une fonction récursive.}
+\li{\code{//@requires}: Déclarer une pré-condition pour une boucle.}
+\li{\code{//@ensures}: Déclarer une post-condition.}
+\li{\code{//@predicate P (int tab[], int i) = ...}: Définir un prédicat \code{P} prenant en paramètre un tableau \code{tab} et un entier \code{i}.}
+\li{\code{//@function int f(int tab[], int i) = ...}: Définir une fonction \code{f} prenant en paramètre un tableau \code{tab} et un entier \code{i}}
+\li{\code{result}: (Dans un contrat de fonction) accéder au résultat renvoyé par la fonction.}
+\li{\code{length(tab)}: Retourner la longueur du tableau \code{tab}.}
+\li{\code{forall i . Q (i)}: Quantification universelle}
+\li{\code{exists i . Q (i)} : Quantification existentielle}
+\li{\code{old(e)}: (Dans une post-condition) Accéder à la valeur de l'expression \code{e} au moment de l'appel de la fonction.}
+\li{\code{//@label} : Déclarer un label.}
+\li{\code{at(e,L)} : Accéder à la valeur de l'expression \code{e} au point du programme indiqué par le label \code{L}.}
+}
+}

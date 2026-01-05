@@ -1,0 +1,20 @@
+\title{Preuve de la fonction d'insertion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-02T11:24:25Z}
+
+\p{Le but de cet exercice est maintenant de donner invariants permettant de prouver les contrats pour la fonction d'insertion
+\ol{
+\li{Donner un variant pour montrer que la boucle termine}
+\li{Regarder les obligations de preuves générées par Why3 correspondant aux accès des tableaux, et ajouter les invariants permettant de montrer que les accès sont toujours dans les bornes.}
+\li{Donner les invariants permettant de prouver les post-conditions de la fonction
+\ul{
+\li{\indice{Réfléchissez en terme de sections du tableau, et vérifiez quelles conditions ils satifont.}}
+\li{\indice{Il faut considérer 2 sections dans le tableau: les indices avant \code{j} et ceux après \code{j}.}}
+\li{\indice{Il faut une condition permettant de comparer la section de gauche et la section de droite.}}
+\li{\indice{N'oubliez pas de relier les sections du tableau avec la valeur \code{val}.}}
+}
+}
+}
+}

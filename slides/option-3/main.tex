@@ -1,0 +1,420 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+\usetikzlibrary {graphs,graphdrawing}
+\usegdlibrary{trees}
+\usepackage{pgfplots}
+
+\usetheme[sectionpage=progressbar, subsectionpage=simple]{metropolis}
+
+\newtheorem{exercice}{Exercice}
+
+\usepackage{macros}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    \NewTCBInputListing{\slideinputlisting}{ O{0} O{9999999} m }{
+      listing file = #3,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1, lastline=#2},
+      width=\textwidth
+}
+
+
+\NewDocumentCommand{\codeslide}{ O{4} O{9999999} m}{
+  \slideinputlisting[#1][#2]{#3}
+  \onslide<2>
+  \slideinputlisting[0]{#3.res}}
+
+
+\title{Introduction à la vérification de programmes}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique Option S3}
+\author{Thibaut Benjamin, Henri Saudubray, Philippe Volte--Vieira}
+\date{5 Janvier 2026}
+\institute{Cours 3}
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Récapitulatif}
+
+  Dans les cours précédents, nous avons vu:
+  \begin{itemize}
+  \item La méthode du variant pour prouver la terminaison des boucles.
+  \item Les contrats de fonctions comprenant
+    \begin{itemize}
+    \item Les pré-conditions: ce qu'il faut vérifier à chaque appel de fonction
+    \item Les variants: pour prouver le terminaison des fonctions récursives
+    \item Les post-conditions: ce qui est vrai à la sortie de la fonction.
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Séance du jour}
+
+  \begin{itemize}
+  \item Les invariants de boucles: pour prouver ce que fait une boucle.
+  \item Une preuve d'un algorithme de tri
+  \end{itemize}
+\end{frame}
+
+\section{Les invariants de boucle}
+
+\subsection{Introduction aux invariants}
+
+\begin{frame}
+  \frametitle{Un exemple informel}
+  On considère un échiquier dans lequel on a enlevé deux coins opposés. On
+  souhaite recouvrir cet échiquier complètement avec des dominos, qui doivent
+  recouvrir deux cases, sans se chevaucher. Est-ce que c'est possible?
+
+  \includegraphics[width = .7\textwidth]{checkerboardanddominoes.png}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solution: Un invariant}
+  \begin{itemize}
+  \item Chaque un domino on recouvre une case rouge et une case noire.
+
+    \alert{Notons \(N_{k}\) le nombre de case noires non recouvertes à l'étape
+      \(k\) et \(R_{k}\) le nombre de cases rouges non recouvertes à l'étape
+      \(k\).}
+
+  \item On a donc \(N_{k+1} - R_{k+1} = N_{k} - R_{k}\): La quantité \(N-R\) est
+    un \emph{invariant}: elle garde la même valeur tout le long de la procédure.
+  \item On démarre avec aucune case recouverte : \(N_{0} - R_{0} = 2\). On ne
+    peut jamais recouvrir toutes les cases, car cela impliquerait d'atteindre un
+    état avec \(N_{k}-R_{k} = 0 \neq 2\).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analyse de la méthode de l'invariant}
+  \begin{itemize}
+  \item On a remarqué que chaque nouvelle étape de notre programme satisfait une
+    condition.
+
+  \item Cela nous a permis de trouver un invariant.
+
+
+  \item Grâce à cet invariant, on a pu transmettre de l'information du début à
+    la fin du programme, pour prouver l'impossibilité de la question.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les invariants en informatique}
+  \begin{itemize}
+  \item En informatique, on va utiliser des invariants lorsque l'on a des
+    boucles.
+
+  \item Un invariant est une proposition qui satisfait deux critères:
+    \begin{itemize}
+    \item Elle est vraie au moment de la première entrée dans la boucle.
+    \item Si elle est vraie au début d'une itération, elle est aussi vraie au
+      début de la suivante.
+    \end{itemize}
+
+  \item Cela implique que la propriété est vraie à chaque entrée dans la boucle.
+    C'est une technique de raisonnement par récurrence.
+
+  \end{itemize}
+\end{frame}
+
+\subsection{Premiers exemples: invariants pour prouver les variants}
+
+\begin{frame}[fragile]
+  \frametitle{Les invariants en Why3}
+  \begin{itemize}
+  \item En Why3, on peut déclarer un invariant associé à une boucle à l'aide du
+    mot-clé \lstinline|//@invariant|
+
+  \item Il est souvent nécessaire pour Why3 d'avoir un invariant afin de prouver
+    les variants.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Un premier exemple, l'addition naive}
+  \slideinputlisting{code/exemple1.cpp}
+
+  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1intyadditionBete%2F7nrza7rrzb7I7H7OO16requiresqA7zAz07wH3whileioB7AyokJk5variantolHqyinvariant%2FqA7TyAmoHe7ys7qz1pHmos7sppF79H4returnlqNqN}
+  {\alert{Démo en Why3}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Variant et invariant}
+
+  \begin{itemize}
+  \item Pourquoi l'invariant est-il nécessaire pour prouver le variant dans cet
+    exemple?
+  \item Comment aurait-on pu modifier le programme pour prouver le variant sans
+    avoir besoin d'un invariant?
+  \item Dans les exercices suivants on reprend les exemples de variants vus dans
+    les cours précédents et on ajoute les invariants nécéssaires pour les
+    prouver.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: Enumération des nombres triangulaires}
+
+  Donner un variant et un invariant permettant de prouver le variant
+  \slideinputlisting[4][11]{code/exercice1.cpp}
+
+  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A2voidynombresTriangulaires%2FA7n1intzn7o77Hq0tr7yz07wHpzipz1pJ3whileil7xhhhLpks7qijHsA7KKwH4printfA7HBkAzdB7Bro7IwD79NtN}{\alert{Démo
+    en Why3}}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: PGCD version itérative}
+
+  Donner un variant, avec des préconditions et un invariant permettant de
+  prouver le variant \slideinputlisting{code/exercice2.cpp}
+
+  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1int2pgcd7nrza7rrzb7I7H3whileAnnB7AyooJ0ifoo7zo7o77p7ys7so7w79H2elseAmpmsnmmmFtH4returnqqNq}{\alert{Démo
+    en Why3}}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Rappel: PGCD récursif}
+  \slideinputlisting{code/exemple2.cpp}
+
+  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1int2pgcd7nrza7rrzb7I7H3whileAnnB7AyooJ0ifoo7zo7o77p7ys7so7w79H2elseAmpmsnmmmFtH4returnqqNq}{\alert{Démo
+      en Why3}}
+
+  Comparer la réponse à l'exercice précédent avec cette spécification.
+
+\end{frame}
+
+\subsection{Utilisation des variants pour prouver les post-conditions}
+
+\begin{frame}
+  \frametitle{Principe général}
+
+  \begin{itemize}
+  \item La méthode de l'invariant ne permet pas seulement de prouver des
+    variants, elle donne un moyen général de caractériser ce qu'il se passe lors
+    d'une boucle.
+  \item On peut utiliser un invariant pour aider à prouver les post-conditions
+    des fonctions.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Usage des labels}
+
+  \begin{itemize}
+  \item \alert{Attention}: En Why3 un invariant est nécessairement une condition
+    booléenne: ca ne peut pas être un entier comme dans l'exemple de
+    l'introduction.
+  \item Pour construire ces booléens, on utilise souvent des \og labels\fg{}
+    grâce au mot clé \lstinline|//@label|
+  \item Si on a définit un label \lstinline|L|, on peut écrire
+    \lstinline|at(e,L)| pour faire référence à la valeur qu'avait l'expression
+    \lstinline|e| au point de programme marqué du label \lstinline|L|.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: Spécification complète de l'addition naive}
+
+  On reprend le code du début. Ajouter une postcondition qui spécifie le
+  résultat que renvoie cette fonction, et un invariant permettant de prouver
+  cette post-condition.
+
+  \slideinputlisting{code/exemple1.cpp}
+
+  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1intyadditionBete%2F7nrza7rrzb7I7H7OO16requiresqA7zAz07wH3whileioB7AyokJk5variantolHqyinvariant%2FqA7TyAmoHe7ys7qz1pHmos7sppF79H4returnlqNqN}
+  {\alert{Démo en Why3}}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: Somme des éléments d'un tableau}
+  \href{https://www.why3.org/try/?name=isqrt.c&lang=micro-C&code=A7iA5includeA7xA3stdio7tAzhA7zNN7OJ1B6function1intysommePartielle%2F7nrza7WYrrzi7IQJuNNr3sommenr1tabnrzn7I7Jrzs7yz07wH1forAjngnnnqXjqqA7KKI7Ljms7qf72n7YwD79H4returnmjNq}{\alert{Sujet
+    sur Why3}}
+
+  On suppose une fonction logique de somme partielles d'un tableau:
+  \begin{enumerate}
+  \item Définir une fonction logique \lstinline|somme(int a[])| qui renvoie la
+    somme des éléments du tableau \lstinline|a|.
+  \item Spécifier le programme donné, à l'aide de ces fonctions.
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: Indice du maximum d'un tableau}
+
+  Donner et prouver le contrat de la fonction suivante, permettant de calculer
+  l'indice du maximum d'un tableau non vide.
+  \slideinputlisting{code/exercice5.cpp}
+  \href{https://www.why3.org/try/?name=isqrt.c&lang=micro-C&code=A7iA5includeA7xA3stdio7tAzhA7zNN1intyindiceMax%2F7nr1tab7WYrrzn7I7Jrn7yz07wH1forjnzinnnqdjqqA7KKI7L0ifkf72o74cppe7YI7LsfmiD79DtH4returnoqNqNNN}{\alert{Démo
+    sur Why3}}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: nombres triangulaires}
+
+  \href{https://www.why3.org/try/?name=test.mlw&lang=micro-C&code=A1intytriangulaire%2FA7nrzn7o77Hq0tr7yz07wH1forknzinnnq7RyAiqqA7KKI7MGjms7qpoMB79H4returnoqNq}{\alert{Sujet
+      sur Why3}}
+
+  \begin{enumerate}
+  \item Définir une fonction logique \lstinline|triangulaire(int n)| qui renvoie
+    la valeur du \(n\)\textsuperscript{ème} nombre triangulaire.
+  \item A l'aide de cette fonction spécifier complètement le programme donné.
+    \alert{Attention: Why3 ne sera pas capable de prouver l'invariant de boucle,
+      même si ce dernier est correct.}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Exercice: plus petit nombre triangulaire plus grand qu'une borne}
+
+  \href{https://www.why3.org/try/?name=test.mlw&lang=micro-C&code=A1intynombreTriangulaireMax%2FA7nrzn7o77Hq0tr7yz07wHpzipz1pH3whileil7xhhhJpks7qijHsA7KKwF79H4returnnoNq}{\alert{Sujet
+      sur Why3}}
+
+  \begin{enumerate}
+  \item Définir une fonction logique \lstinline|triangulaire(int n)| qui renvoie
+    la valeur du \(n\)\textsuperscript{ème} nombre triangulaire.
+  \item Spécifier le programme donné pour prouver que le résultat est un nombre
+    triangulaire plus grand que \lstinline|n|.
+  \item Affiner la spécification pour certifier que le résultat est le plus
+    petit nombre triangulaire plus grand que \lstinline|n|.
+  \end{enumerate}
+\end{frame}
+
+\subsection{Preuve d'un algorithme de tri itératif}
+
+\begin{frame}
+  \frametitle{Objectif}
+  \begin{itemize}
+  \item La dernière fois, on avait montré que la version récursive du tri par
+    instertion renvoie toujours un tableau trié (sans prouver la fonction
+    d'insertion).
+  \item Aujourd'hui, on va faire la même chose pour la version itérative du tri
+    par insertion.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Prédicats utilisés}
+  \begin{itemize}
+  \item Définir un prédicat \lstinline|trieJusque(int a[], int n)| qui dit que
+    le tableau \lstinline|a| est trié jusqu'à l'indice \lstinline|n| exclus.
+  \item Définir un prédicat \lstinline|trie(int a[])| qui dit que le tableau
+    \lstinline|a| est trié.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Fonction d'insertion}
+  Rappeler les spécifications de la fonction d'insertion, garantissant qu'elle
+  trie le tableau
+  \slideinputlisting{code/exercice3.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tri par insertion}
+  Donner les spécifications (contrat, variant et invariant) pour la fonction de
+  tri par insertion itérative suivante, garantissant que le tableau obtenu à la
+  fin est trié. \slideinputlisting{code/exercice4.cpp}
+
+  \href{https://www.why3.org/try/?name=isqrt.c&lang=micro-C&code=A7iA5includeA7xA3stdio7tAzhA7zNN2voidyinsertion%2F7n1int1tab7WYrrzn7I7J7Ou2CODE0DE0LA6FONCTIONN79NNgytriInsertion%2FAgiggrggH1forAnpzi7yz17wq7RykqqA7KKI7LYkg7rAo7IwDbNt}{\alert{Démo
+    en Why3}}
+\end{frame}
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% TeX-engine: luatex
+%%% End:

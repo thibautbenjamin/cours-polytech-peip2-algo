@@ -1,0 +1,31 @@
+\title{Spécification de l'indice du minimum}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-05T10:12:13Z}
+
+\p{
+On se concentre ensuite sur la fonction suivante, permettant de trouver l'indice du minimum dans un tableau, à partir d'un indice \code{k} donné.
+\cppdisplay{
+\startverb
+int indiceMin (int tab[], int k, int n){
+    int indiceMin = k;
+    for (int i = k; i < n; i++){
+        if (tab[i] < tab[indiceMin]){
+            indiceMin = i;
+        }
+    }
+    return indiceMin;
+}
+\stopverb
+}
+\ol{
+\li{Donner les préconditions de cette fonction.}
+\li{Donner le variant de la boucle.}
+\li{Donner les invariants de la boucle permettant de garantir que tous les accès au tableau sont corrects.}
+\li{Donner la post-condition garantissant que le résultat de la fonction est une position valide du tableau supérieure ou égale à \code{k}.}
+\li{Donner la post-condition de cette fonction assurant que tous les éléments du tableau contenus à des position supérieures ou égales à \code{k}, sont supérieurs à l'élément contenu dans la position renvoyée par la fonction.}
+\li{Donner un invariant de la boucle permettant de prouver cette post-condition.}
+\li{Vérifier que Why3 réussit bien à vérifier tous les buts.}
+}
+}

@@ -1,0 +1,24 @@
+\title{Spécifications de la fonction d'insertion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-01-02T11:15:37Z}
+
+\p{Donner le contrat pour la fonction d'insertion \strong{seulement les contrats pour le moment, pas de preuves}
+\cppdisplay{
+\startverb
+void insertion (int tab[], int n){
+     if (n==1){}
+     else{
+        int val = tab[n-1];
+        int j = n-1;
+        while (j > 0 && val < tab [j-1]){
+              tab[j] = tab[j-1];
+              j = j-1;
+        }
+        tab[j] = val;
+     }
+}
+\stopverb
+}
+}

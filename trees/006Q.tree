@@ -1,0 +1,13 @@
+\title{Preuves d'implémentations du tri par sélection}
+\taxon{TP}
+\author{thibautbenjamin}
+\date{2026-01-05T09:50:05Z}
+
+\p{L'objectif de ce TP est spécifier différentes implémentations du tri par sélection, afin de montrer que ces fonctions renvoient toujours un tableau trié.}
+
+\transclude{006S}
+\transclude{006L}
+\transclude{006T}
+\transclude{006U}
+\transclude{006V}
+\transclude{006W}
