@@ -248,34 +248,6 @@ On cherche maintenant à généraliser ce résultat:
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD3/" title="TD 3" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD3/" display-uri="Seance-TD3" type="local">TD 3</fr:link></html:li>
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD4/" title="TD 4" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD4/" display-uri="Seance-TD4" type="local">TD 4</fr:link></html:li></html:ul>
             </html:p>
-            <html:p><html:strong>Corrections</html:strong>: Merci à <html:strong>Olivier Delfanne</html:strong> pour la prise de notes des corrections des TD. C'est un travail personnel qu'il partage avec l'ensemble de la classe, et ne constituent en aucun cas des corrections officielles.
-<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmibqttedcc66vbeyx6r57qye27csl72f3piycl2w4fc6isyxnvgpmy.zip"><html:strong>Corrections du TD1</html:strong></html:a></html:span></html:li>
-<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicqevkaa2lwvcb75ckdxpmsf2o2iducoroircqlpmfga6cqt7cpmi.zip"><html:strong>Corrections du TD2</html:strong></html:a></html:span></html:li>
-<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmibrtp2e5sqkfxxret4ymzufypyjdjifakarjyy6w76o34adfvtleq.zip"><html:strong>Corrections du TD3</html:strong></html:a></html:span></html:li>
-<html:li><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmice22wqgfv26f73ty2qp4rbffujq6kcwvzb6dja223brms3xxzoki.zip"><html:strong>Corrections du TD4</html:strong></html:a></html:span></html:li></html:p>
-          </fr:mainmatter>
-        </fr:tree>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:author>
-                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:author>
-            </fr:authors>
-            <fr:date>
-              <fr:year>2025</fr:year>
-              <fr:month>10</fr:month>
-              <fr:day>27</fr:day>
-            </fr:date>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001V.sync-conflict-20251111-153300-I54U3RZ</fr:uri>
-            <fr:display-uri>001V.sync-conflict-20251111-153300-I54U3RZ</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/001V.sync-conflict-20251111-153300-I54U3RZ</fr:route>
-            <fr:title text="Recueil des TD/TP">Recueil des TD/TP</fr:title>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p><html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
-<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
-<html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li></html:ul></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>
