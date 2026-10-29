@@ -1,0 +1,22 @@
+\title{Calcul de la somme de deux entiers positifs (récursivement)}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2026-10-29T14:56:40Z}
+\import{basemacros}
+
+\p{
+\cppdisplay{
+\startverb
+// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  if (y <= 0){
+    return x;
+  }
+  else {
+    return somme(x,y-1)+1;
+  }   
+}
+\stopverb
+}}
+

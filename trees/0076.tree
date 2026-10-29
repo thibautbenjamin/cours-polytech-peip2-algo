@@ -1,0 +1,14 @@
+\title{Anatomie d'un programme récursif}
+\author{thibautbenjamin}
+\date{2026-10-29T14:42:47Z}
+\import{basemacros}
+
+
+\p{Un programme récursif est généralement structuré en deux bien distincts:
+\ul{
+\li{\strong{Le cas de base} : Il typiquement d'un cas minimal, où l'on sais donner directement la réponse au problème posé sans faire d'appel récursif.}
+\li{\strong{Le cas récursif} : Il s'agit du cas général, dans lequel l'algorithme va s'appeler lui-même récursivement. Pour que l'algorithme récursif termine, il est important que chacun des appels nous rapproche du cas de base}
+}
+}
+
+\transclude{0079}

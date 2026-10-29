@@ -1,0 +1,17 @@
+\title{Addition naïve version récursive}
+\author{thibautbenjamin}
+\date{2026-10-29T14:37:50Z}
+\taxon{Explication d'algorithme}
+\import{basemacros}
+
+\p{Voici une version récursive de [l'algorithme d'addition de deux entiers positifs avec une boulce](001I)}
+\transclude{0078}
+
+\p{Imaginons que l'on appelle l'algorithme \code{somme} ci-dessus avec plusieurs valeurs:
+\ul{
+\li{Si l'on appelle \code{somme(4,0)} la fonction renvoie \code{4} directement, sans faire d'appel récursif}
+\li{Si l'on appelle \code{somme(4,1)}, la fonction va appeler \code{somme(4,0)} qui renvoie \code{4}, puis utiliser ce résultat pour renvoyer \code{5}}
+\li{Si l'on appelle \code{somme(4,2)}, la fonction va appeler \code{somme(4,1)} (qui elle même va appeler \code{somme(4,0)} pour faire son calcul). Cette dernière renvoie \code{5}, qui est utilisé pour renvoyer \code{6}}
+\li{Et ainsi de suite, à chaque nouvel appel le second argument décroit jusqu'à tomber à \code{0}, où la fonction renvoie une valeur fixe.}
+}
+}

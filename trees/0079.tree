@@ -1,0 +1,10 @@
+\title{Le cas de base}
+\author{thibautbenjamin}
+\date{2026-10-29T15:07:29Z}
+\import{basemacros}
+
+\p{Le cas de base est le cas dans lequel on sait donner un résultat sans faire d'appel récursif. Il est important de fournir un cas de base, car c'est le cas qui à la fin garantit que la fonction s'arrête. Un algorithme sans cas de base ne s'arrête pas en général}
+
+\transclude{007A}
+
+

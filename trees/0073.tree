@@ -1,0 +1,25 @@
+\title{Incrémentation d'un nombre entier positif par récursivité}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\date{2026-10-29T14:17:00Z}
+\import{basemacros}
+
+\p{
+\cppdisplay{
+\startverb
+// Entrées: Un entier x positif ou nul
+// Sortie: L'entier x incrémenté de 1
+#include <iostream>
+using namespace std;
+
+int incrementer (int x){
+    if (x == 0){
+        return 1;
+    }
+    else{
+        return incrementer (x-1) + 1;
+    }
+    return 0;
+}
+\stopverb
+}}

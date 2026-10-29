@@ -1,0 +1,9 @@
+\title{Principe de base de la récursivité}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2026-10-29T14:04:25Z}
+
+\p{En informatique, un algorithme récursif est un algorithme qui s'appelle elle-même dans son code. Cela peut paraître compliqué au début, car comment un algorithme peut-il apparaître dans sa propre définition? Cependant, c'est autorisé en \Cpp, et nous allons voir que dans plein de cas, cela est utile pour écrire des algorithmes raisonnables}
+
+\transclude{0074}
+\transclude{0076}

@@ -1,0 +1,20 @@
+\title{Incrémentation d'un entier}
+\author{thibautbenjamin}
+\taxon{Explication d'algorithme}
+\date{2026-10-29T14:43:58Z}
+\import{basemacros}
+
+\transclude{0073}
+
+\p{Imaginons que l'on appelle la fonction \code{incrementer} ci-dessus avec plusieurs valeurs:
+\ul{
+\li{Si l'on appelle \code{incrementer(0)} la fonction renvoie \code{1} directement, sans faire d'appel récursif}
+\li{Si l'on appelle \code{incrementer(1)}, la fonction va appeler \code{incrementer(0)} qui renvoie \code{1}, puis utiliser ce résultat pour renvoyer \code{2}}
+\li{Si l'on appelle \code{incrementer(2)}, la fonction va appeler \code{incrementer(1)} (qui elle même va appeler \code{incrementer(0)} pour faire son calcul). Cette dernière renvoie \code{2}, qui est utilisé pour renvoyer \code{3}}
+\li{Et ainsi de suite, chaque nombre appelle le précédent jusqu'à tomber à \code{0}, où la fonction renvoie une valeur fixe.}
+\li{Notons que si l'on appelle la fonction avec un nombre négatif, elle va s'appeler elle-même avec des nombres négatifs de plus en plus petits sans jamais tomber à \code{0}, et donc va boucler à l'infini.}
+}
+}
+
+
+

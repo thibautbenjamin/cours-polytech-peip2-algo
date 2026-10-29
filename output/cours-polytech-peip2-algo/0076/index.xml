@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>29</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0076/</fr:uri>
+    <fr:display-uri>0076</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/0076/</fr:route>
+    <fr:title text="Anatomie d'un programme récursif">Anatomie d'un programme récursif</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Un programme récursif est généralement structuré en deux bien distincts:
+<html:ul><html:li><html:strong>Le cas de base</html:strong> : Il typiquement d'un cas minimal, où l'on sais donner directement la réponse au problème posé sans faire d'appel récursif.</html:li>
+<html:li><html:strong>Le cas récursif</html:strong> : Il s'agit du cas général, dans lequel l'algorithme va s'appeler lui-même récursivement. Pour que l'algorithme récursif termine, il est important que chacun des appels nous rapproche du cas de base</html:li></html:ul></html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>29</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0079/</fr:uri>
+        <fr:display-uri>0079</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/0079/</fr:route>
+        <fr:title text="Le cas de base">Le cas de base</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Le cas de base est le cas dans lequel on sait donner un résultat sans faire d'appel récursif. Il est important de fournir un cas de base, car c'est le cas qui à la fin garantit que la fonction s'arrête. Un algorithme sans cas de base ne s'arrête pas en général</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>29</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007A/</fr:uri>
+            <fr:display-uri>007A</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/007A/</fr:route>
+            <fr:title text="Un algorithme sans cas de base">Un algorithme sans cas de base</fr:title>
+            <fr:taxon>Exemple</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  return somme(x,y-1)+1;
+}]]>
+</html:code></html:pre></html:p>
+            <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>somme</html:code> va boucler à l'infini, par exemple
+<html:ul><html:li><html:code>somme(4,1)</html:code> va appeler <html:code>somme(4,0)</html:code></html:li>
+<html:li><html:code>somme(4,0)</html:code> va appeler <html:code>somme(4,-1)</html:code></html:li>
+<html:li><html:code>somme(4,-1)</html:code> va appeler <html:code>somme(4,-2)</html:code></html:li>
+<html:li>Et ainsi de suite, chaque étape va appeler <html:code>somme</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>29</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0072/</fr:uri>
+            <fr:display-uri>0072</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0072/</fr:route>
+            <fr:title text="Principe de base de la récursivité">Principe de base de la récursivité</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>En informatique, un algorithme récursif est un algorithme qui s'appelle elle-même dans son code. Cela peut paraître compliqué au début, car comment un algorithme peut-il apparaître dans sa propre définition? Cependant, c'est autorisé en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, et nous allons voir que dans plein de cas, cela est utile pour écrire des algorithmes raisonnables</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0074/</fr:uri>
+                <fr:display-uri>0074</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0074/</fr:route>
+                <fr:title text="Premiers exemples d'algorithmes récursifs">Premiers exemples d'algorithmes récursifs</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>29</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0077/</fr:uri>
+                    <fr:display-uri>0077</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0077/</fr:route>
+                    <fr:title text="Incrémentation d'un entier">Incrémentation d'un entier</fr:title>
+                    <fr:taxon>Explication d'algorithme</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>29</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0073/</fr:uri>
+                        <fr:display-uri>0073</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/0073/</fr:route>
+                        <fr:title text="Incrémentation d'un nombre entier positif par récursivité">Incrémentation d'un nombre entier positif par récursivité</fr:title>
+                        <fr:taxon>Algorithme</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Un entier x positif ou nul
+// Sortie: L'entier x incrémenté de 1
+#include <iostream>
+using namespace std;
+
+int incrementer (int x){
+    if (x == 0){
+        return 1;
+    }
+    else{
+        return incrementer (x-1) + 1;
+    }
+    return 0;
+}]]>
+</html:code></html:pre></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <html:p>Imaginons que l'on appelle la fonction <html:code>incrementer</html:code> ci-dessus avec plusieurs valeurs:
+<html:ul><html:li>Si l'on appelle <html:code>incrementer(0)</html:code> la fonction renvoie <html:code>1</html:code> directement, sans faire d'appel récursif</html:li>
+<html:li>Si l'on appelle <html:code>incrementer(1)</html:code>, la fonction va appeler <html:code>incrementer(0)</html:code> qui renvoie <html:code>1</html:code>, puis utiliser ce résultat pour renvoyer <html:code>2</html:code></html:li>
+<html:li>Si l'on appelle <html:code>incrementer(2)</html:code>, la fonction va appeler <html:code>incrementer(1)</html:code> (qui elle même va appeler <html:code>incrementer(0)</html:code> pour faire son calcul). Cette dernière renvoie <html:code>2</html:code>, qui est utilisé pour renvoyer <html:code>3</html:code></html:li>
+<html:li>Et ainsi de suite, chaque nombre appelle le précédent jusqu'à tomber à <html:code>0</html:code>, où la fonction renvoie une valeur fixe.</html:li>
+<html:li>Notons que si l'on appelle la fonction avec un nombre négatif, elle va s'appeler elle-même avec des nombres négatifs de plus en plus petits sans jamais tomber à <html:code>0</html:code>, et donc va boucler à l'infini.</html:li></html:ul></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>29</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0075/</fr:uri>
+                    <fr:display-uri>0075</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0075/</fr:route>
+                    <fr:title text="Addition naïve version récursive">Addition naïve version récursive</fr:title>
+                    <fr:taxon>Explication d'algorithme</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Voici une version récursive de <fr:link href="/cours-polytech-peip2-algo/001I/" title="Calcul de la somme de deux entiers positifs (avec une boucle)" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001I/" display-uri="001I" type="local">l'algorithme d'addition de deux entiers positifs avec une boulce</fr:link></html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>29</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0078/</fr:uri>
+                        <fr:display-uri>0078</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/0078/</fr:route>
+                        <fr:title text="Calcul de la somme de deux entiers positifs (récursivement)">Calcul de la somme de deux entiers positifs (récursivement)</fr:title>
+                        <fr:taxon>Algorithme</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  if (y <= 0){
+    return x;
+  }
+  else {
+    return somme(x,y-1)+1;
+  }   
+}]]>
+</html:code></html:pre></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <html:p>Imaginons que l'on appelle l'algorithme <html:code>somme</html:code> ci-dessus avec plusieurs valeurs:
+<html:ul><html:li>Si l'on appelle <html:code>somme(4,0)</html:code> la fonction renvoie <html:code>4</html:code> directement, sans faire d'appel récursif</html:li>
+<html:li>Si l'on appelle <html:code>somme(4,1)</html:code>, la fonction va appeler <html:code>somme(4,0)</html:code> qui renvoie <html:code>4</html:code>, puis utiliser ce résultat pour renvoyer <html:code>5</html:code></html:li>
+<html:li>Si l'on appelle <html:code>somme(4,2)</html:code>, la fonction va appeler <html:code>somme(4,1)</html:code> (qui elle même va appeler <html:code>somme(4,0)</html:code> pour faire son calcul). Cette dernière renvoie <html:code>5</html:code>, qui est utilisé pour renvoyer <html:code>6</html:code></html:li>
+<html:li>Et ainsi de suite, à chaque nouvel appel le second argument décroit jusqu'à tomber à <html:code>0</html:code>, où la fonction renvoie une valeur fixe.</html:li></html:ul></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0076/</fr:uri>
+                <fr:display-uri>0076</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0076/</fr:route>
+                <fr:title text="Anatomie d'un programme récursif">Anatomie d'un programme récursif</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Un programme récursif est généralement structuré en deux bien distincts:
+<html:ul><html:li><html:strong>Le cas de base</html:strong> : Il typiquement d'un cas minimal, où l'on sais donner directement la réponse au problème posé sans faire d'appel récursif.</html:li>
+<html:li><html:strong>Le cas récursif</html:strong> : Il s'agit du cas général, dans lequel l'algorithme va s'appeler lui-même récursivement. Pour que l'algorithme récursif termine, il est important que chacun des appels nous rapproche du cas de base</html:li></html:ul></html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>29</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0079/</fr:uri>
+                    <fr:display-uri>0079</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0079/</fr:route>
+                    <fr:title text="Le cas de base">Le cas de base</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Le cas de base est le cas dans lequel on sait donner un résultat sans faire d'appel récursif. Il est important de fournir un cas de base, car c'est le cas qui à la fin garantit que la fonction s'arrête. Un algorithme sans cas de base ne s'arrête pas en général</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>29</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007A/</fr:uri>
+                        <fr:display-uri>007A</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/007A/</fr:route>
+                        <fr:title text="Un algorithme sans cas de base">Un algorithme sans cas de base</fr:title>
+                        <fr:taxon>Exemple</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  return somme(x,y-1)+1;
+}]]>
+</html:code></html:pre></html:p>
+                        <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>somme</html:code> va boucler à l'infini, par exemple
+<html:ul><html:li><html:code>somme(4,1)</html:code> va appeler <html:code>somme(4,0)</html:code></html:li>
+<html:li><html:code>somme(4,0)</html:code> va appeler <html:code>somme(4,-1)</html:code></html:li>
+<html:li><html:code>somme(4,-1)</html:code> va appeler <html:code>somme(4,-2)</html:code></html:li>
+<html:li>Et ainsi de suite, chaque étape va appeler <html:code>somme</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
