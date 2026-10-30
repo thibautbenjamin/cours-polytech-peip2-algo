@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>30</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007J/</fr:uri>
+    <fr:display-uri>007J</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/007J/</fr:route>
+    <fr:title text="Principe de calcul de complexité">Principe de calcul de complexité</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>De manière générale, pour calculer la complexité d'un algorithme récursif, on procède de la manière suivante:
+<html:ol><html:li>On pose <fr:tex display="inline"><![CDATA[T(n)]]></fr:tex> la complexité de l'algorithme sur une entrée de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex></html:li>
+<html:li>On compte comme d'habitude le nombre d'opérations:
+<html:ul><html:li>Le ou les cas de base donnent une valeur explicite pour <fr:tex display="inline"><![CDATA[T]]></fr:tex> sur certaines valeurs de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Le ou les cas récursifs donnent une relation entre <fr:tex display="inline"><![CDATA[T(n)]]></fr:tex> et la valeur de <fr:tex display="inline"><![CDATA[T]]></fr:tex> sur d'autres entrées.</html:li></html:ul>
+On obtient ainsi une suite définie par récurrence.
+</html:li>
+<html:li>On résout la récurrence pour obtenir la complexité de l'algorithme.</html:li></html:ol></html:p>
+    <html:p><html:strong>Note</html:strong>: En pratique, on compte en ordre de grandeur, et on obtient une relation de récurrence faisant intervenir des <fr:tex display="inline"><![CDATA[\mathcal {O}]]></fr:tex>. Pour résoudre de telles relations, on procède comme d'habitude.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007I/</fr:uri>
+            <fr:display-uri>007I</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/007I/</fr:route>
+            <fr:title text="Complexité des algorithmes récursifs">Complexité des algorithmes récursifs</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007J/</fr:uri>
+                <fr:display-uri>007J</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007J/</fr:route>
+                <fr:title text="Principe de calcul de complexité">Principe de calcul de complexité</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>De manière générale, pour calculer la complexité d'un algorithme récursif, on procède de la manière suivante:
+<html:ol><html:li>On pose <fr:tex display="inline"><![CDATA[T(n)]]></fr:tex> la complexité de l'algorithme sur une entrée de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex></html:li>
+<html:li>On compte comme d'habitude le nombre d'opérations:
+<html:ul><html:li>Le ou les cas de base donnent une valeur explicite pour <fr:tex display="inline"><![CDATA[T]]></fr:tex> sur certaines valeurs de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Le ou les cas récursifs donnent une relation entre <fr:tex display="inline"><![CDATA[T(n)]]></fr:tex> et la valeur de <fr:tex display="inline"><![CDATA[T]]></fr:tex> sur d'autres entrées.</html:li></html:ul>
+On obtient ainsi une suite définie par récurrence.
+</html:li>
+<html:li>On résout la récurrence pour obtenir la complexité de l'algorithme.</html:li></html:ol></html:p>
+                <html:p><html:strong>Note</html:strong>: En pratique, on compte en ordre de grandeur, et on obtient une relation de récurrence faisant intervenir des <fr:tex display="inline"><![CDATA[\mathcal {O}]]></fr:tex>. Pour résoudre de telles relations, on procède comme d'habitude.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007K/</fr:uri>
+                <fr:display-uri>007K</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007K/</fr:route>
+                <fr:title text="Algorithmes récursifs simples et leur complexité">Algorithmes récursifs simples et leur complexité</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007L/</fr:uri>
+                    <fr:display-uri>007L</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007L/</fr:route>
+                    <fr:title text="Addition récursive des entiers positifs">Addition récursive des entiers positifs</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Reprenons l'exemple de l'algorithme naif d'addition de deux entiers positifs</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>29</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0078/</fr:uri>
+                        <fr:display-uri>0078</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/0078/</fr:route>
+                        <fr:title text="Calcul de la somme de deux entiers positifs (récursivement)">Calcul de la somme de deux entiers positifs (récursivement)</fr:title>
+                        <fr:taxon>Algorithme</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  if (y <= 0){
+    return x;
+  }
+  else {
+    return somme(x,y-1)+1;
+  }   
+}]]>
+</html:code></html:pre></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <html:p>Notons <fr:tex display="inline"><![CDATA[T(y)]]></fr:tex> la complexité de l'algorithme en fonction de la valeur de <html:code>y</html:code>.
+<html:ul><html:li>Le cas de base nous donne <fr:tex display="inline"><![CDATA[T(y) = \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[y \leq  0]]></fr:tex></html:li>
+<html:li>Le cas récursif nous donne <fr:tex display="inline"><![CDATA[T(y) = T(y-1) + \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[y>0]]></fr:tex>. En effet, on fait un nombre constant d'opérations plus un appel récursif avec <html:code>y-1</html:code> en second argument</html:li></html:ul>
+Résoudre cette récurrence nous donne <fr:tex display="inline"><![CDATA[T(y) = y \times  \mathcal {O}(1)]]></fr:tex> soit <fr:tex display="inline"><![CDATA[T(y) = \mathcal {O}(y)]]></fr:tex>. Il s'agit donc d'une <html:strong>complexité linéaire</html:strong>. 
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007M/</fr:uri>
+                    <fr:display-uri>007M</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007M/</fr:route>
+                    <fr:title text="Calcul de la somme des carrés">Calcul de la somme des carrés</fr:title>
+                    <fr:taxon>Exemple</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>On considère un algorithme ayant pour but de renvoyer la somme des carrés de <fr:tex display="inline"><![CDATA[1]]></fr:tex> à une valeur <fr:tex display="inline"><![CDATA[n]]></fr:tex> donnée en entrée.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>30</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007N/</fr:uri>
+                        <fr:display-uri>007N</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/007N/</fr:route>
+                        <fr:title text="Principe récursif du calcul de la somme des carrés">Principe récursif du calcul de la somme des carrés</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Pour calculer la somme des carrés de <fr:tex display="inline"><![CDATA[1]]></fr:tex> à <fr:tex display="inline"><![CDATA[n]]></fr:tex>, il suffit de calculer la somme des carrés de <fr:tex display="inline"><![CDATA[1]]></fr:tex> à <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> et d'y ajouter <fr:tex display="inline"><![CDATA[n^2]]></fr:tex></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>30</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007O/</fr:uri>
+                        <fr:display-uri>007O</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/007O/</fr:route>
+                        <fr:title text="Calcul de la somme des carrés">Calcul de la somme des carrés</fr:title>
+                        <fr:taxon>Algorithme</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+// Entrée: un entier n
+// Sortie: la somme des carrés de 1 à n
+int sommecarres (int n){
+  if (n &lt;= 0){
+    return 0;
+  }
+  else {
+    return sommecarres(n-1)+(n*n);
+  }   
+}
+
+</html:code></html:pre></fr:mainmatter>
+                    </fr:tree>
+                    <html:p>Notons <fr:tex display="inline"><![CDATA[T(n)]]></fr:tex> la complexité de l'algorithme en fonction de la valeur de <html:code>n</html:code>.
+<html:ul><html:li>Le cas de base nous donne <fr:tex display="inline"><![CDATA[T(n) = \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[y \leq  0]]></fr:tex></html:li>
+<html:li>Le cas récursif nous donne <fr:tex display="inline"><![CDATA[T(n) = T(n-1) + \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[n>0]]></fr:tex>. En effet, on fait un nombre constant d'opérations plus un appel récursif avec <html:code>y-1</html:code> en second argument</html:li></html:ul>
+Résoudre cette récurrence nous donne <fr:tex display="inline"><![CDATA[T(n) = n \times  \mathcal {O}(1)]]></fr:tex> soit <fr:tex display="inline"><![CDATA[T(n) = \mathcal {O}(n)]]></fr:tex>. Il s'agit donc d'une <html:strong>complexité linéaire</html:strong>.
+</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

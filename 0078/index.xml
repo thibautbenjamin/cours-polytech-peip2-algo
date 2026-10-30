@@ -75,6 +75,85 @@ int somme (int x , int y){
             <fr:date>
               <fr:year>2026</fr:year>
               <fr:month>10</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007L/</fr:uri>
+            <fr:display-uri>007L</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/007L/</fr:route>
+            <fr:title text="Addition récursive des entiers positifs">Addition récursive des entiers positifs</fr:title>
+            <fr:taxon>Exemple</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Reprenons l'exemple de l'algorithme naif d'addition de deux entiers positifs</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>29</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0078/</fr:uri>
+                <fr:display-uri>0078</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0078/</fr:route>
+                <fr:title text="Calcul de la somme de deux entiers positifs (récursivement)">Calcul de la somme de deux entiers positifs (récursivement)</fr:title>
+                <fr:taxon>Algorithme</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  if (y <= 0){
+    return x;
+  }
+  else {
+    return somme(x,y-1)+1;
+  }   
+}]]>
+</html:code></html:pre></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>Notons <fr:tex display="inline"><![CDATA[T(y)]]></fr:tex> la complexité de l'algorithme en fonction de la valeur de <html:code>y</html:code>.
+<html:ul><html:li>Le cas de base nous donne <fr:tex display="inline"><![CDATA[T(y) = \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[y \leq  0]]></fr:tex></html:li>
+<html:li>Le cas récursif nous donne <fr:tex display="inline"><![CDATA[T(y) = T(y-1) + \mathcal {O}(1)]]></fr:tex> pour <fr:tex display="inline"><![CDATA[y>0]]></fr:tex>. En effet, on fait un nombre constant d'opérations plus un appel récursif avec <html:code>y-1</html:code> en second argument</html:li></html:ul>
+Résoudre cette récurrence nous donne <fr:tex display="inline"><![CDATA[T(y) = y \times  \mathcal {O}(1)]]></fr:tex> soit <fr:tex display="inline"><![CDATA[T(y) = \mathcal {O}(y)]]></fr:tex>. Il s'agit donc d'une <html:strong>complexité linéaire</html:strong>. 
+</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
               <fr:day>29</fr:day>
             </fr:date>
             <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0075/</fr:uri>

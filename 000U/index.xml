@@ -3268,7 +3268,7 @@ int produit (int x , int y){
                         <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001M/</fr:uri>
                         <fr:display-uri>001M</fr:display-uri>
                         <fr:route>/cours-polytech-peip2-algo/001M/</fr:route>
-                        <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+                        <fr:title text="Calcul du produit de deux entiers positifs (avec une boucle)">Calcul du produit de deux entiers positifs (avec une boucle)</fr:title>
                         <fr:taxon>Algorithme</fr:taxon>
                       </fr:frontmatter>
                       <fr:mainmatter>
@@ -4635,7 +4635,13 @@ int main (){
                         <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                        <html:p>Voici une animation pour aider à comprendre le tri par sélection, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmidgh5pxifncas324fctjravraogqueetpkbrnewdmbytuzxrezhwm.gif" />
+<html:figcaption>Tri par sélection d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=selection-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                     <fr:tree show-metadata="false">
@@ -4779,7 +4785,13 @@ int main (){
                         <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                        <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                     <fr:tree show-metadata="false">
@@ -4865,6 +4877,30 @@ int main (){
                           </fr:author>
                         </fr:authors>
                         <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>29</fr:day>
+                        </fr:date>
+                        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0071/</fr:uri>
+                        <fr:display-uri>0071</fr:display-uri>
+                        <fr:route>/cours-polytech-peip2-algo/0071/</fr:route>
+                        <fr:title text="Le tri à bulles n'est pas une bonne méthode">Le tri à bulles n'est pas une bonne méthode</fr:title>
+                        <fr:taxon>Meme</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+                          <fr:link href="https://www.youtube.com/shorts/eNNQU0Ys404" type="external">D'après Obama</fr:link>
+                        </html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
                           <fr:year>2025</fr:year>
                           <fr:month>11</fr:month>
                           <fr:day>12</fr:day>
@@ -4896,7 +4932,13 @@ int main (){
                         <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                       </fr:frontmatter>
                       <fr:mainmatter>
-                        <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                        <html:p>Voici une animation pour aider à comprendre le tri à bulles, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmibnecyybnayvrmyodwtc7f6ryzwsrjkzqhxthrmya3ra4qfqrrpvy.gif" />
+<html:figcaption>Tri à bulles d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=bubble-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                     <fr:tree show-metadata="false">

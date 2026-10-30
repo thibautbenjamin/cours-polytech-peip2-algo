@@ -140,7 +140,7 @@ int produit (int x , int y){
                 <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001M/</fr:uri>
                 <fr:display-uri>001M</fr:display-uri>
                 <fr:route>/cours-polytech-peip2-algo/001M/</fr:route>
-                <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+                <fr:title text="Calcul du produit de deux entiers positifs (avec une boucle)">Calcul du produit de deux entiers positifs (avec une boucle)</fr:title>
                 <fr:taxon>Algorithme</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>

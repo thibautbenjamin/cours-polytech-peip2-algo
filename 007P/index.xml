@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>30</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007P/</fr:uri>
+    <fr:display-uri>007P</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/007P/</fr:route>
+    <fr:title text="Tri par insertion récursif">Tri par insertion récursif</fr:title>
+    <fr:taxon>Exercice</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>L'objectif de cet exercice est de donner une version récursive du <fr:link href="/cours-polytech-peip2-algo/0039/" title="Tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0039/" display-uri="0039" type="local">tri par insertion</fr:link></html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>30</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007Q/</fr:uri>
+        <fr:display-uri>007Q</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/007Q/</fr:route>
+        <fr:title text="Principe récursif du tri par insertion">Principe récursif du tri par insertion</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Le principe récursif à suivre pour écrire le tri par insertion est le suivant: Pour trier un tableau à <fr:tex display="inline"><![CDATA[n]]></fr:tex> éléments, il suffit de d'abort trier le sous-tableau constitué des <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> plus petits éléments, puis d'insérer le dernier élément à la bonne place.</html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>11</fr:month>
+          <fr:day>2</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003C/</fr:uri>
+        <fr:display-uri>003C</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/003C/</fr:route>
+        <fr:title text="Insertion dans un tableau trié">Insertion dans un tableau trié</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2026</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>30</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007R/</fr:uri>
+        <fr:display-uri>007R</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/007R/</fr:route>
+        <fr:title text="Le tri par insertion">Le tri par insertion</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ol><html:li>Ecrire une fonction récursive <html:code>triInsertion</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui effectue le tri par insertion sur ce tableau.</html:li>
+<html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Comparer cette complexité avec celle trouvée pour <fr:link href="/cours-polytech-peip2-algo/003D/" title="Le tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003D/" display-uri="003D" type="local">la version itérative</fr:link></html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007E/</fr:uri>
+            <fr:display-uri>007E</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/007E/</fr:route>
+            <fr:title text="Version récursive des algorithmes de tris précédents">Version récursive des algorithmes de tris précédents</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007F/</fr:uri>
+                <fr:display-uri>007F</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007F/</fr:route>
+                <fr:title text="Tri par sélection récursif">Tri par sélection récursif</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est de donner une version récursive du <fr:link href="/cours-polytech-peip2-algo/0033/" title="Tri par sélection" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0033/" display-uri="0033" type="local">tri par sélection</fr:link></html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007G/</fr:uri>
+                    <fr:display-uri>007G</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007G/</fr:route>
+                    <fr:title text="Principe récursif du tri par sélection">Principe récursif du tri par sélection</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Le principe récursif à suivre pour écrire le tri par sélection est le suivant: Pour trier un tableau à <fr:tex display="inline"><![CDATA[n]]></fr:tex> éléments, il suffit de placer le plus petit élément en première position, puis de trier le tableau à <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> éléments restants, constitué de tous les éléments sauf le plus petit.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>1</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0031/</fr:uri>
+                    <fr:display-uri>0031</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0031/</fr:route>
+                    <fr:title text="Minimum d'un tableau">Minimum d'un tableau</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction <html:code>minimum</html:code> qui prend en argument un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum de ce tableau</html:li>
+<html:li>Ecrire une fonction <html:code>minimumParmi</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Ecrire une fonction <html:code>indiceMinimum</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie la position à laquelle se situe minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Donner une estimation de la complexité de chacune de ces fonctions.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>2</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0037/</fr:uri>
+                    <fr:display-uri>0037</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0037/</fr:route>
+                    <fr:title text="Echange de deux cases dans un tableau">Echange de deux cases dans un tableau</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction qui prend en argument un tableau d'entiers, et deux entiers <fr:tex display="inline"><![CDATA[i]]></fr:tex> et <fr:tex display="inline"><![CDATA[j]]></fr:tex> tout deux strictement inférieurs à la taille du tableau, et qui échange le contenu des positions <fr:tex display="inline"><![CDATA[i]]></fr:tex> et <fr:tex display="inline"><![CDATA[j]]></fr:tex> dans le tableau.</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007H/</fr:uri>
+                    <fr:display-uri>007H</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007H/</fr:route>
+                    <fr:title text="Le tri par sélection récursif">Le tri par sélection récursif</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction récursive <html:code>triselection</html:code> prenant en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau d'entier de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et effectuant le tri par sélection de ce tableau de manière récursive.</html:li>
+<html:li>Evaluer la complexité de cette fonction, en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Comparer cette comlpexité avec celle de <fr:link href="/cours-polytech-peip2-algo/0038/" title="Le tri par sélection" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0038/" display-uri="0038" type="local">la version itérative</fr:link>.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007P/</fr:uri>
+                <fr:display-uri>007P</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007P/</fr:route>
+                <fr:title text="Tri par insertion récursif">Tri par insertion récursif</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif de cet exercice est de donner une version récursive du <fr:link href="/cours-polytech-peip2-algo/0039/" title="Tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0039/" display-uri="0039" type="local">tri par insertion</fr:link></html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007Q/</fr:uri>
+                    <fr:display-uri>007Q</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007Q/</fr:route>
+                    <fr:title text="Principe récursif du tri par insertion">Principe récursif du tri par insertion</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Le principe récursif à suivre pour écrire le tri par insertion est le suivant: Pour trier un tableau à <fr:tex display="inline"><![CDATA[n]]></fr:tex> éléments, il suffit de d'abort trier le sous-tableau constitué des <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> plus petits éléments, puis d'insérer le dernier élément à la bonne place.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>2</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003C/</fr:uri>
+                    <fr:display-uri>003C</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/003C/</fr:route>
+                    <fr:title text="Insertion dans un tableau trié">Insertion dans un tableau trié</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>30</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007R/</fr:uri>
+                    <fr:display-uri>007R</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/007R/</fr:route>
+                    <fr:title text="Le tri par insertion">Le tri par insertion</fr:title>
+                    <fr:taxon>Exercice</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:ol><html:li>Ecrire une fonction récursive <html:code>triInsertion</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui effectue le tri par insertion sur ce tableau.</html:li>
+<html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Comparer cette complexité avec celle trouvée pour <fr:link href="/cours-polytech-peip2-algo/003D/" title="Le tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003D/" display-uri="003D" type="local">la version itérative</fr:link></html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0039/</fr:uri>
+            <fr:display-uri>0039</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0039/</fr:route>
+            <fr:title text="Tri par insertion">Tri par insertion</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est d'implémenter le tri par insertion</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003A/</fr:uri>
+                <fr:display-uri>003A</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003A/</fr:route>
+                <fr:title text="Le principe du tri par insertion">Le principe du tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le <fr:link href="https://fr.wikipedia.org/wiki/Tri_par_insertion" type="external">tri par insertion</fr:link> consistant à trier d'abord les deux premières cases du tableau, puis à trier les 3 premières cases en insérant la 3e à la bonne place, puis la 4e en l'insérant à la bonne place, etc. Concrètement avant l'étape <fr:tex display="inline"><![CDATA[i]]></fr:tex>, on aura trié les <fr:tex display="inline"><![CDATA[i-1]]></fr:tex> premières cases du tableau. On va alors regarder la case en position <fr:tex display="inline"><![CDATA[i]]></fr:tex> et comparer son contenu avec toutes les cases des positions <fr:tex display="inline"><![CDATA[0,...,i-1]]></fr:tex>, jusqu'à trouver la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à laquelle cette case doit être insérée, pour que le tableau soit trié. Finalement, on va insérer une la valeur de la case <fr:tex display="inline"><![CDATA[i]]></fr:tex> en position <fr:tex display="inline"><![CDATA[k]]></fr:tex>, et pour se faire, il faudra aussi décaler toutes les valeurs dans les positions <fr:tex display="inline"><![CDATA[k,...,i-1]]></fr:tex> de <fr:tex display="inline"><![CDATA[1]]></fr:tex> vers la droite. Cela termine l'étape <fr:tex display="inline"><![CDATA[i]]></fr:tex>, à l'issue de laquelle on aura effectivement trié les <fr:tex display="inline"><![CDATA[i]]></fr:tex> premières cases du tableau.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003B/</fr:uri>
+                <fr:display-uri>003B</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003B/</fr:route>
+                <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003C/</fr:uri>
+                <fr:display-uri>003C</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003C/</fr:route>
+                <fr:title text="Insertion dans un tableau trié">Insertion dans un tableau trié</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003D/</fr:uri>
+                <fr:display-uri>003D</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003D/</fr:route>
+                <fr:title text="Le tri par insertion">Le tri par insertion</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>triInsertion</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui effectue le tri par insertion sur ce tableau.</html:li>
+<html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
