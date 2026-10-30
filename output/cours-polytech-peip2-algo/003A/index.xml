@@ -93,7 +93,13 @@
                 <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">

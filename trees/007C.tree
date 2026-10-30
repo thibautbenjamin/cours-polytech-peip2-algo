@@ -1,0 +1,27 @@
+\title{Un algorithme récursif sans progrès vers le cas de base}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\date{2026-10-30T09:42:54Z}
+\import{basemacros}
+
+\p{
+\cppdisplay{
+\startverb
+int f (int x , int y){
+  if (y <= 0){
+     return x 
+  }
+  else{
+    return f(x,y+1);
+  }
+}
+\stopverb
+}}
+
+\p{Dans cet exemple, n'importe quel appel à la fonction \code{f} avec un deuxième argument positif va boucler à l'infini, par exemple
+\ul{
+\li{\code{f(4,1)} va appeler \code{f(4,2)}}
+\li{\code{f(4,2)} va appeler \code{f(4,3)}}
+\li{Et ainsi de suite, chaque étape va appeler \code{f} avec son deuxième argument qui croit. Malgré la présence d'un cas de base \code{y<=0}, on ne va jamais atteindre ce dernier car l'argument \code{y} ne progresse par en direction du cas de base.}
+}
+}

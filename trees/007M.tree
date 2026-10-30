@@ -1,0 +1,19 @@
+\title{Calcul de la somme des carrés}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\import{basemacros}
+\date{2026-10-30T10:34:03Z}
+
+\p{On considère un algorithme ayant pour but de renvoyer la somme des carrés de #{1} à une valeur #{n} donnée en entrée.}
+\transclude{007N}
+\transclude{007O}
+\p{Notons #{T(n)} la complexité de l'algorithme en fonction de la valeur de \code{n}.
+\ul{
+\li{Le cas de base nous donne #{T(n) = \O(1)} pour #{y \leq 0}}
+\li{Le cas récursif nous donne #{T(n) = T(n-1) + \O(1)} pour #{n>0}. En effet, on fait un nombre constant d'opérations plus un appel récursif avec \code{y-1} en second argument}
+}
+Résoudre cette récurrence nous donne #{T(n) = n \times \O(1)} soit #{T(n) = \O(n)}. Il s'agit donc d'une \strong{complexité linéaire}.
+}
+
+
+

@@ -5,6 +5,7 @@
 \import{basemacros}
 
 \p{L'objectif de cet exercice est d'implémenter le tri à bulles}
+\transclude{0071}
 \transclude{0041}
 \transclude{0042}
 \transclude{0043}

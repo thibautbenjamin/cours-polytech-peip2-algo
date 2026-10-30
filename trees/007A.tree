@@ -1,4 +1,4 @@
-\title{Un algorithme sans cas de base}
+\title{Un algorithme récursif sans cas de base}
 \author{thibautbenjamin}
 \taxon{Exemple}
 \date{2026-10-29T15:18:48Z}
@@ -7,20 +7,18 @@
 \p{
 \cppdisplay{
 \startverb
-// Entrées: Deux entiers x et y positifs
-// Sortie: La somme des deux entrées
-int somme (int x , int y){
-  return somme(x,y-1)+1;
+int f (int x , int y){
+  return f(x,y-1)+1;
 }
 \stopverb
 }}
 
-\p{Dans cet exemple, n'importe quel appel à la fonction \code{somme} va boucler à l'infini, par exemple
+\p{Dans cet exemple, n'importe quel appel à la fonction \code{f} va boucler à l'infini, par exemple
 \ul{
-\li{\code{somme(4,1)} va appeler \code{somme(4,0)}}
-\li{\code{somme(4,0)} va appeler \code{somme(4,-1)}}
-\li{\code{somme(4,-1)} va appeler \code{somme(4,-2)}}
-\li{Et ainsi de suite, chaque étape va appeler \code{somme} avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.}
+\li{\code{f(4,1)} va appeler \code{f(4,0)}}
+\li{\code{f(4,0)} va appeler \code{f(4,-1)}}
+\li{\code{f(4,-1)} va appeler \code{f(4,-2)}}
+\li{Et ainsi de suite, chaque étape va appeler \code{f} avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.}
 }
 }
 

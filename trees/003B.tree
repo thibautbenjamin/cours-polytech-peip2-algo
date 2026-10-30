@@ -3,4 +3,11 @@
 \date{2025-11-02T11:30:11Z}
 \import{basemacros}
 
-\p{Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel [sound of sorting](0036) \mark{TODO}}
+\p{Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+\<html:figure>{
+\<html:img>[src]{\route-asset{assets/images/Insertion-Sort-Animation.gif}}{}
+\<html:figcaption>{Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)}
+}
+Vous pouvez aussi [cliquer ici](https://mszula.github.io/visual-sorting/?algorithm=insertion-sort) pour faire vos propres essais et générer vos propres animations à l'aide du site internet [sound of sorting](0036)
+}

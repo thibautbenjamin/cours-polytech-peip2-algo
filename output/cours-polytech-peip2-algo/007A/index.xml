@@ -15,7 +15,7 @@
     <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007A/</fr:uri>
     <fr:display-uri>007A</fr:display-uri>
     <fr:route>/cours-polytech-peip2-algo/007A/</fr:route>
-    <fr:title text="Un algorithme sans cas de base">Un algorithme sans cas de base</fr:title>
+    <fr:title text="Un algorithme récursif sans cas de base">Un algorithme récursif sans cas de base</fr:title>
     <fr:taxon>Exemple</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
@@ -39,17 +39,15 @@
                         "right-trim": true,
                 });</html:script>
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[// Entrées: Deux entiers x et y positifs
-// Sortie: La somme des deux entrées
-int somme (int x , int y){
-  return somme(x,y-1)+1;
+<![CDATA[int f (int x , int y){
+  return f(x,y-1)+1;
 }]]>
 </html:code></html:pre></html:p>
-    <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>somme</html:code> va boucler à l'infini, par exemple
-<html:ul><html:li><html:code>somme(4,1)</html:code> va appeler <html:code>somme(4,0)</html:code></html:li>
-<html:li><html:code>somme(4,0)</html:code> va appeler <html:code>somme(4,-1)</html:code></html:li>
-<html:li><html:code>somme(4,-1)</html:code> va appeler <html:code>somme(4,-2)</html:code></html:li>
-<html:li>Et ainsi de suite, chaque étape va appeler <html:code>somme</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
+    <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>f</html:code> va boucler à l'infini, par exemple
+<html:ul><html:li><html:code>f(4,1)</html:code> va appeler <html:code>f(4,0)</html:code></html:li>
+<html:li><html:code>f(4,0)</html:code> va appeler <html:code>f(4,-1)</html:code></html:li>
+<html:li><html:code>f(4,-1)</html:code> va appeler <html:code>f(4,-2)</html:code></html:li>
+<html:li>Et ainsi de suite, chaque étape va appeler <html:code>f</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
@@ -99,7 +97,7 @@ int somme (int x , int y){
                 <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007A/</fr:uri>
                 <fr:display-uri>007A</fr:display-uri>
                 <fr:route>/cours-polytech-peip2-algo/007A/</fr:route>
-                <fr:title text="Un algorithme sans cas de base">Un algorithme sans cas de base</fr:title>
+                <fr:title text="Un algorithme récursif sans cas de base">Un algorithme récursif sans cas de base</fr:title>
                 <fr:taxon>Exemple</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
@@ -123,17 +121,15 @@ int somme (int x , int y){
                         "right-trim": true,
                 });</html:script>
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[// Entrées: Deux entiers x et y positifs
-// Sortie: La somme des deux entrées
-int somme (int x , int y){
-  return somme(x,y-1)+1;
+<![CDATA[int f (int x , int y){
+  return f(x,y-1)+1;
 }]]>
 </html:code></html:pre></html:p>
-                <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>somme</html:code> va boucler à l'infini, par exemple
-<html:ul><html:li><html:code>somme(4,1)</html:code> va appeler <html:code>somme(4,0)</html:code></html:li>
-<html:li><html:code>somme(4,0)</html:code> va appeler <html:code>somme(4,-1)</html:code></html:li>
-<html:li><html:code>somme(4,-1)</html:code> va appeler <html:code>somme(4,-2)</html:code></html:li>
-<html:li>Et ainsi de suite, chaque étape va appeler <html:code>somme</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
+                <html:p>Dans cet exemple, n'importe quel appel à la fonction <html:code>f</html:code> va boucler à l'infini, par exemple
+<html:ul><html:li><html:code>f(4,1)</html:code> va appeler <html:code>f(4,0)</html:code></html:li>
+<html:li><html:code>f(4,0)</html:code> va appeler <html:code>f(4,-1)</html:code></html:li>
+<html:li><html:code>f(4,-1)</html:code> va appeler <html:code>f(4,-2)</html:code></html:li>
+<html:li>Et ainsi de suite, chaque étape va appeler <html:code>f</html:code> avec son deuxième argument qui décroit, mais on n'atteind un cas où l'on peut s'arrêter: On continue d'appeler à l'infini la même fonction avec un argument toujours plus petit.</html:li></html:ul></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>

@@ -1,0 +1,15 @@
+\title{Addition récursive des entiers positifs}
+\author{thibautbenjamin}
+\taxon{Exemple}
+\import{basemacros}
+\date{2026-10-30T10:25:05Z}
+
+\p{Reprenons l'exemple de l'algorithme naif d'addition de deux entiers positifs}
+\transclude{0078}
+\p{Notons #{T(y)} la complexité de l'algorithme en fonction de la valeur de \code{y}.
+\ul{
+\li{Le cas de base nous donne #{T(y) = \O(1)} pour #{y \leq 0}}
+\li{Le cas récursif nous donne #{T(y) = T(y-1) + \O(1)} pour #{y>0}. En effet, on fait un nombre constant d'opérations plus un appel récursif avec \code{y-1} en second argument}
+}
+Résoudre cette récurrence nous donne #{T(y) = y \times \O(1)} soit #{T(y) = \O(y)}. Il s'agit donc d'une \strong{complexité linéaire}. 
+}

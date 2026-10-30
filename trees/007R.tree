@@ -1,0 +1,14 @@
+\title{Le tri par insertion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\date{2026-10-30T10:48:09Z}
+
+
+\p{\ol{
+\li{Ecrire une fonction récursive \code{triInsertion} qui prend en entrée un entier #{n} et un tableau de taille #{n}, et qui effectue le tri par insertion sur ce tableau.}
+\li{Evaluer la complexité de cet algorithme en fonction de #{n}.}
+\li{Comparer cette complexité avec celle trouvée pour [la version itérative](003D)}
+\li{En utilisant le [générateur de tableau aléatoires](0044), générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.}
+\li{En utilisant le [générateur de tableau aléatoires](0044), générer des tableaux de différentes tailles, et [afficher le temps](0045) mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.}
+\li{Comparer la courbe obtenue avec la complexité théorique attendue.}
+}}

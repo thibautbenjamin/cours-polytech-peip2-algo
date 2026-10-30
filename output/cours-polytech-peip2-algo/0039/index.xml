@@ -59,7 +59,13 @@
         <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
-        <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+        <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
@@ -208,7 +214,13 @@
                     <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri par sélection, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmidgh5pxifncas324fctjravraogqueetpkbrnewdmbytuzxrezhwm.gif" />
+<html:figcaption>Tri par sélection d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=selection-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -352,7 +364,13 @@
                     <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -438,6 +456,30 @@
                       </fr:author>
                     </fr:authors>
                     <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>29</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0071/</fr:uri>
+                    <fr:display-uri>0071</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0071/</fr:route>
+                    <fr:title text="Le tri à bulles n'est pas une bonne méthode">Le tri à bulles n'est pas une bonne méthode</fr:title>
+                    <fr:taxon>Meme</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <fr:link href="https://www.youtube.com/shorts/eNNQU0Ys404" type="external">D'après Obama</fr:link>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
                       <fr:year>2025</fr:year>
                       <fr:month>11</fr:month>
                       <fr:day>12</fr:day>
@@ -469,7 +511,13 @@
                     <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri à bulles, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmibnecyybnayvrmyodwtc7f6ryzwsrjkzqhxthrmya3ra4qfqrrpvy.gif" />
+<html:figcaption>Tri à bulles d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=bubble-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -779,7 +827,13 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri par sélection, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmidgh5pxifncas324fctjravraogqueetpkbrnewdmbytuzxrezhwm.gif" />
+<html:figcaption>Tri par sélection d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=selection-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -923,7 +977,13 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri par insertion, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmigwnnidsjfqj6bocbfnduecurtimz7uglr764cnjioxsqur4h57dy.gif" />
+<html:figcaption>Tri par insertion d'un tableau contenant les nombres de 1 à 8 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=insertion-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -1009,6 +1069,30 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                       </fr:author>
                     </fr:authors>
                     <fr:date>
+                      <fr:year>2026</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>29</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0071/</fr:uri>
+                    <fr:display-uri>0071</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0071/</fr:route>
+                    <fr:title text="Le tri à bulles n'est pas une bonne méthode">Le tri à bulles n'est pas une bonne méthode</fr:title>
+                    <fr:taxon>Meme</fr:taxon>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <fr:link href="https://www.youtube.com/shorts/eNNQU0Ys404" type="external">D'après Obama</fr:link>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
                       <fr:year>2025</fr:year>
                       <fr:month>11</fr:month>
                       <fr:day>12</fr:day>
@@ -1040,7 +1124,13 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
                     <fr:title text="Illustrations du tri par sélection">Illustrations du tri par sélection</fr:title>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+                    <html:p>Voici une animation pour aider à comprendre le tri à bulles, sur un
+exemple concret:
+<html:figure>
+<html:img src="/cours-polytech-peip2-algo/bafkrmibnecyybnayvrmyodwtc7f6ryzwsrjkzqhxthrmya3ra4qfqrrpvy.gif" />
+<html:figcaption>Tri à bulles d'un tableau contenant les nombres de 0 à 9 (source: Wikipedia)</html:figcaption>
+</html:figure>
+Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algorithm=bubble-sort" type="external">cliquer ici</fr:link> pour faire vos propres essais et générer vos propres animations à l'aide du site internet <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -1084,7 +1174,105 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>30</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007P/</fr:uri>
+            <fr:display-uri>007P</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/007P/</fr:route>
+            <fr:title text="Tri par insertion récursif">Tri par insertion récursif</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est de donner une version récursive du <fr:link href="/cours-polytech-peip2-algo/0039/" title="Tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0039/" display-uri="0039" type="local">tri par insertion</fr:link></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007Q/</fr:uri>
+                <fr:display-uri>007Q</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007Q/</fr:route>
+                <fr:title text="Principe récursif du tri par insertion">Principe récursif du tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le principe récursif à suivre pour écrire le tri par insertion est le suivant: Pour trier un tableau à <fr:tex display="inline"><![CDATA[n]]></fr:tex> éléments, il suffit de d'abort trier le sous-tableau constitué des <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> plus petits éléments, puis d'insérer le dernier élément à la bonne place.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003C/</fr:uri>
+                <fr:display-uri>003C</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003C/</fr:route>
+                <fr:title text="Insertion dans un tableau trié">Insertion dans un tableau trié</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>30</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/007R/</fr:uri>
+                <fr:display-uri>007R</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/007R/</fr:route>
+                <fr:title text="Le tri par insertion">Le tri par insertion</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction récursive <html:code>triInsertion</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui effectue le tri par insertion sur ce tableau.</html:li>
+<html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li>Comparer cette complexité avec celle trouvée pour <fr:link href="/cours-polytech-peip2-algo/003D/" title="Le tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003D/" display-uri="003D" type="local">la version itérative</fr:link></html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
+<html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

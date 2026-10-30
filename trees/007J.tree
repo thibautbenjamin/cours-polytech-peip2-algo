@@ -1,0 +1,20 @@
+\title{Principe de calcul de complexité}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2026-10-30T10:17:29Z}
+
+\p{De manière générale, pour calculer la complexité d'un algorithme récursif, on procède de la manière suivante:
+\ol{
+\li{On pose #{T(n)} la complexité de l'algorithme sur une entrée de taille #{n}}
+\li{On compte comme d'habitude le nombre d'opérations:
+\ul{
+\li{Le ou les cas de base donnent une valeur explicite pour #{T} sur certaines valeurs de #{n}.}
+\li{Le ou les cas récursifs donnent une relation entre #{T(n)} et la valeur de #{T} sur d'autres entrées.}
+}
+On obtient ainsi une suite définie par récurrence.
+}
+\li{On résout la récurrence pour obtenir la complexité de l'algorithme.}
+}
+}
+
+\p{\strong{Note}: En pratique, on compte en ordre de grandeur, et on obtient une relation de récurrence faisant intervenir des #{\O}. Pour résoudre de telles relations, on procède comme d'habitude.}

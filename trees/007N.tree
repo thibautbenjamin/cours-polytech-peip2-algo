@@ -1,0 +1,6 @@
+\title{Principe récursif du calcul de la somme des carrés}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2026-10-30T10:38:01Z}
+
+\p{Pour calculer la somme des carrés de #{1} à #{n}, il suffit de calculer la somme des carrés de #{1} à #{n-1} et d'y ajouter #{n^2}}

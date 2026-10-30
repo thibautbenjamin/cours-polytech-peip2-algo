@@ -1,0 +1,12 @@
+\title{Tri par sélection récursif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-10-30T09:57:38Z}
+
+\p{L'objectif de cet exercice est de donner une version récursive du [tri par sélection](0033)}
+
+\transclude{007G}
+\transclude{0031}
+\transclude{0037}
+\transclude{007H}

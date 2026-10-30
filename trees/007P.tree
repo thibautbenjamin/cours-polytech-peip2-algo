@@ -1,0 +1,12 @@
+\title{Tri par insertion récursif}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2026-10-30T09:57:38Z}
+
+\p{L'objectif de cet exercice est de donner une version récursive du [tri par insertion](0039)}
+
+\transclude{007Q}
+\transclude{003C}
+\transclude{007R}
+

@@ -1,0 +1,19 @@
+\title{Calcul de la somme des carrés}
+\author{thibautbenjamin}
+\taxon{Algorithme}
+\import{basemacros}
+\date{2026-10-30T10:38:02Z}
+
+\cppdisplay{
+// Entrée: un entier n
+// Sortie: la somme des carrés de 1 à n
+int sommecarres (int n){
+  if (n <= 0){
+    return 0;
+  }
+  else {
+    return sommecarres(n-1)+(n*n);
+  }   
+}
+
+}

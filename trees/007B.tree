@@ -1,0 +1,8 @@
+\title{Le ou les cas récursifs}
+\author{thibautbenjamin}
+\date{2026-10-30T09:37:41Z}
+\import{basemacros}
+
+\p{Il s'agit du ou des cas où l'algorithme s'appelle lui-même avec différents arguments. Il n'y a pas d'obstruction à ce que l'algorithme s'appelle lui même plusieurs fois, mais il faut qu'à chaque appel les arguments progressent vers les cas de base, pour assurer qu'à un certain moment ces derniers seront atteints et l'algorithme pourra terminer}
+\transclude{007C}
+

@@ -1,0 +1,8 @@
+\title{Quand utiliser la récursivité?}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2026-10-30T09:51:09Z}
+
+\p{La récursivité est adaptée lorsque l'on sait déduire la solution d'un problème donné, à partir des solutions d'instances plus petites du même problème.}
+
+

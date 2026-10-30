@@ -1,0 +1,6 @@
+\title{Principe récursif du tri par sélection}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2026-10-30T10:07:51Z}
+
+\p{Le principe récursif à suivre pour écrire le tri par sélection est le suivant: Pour trier un tableau à #{n} éléments, il suffit de placer le plus petit élément en première position, puis de trier le tableau à #{n-1} éléments restants, constitué de tous les éléments sauf le plus petit.}
