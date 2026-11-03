@@ -10,7 +10,7 @@
       let pkgs = import nixpkgs { inherit system; }; in
       {
         devShells.default = pkgs.mkShell {
-          buildInputs = [ pkgs.python3 forester.packages.${system}.default ];
+          buildInputs = [ pkgs.git-crypt pkgs.python3 forester.packages.${system}.default ];
         };
       });
 }
