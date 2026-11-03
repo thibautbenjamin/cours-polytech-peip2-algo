@@ -9,6 +9,7 @@ void print (int n, int t[]){
 
 int main (){
   int t[5] = {10, -7, 42, 0, 10};
+  t[0] = 67;
   print(5, t);
   return 0;
 }
