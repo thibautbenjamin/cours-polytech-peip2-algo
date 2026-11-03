@@ -3,7 +3,14 @@
 \date{2025-11-04T12:56:02Z}
 \import{basemacros}
 
+
+
+
 \p{Cette page recense les diapositives de cours.}
+\p{\strong{\asset-link{2026/slides/1/main.pdf}{Amphi 1}}: Introduction et rappels de \Cpp}
+
+
+\p{\strong{Slides des années précédentes:}}
 
 \p{\strong{\asset-link{2025/slides/1/main.pdf}{Amphi 1}}: Introduction et rappels de \Cpp}
 \p{\strong{\asset-link{2025/slides/2/main.pdf}{Amphi 2}}: Les bases de la complexité et premiers algorithmes de tri}
