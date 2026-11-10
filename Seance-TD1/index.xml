@@ -129,7 +129,7 @@ int produit (int x , int y){
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
-  int result;
+  int result = 0;
   while (y  > 0){
     result = result + x;
     y = y - 1;
@@ -200,7 +200,7 @@ int produit (int x , int y){
                         "right-trim": true,
                 });</html:script>
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[// Entrées: Un entier n >= 1
+<![CDATA[// Entrées: Un entier n >= 2
 // Sortie: Un booléen mystère
 bool mystere (int n){
   int i = 2;
