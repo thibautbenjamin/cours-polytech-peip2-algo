@@ -7,7 +7,7 @@
 \p{
 \cppdisplay{
 \startverb
-// Entrées: Un entier n >= 1
+// Entrées: Un entier n >= 2
 // Sortie: Un booléen mystère
 bool mystere (int n){
   int i = 2;

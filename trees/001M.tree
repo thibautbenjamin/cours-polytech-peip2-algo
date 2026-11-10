@@ -9,7 +9,7 @@
 // Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
-  int result;
+  int result = 0;
   while (y  > 0){
     result = result + x;
     y = y - 1;

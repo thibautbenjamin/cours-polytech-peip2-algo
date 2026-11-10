@@ -196,13 +196,19 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
           <fr:mainmatter>
             <html:p>Cette page recense les diapositives de cours.</html:p>
             <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmidcd7emct4hkd7i2cvbbvxhh5nk3pib3x6voeo7iruvop6vicw3bi.pdf">Amphi 1</html:a></html:span></html:strong>: Introduction et rappels de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource></html:p>
+            <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmiganqetneobuuvoj3t52jd2dlqgggo66uzfmeqvo7nefvkwrnjqjm.pdf">Amphi 2</html:a></html:span></html:strong>: Les bases de la complexité et premiers algorithmes de tri</html:p>
             <html:p>
               <html:strong>Slides des années précédentes:</html:strong>
             </html:p>
-            <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieidqupiubmozwhz2d7sbpwj245yfnpsuorg7eazyh4d7qcmj6hje.pdf">Amphi 1</html:a></html:span></html:strong>: Introduction et rappels de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource></html:p>
-            <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicjpxidbzbt344glt4ezog2bxuws45nfjzlgkvnzmfqnapwhlshei.pdf">Amphi 2</html:a></html:span></html:strong>: Les bases de la complexité et premiers algorithmes de tri</html:p>
-            <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieiplol6gqokyyrtebd3df2a4dubnqzogcabvbwh5blmvbs6qk3vq.pdf">Amphi 3</html:a></html:span></html:strong>: Récursivité et complexité des fonctions récursives</html:p>
-            <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmidta25kcr7z7nml3siyktj2a5rhac2nzs4wgfqxgnlfssxkmxueqm.pdf">Amphi 4</html:a></html:span></html:strong>: Sujets d'algorithmique plus avancés</html:p>
+            <html:p>
+              <html:ul>
+                <html:li><html:strong>2025</html:strong>
+<html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieidqupiubmozwhz2d7sbpwj245yfnpsuorg7eazyh4d7qcmj6hje.pdf">Amphi 1</html:a></html:span></html:strong>: Introduction et rappels de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource></html:p>
+<html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicjpxidbzbt344glt4ezog2bxuws45nfjzlgkvnzmfqnapwhlshei.pdf">Amphi 2</html:a></html:span></html:strong>: Les bases de la complexité et premiers algorithmes de tri</html:p>
+<html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieiplol6gqokyyrtebd3df2a4dubnqzogcabvbwh5blmvbs6qk3vq.pdf">Amphi 3</html:a></html:span></html:strong>: Récursivité et complexité des fonctions récursives</html:p>
+<html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmidta25kcr7z7nml3siyktj2a5rhac2nzs4wgfqxgnlfssxkmxueqm.pdf">Amphi 4</html:a></html:span></html:strong>: Sujets d'algorithmique plus avancés</html:p></html:li>
+              </html:ul>
+            </html:p>
           </fr:mainmatter>
         </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
@@ -1059,7 +1065,7 @@ int produit (int x , int y){
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
-  int result;
+  int result = 0;
   while (y  > 0){
     result = result + x;
     y = y - 1;
@@ -1130,7 +1136,7 @@ int produit (int x , int y){
                         "right-trim": true,
                 });</html:script>
         <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
-<![CDATA[// Entrées: Un entier n >= 1
+<![CDATA[// Entrées: Un entier n >= 2
 // Sortie: Un booléen mystère
 bool mystere (int n){
   int i = 2;
