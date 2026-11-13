@@ -10,7 +10,7 @@
 \li{[Linéaire](0017): Les fonctions linéaires peuvent commencer à poser problème.}
 \li{#{n\log(n)}: C'est une complexité que l'on rencontre souvent, plus élevée que les fonctions linéaires.}
 \li{[Quadratique](0018): En général à partir de là, le programme pose problème.}
-\li{#{n^3}: Plus on augmente l'exposant, plus ca croît vite.}
+\li{#{n^3}: Plus on augmente l'exposant, plus ça croît vite.}
 \li{[Exponentielle](001A) : Plus rapide que toutes les fonctions puissance.}
 }
 }

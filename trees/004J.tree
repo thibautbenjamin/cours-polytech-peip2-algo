@@ -5,7 +5,9 @@
 \import{basemacros}
 \date{2025-11-15T11:30:51Z}
 
-\p{L'algorithme de Rabin-Karp est un algorithme pour résoudre le problème de la recherche de sous-chaîne qui améliore [l'algorithme naïf](004I) en introduisant une heuristique pour éviter de faire certaines comparaisons. Pour que cette algorithme soit efficace, il faut que le calcule de cette heuristique soit plus rapide que la comparaison des chaînes de caractères. Pour cela, on va introduire une notion de signature (appelée \em{hach}) associée à une chaîne de caractère, et avant de comparer deux chaînes de caractères, on va calculer leur hach et les comparer entre eux. Si les haches sont différents, on sait que les chaînes de caractères seront différentes sans même avoir besoin de les comparer. Si les haches sont les mêmes, alors il faudra comparer les chaînes de caractères pour savoir si elles sont les mêmes. Toute l'astuce de cet algorithme est de choisir une \em{fonction de hachage} (c'est à dire une manière de calculer le hach) qui soit efficace à calculer à partir du hach associé à l'étape précédente.}
+\p{L'algorithme de Rabin-Karp est un algorithme pour résoudre le problème de la recherche de sous-chaîne qui améliore [l'algorithme naïf](004I) en introduisant une heuristique pour éviter de faire certaines comparaisons. Pour que cet algorithme soit efficace, il faut que le calcul de cette heuristique soit plus rapide que la comparaison des chaînes de caractères. Pour cela, on va introduire une notion de signature (appelée \em{hach}) associée à une chaîne de caractères, et avant de comparer deux chaînes de caractères, on va calculer leur hach et les comparer entre eux. Si les haches sont différents, on sait que les chaînes de caractères seront différentes sans même avoir besoin de les comparer. Si les haches sont les mêmes, alors il faudra comparer les chaînes de caractères pour savoir si elles sont les mêmes. Toute l'astuce de cet algorithme est de choisir une \em{fonction de hachage} (c'est-à-dire une manière de calculer le hach) qui soit efficace à calculer à partir du hach associé à l'étape précédente.}
+
+\p{TODO : corriger hach -> hash}
 
 \p{
 On commence par écrire la logique de l'algorithme sans se préoccuper du choix de la fonction de hachage. Pour cela on écrit les fonctions de hachage suivantes:
@@ -25,7 +27,7 @@ int nouveauHach (int ancientHach, string s, int ancientDebut, int nouvelleFin){
 \stopverb
 }
 \ol{
-\li{Ecrire une fonction \code{matchPosition} qui prend en entrée une chaîne de caractère \code{motif}, un entier \code{hachMotif} qui est le hach de \code{motif}, une chaîne de caractère \code{s}, un entier #{i} et un entier \code{hachCandidat} qui est le hach de la sous-chaîne de \code{s} de la même longueur que \code{motif} démarrant à la position #{i}.
+\li{Ecrire une fonction \code{matchPosition} qui prend en entrée une chaîne de caractères \code{motif}, un entier \code{hachMotif} qui est le hach de \code{motif}, une chaîne de caractères \code{s}, un entier #{i} et un entier \code{hachCandidat} qui est le hach de la sous-chaîne de \code{s} de la même longueur que \code{motif} démarrant à la position #{i}.
 }
 \li{Ecrire une fonction \code{rabinKarp} qui prend en entrée une chaîne de caractères \code{motif}, une chaîne de caractères \code{s} et qui affiche à l'écran toutes les positions de la chaîne \code{s} à laquelle le motif apparaît, à l'aide de l'algorithme de Rabin-Karp. Attention à bien penser à recalculer le hache lorsque cela est nécessaire, même si avec la fonction courante le calcul est inutile.}}
 On souhaite travailler sur la fonction de hachage: Avec la fonction renvoyant toujours \code{0}, l'algorithme fonctionne, mais à aucun moment il ne détecte des haches différents. Pour coder la fonction de hachage, on va s'appuyer sur le fait que les caractères en \Cpp sont aussi des entiers, et on va donc faire des opérations avec.

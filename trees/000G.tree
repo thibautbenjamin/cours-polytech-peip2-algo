@@ -3,7 +3,7 @@
 \date{2025-10-07T15:48:27Z}
 \import{basemacros}
 
-\p{Les variables permettent de stocker des valeur que l'on a besoin de manipuler lors de l'exécution de l'aglorithme. Elles sont déclarées en étant précédées de leur type de donnée comme dans l'exemple suivant
+\p{Les variables permettent de stocker des valeurs que l'on a besoin de manipuler lors de l'exécution de l'algorithme. Elles sont déclarées en étant précédées de leur type de donnée comme dans l'exemple suivant
 \cppdisplay{
 \startverb
 int x;
@@ -13,7 +13,7 @@ Pour affecter une valeur à une variable on utilisera le symbole \code{=}. Ainsi
 int x;
 x = 5;
 \stopverb}
-On pourra abréger ce code en 1 seule ligne, en echaînant la déclaration et l'affectation, comme suit
+On pourra abréger ce code en 1 seule ligne, en enchaînant la déclaration et l'affectation, comme suit
 \cppdisplay{\startverb
 int x = 5;
 \stopverb}

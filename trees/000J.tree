@@ -5,7 +5,7 @@
 
 
 
-\p{Les branchements conditionnels sont une [structure de contrôle](000N) permettant d'exécuter des parties de code seulement sous certaines conditions. Nous utiliserons deux sortes de conditionnelles
+\p{Les branchements conditionnels sont une [structure de contrôle](000N) permettant d'exécuter des parties de code seulement sous certaines conditions. Nous utiliserons deux sortes de conditionnels
 \ol{
 \li{Les conditions \code{if-then-else}}
 \li{Les conditions \code{switch}}
