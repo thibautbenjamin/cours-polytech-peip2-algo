@@ -3,4 +3,4 @@
 \taxon{Définition}
 \date{2025-10-07T12:08:50Z}
 
-\p{La \em{complexité} d'un algorithme est le nombre d'opérations élémentaire que cet algorithme doit réaliser en fonction de ses entrées.}
+\p{La \em{complexité} d'un algorithme est le nombre d'opérations élémentaires que cet algorithme doit réaliser en fonction de ses entrées.}

@@ -3,7 +3,7 @@
 \date{2025-11-01T14:11:13Z}
 \import{basemacros}
 
-\p{On peut représenter des matrices, c'est à dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
+\p{On peut représenter des matrices, c'est-à-dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
 ##{
 \begin{pmatrix}
 1&2&3&4 \\
