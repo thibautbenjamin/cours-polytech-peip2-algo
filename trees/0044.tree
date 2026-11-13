@@ -4,7 +4,7 @@
 \import{basemacros}
 
 \p{
-Pour remplir un tableau de taille #{n} avec des valeurs générées aléatoirement, on utilisera le code suivant. Notez que pour utiliser ce code, il faut recopier la ligne \code{#include<cstdlib>} dans la partie entête de vôtre fichier.
+Pour remplir un tableau de taille #{n} avec des valeurs générées aléatoirement, on utilisera le code suivant. Notez que pour utiliser ce code, il faut recopier la ligne \code{#include<cstdlib>} dans la partie entête de votre fichier.
 
 \cppdisplay{\startverb
 #include <cstdlib>

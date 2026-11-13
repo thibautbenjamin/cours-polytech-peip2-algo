@@ -4,7 +4,7 @@
 \import{basemacros}
 \date{2025-11-20T16:30:01Z}
 
-\p{L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Lomuto. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son dernier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices \code{petits} et \code{i}. L'indice \code{petits} représente la limite de tous les éléments connus comme étant plus petits que le pivot. C'est à dire qu'à tout moment, tous les éléments d'indice plus petit que \code{petits}#{-1} sont effectivement plus petits que le pivot. L'indice \code{i} représente l'endroit du tableau que l'on a exploré, il est toujours au moins aussi grand que \code{petits}. A chaque étape, on procède ainsi:
+\p{L'objectif de cet exercice est de programmer le tri fusion, en utilisant un algorithme de partitionnement de Lomuto. Pour cet exercice, on va choisir le pivot d'un tableau comme étant son dernier élément, et on réalise l'algorithme de partition en place. Pour cela, on maintient deux indices \code{petits} et \code{i}. L'indice \code{petits} représente la limite de tous les éléments connus comme étant plus petits que le pivot. C'est-à-dire qu'à tout moment, tous les éléments d'indice plus petit que \code{petits}#{-1} sont effectivement plus petits que le pivot. L'indice \code{i} représente l'endroit du tableau que l'on a exploré, il est toujours au moins aussi grand que \code{petits}. A chaque étape, on procède ainsi:
 \ul{
 \li{Si l'indice positionné à \code{i} est plus petit que le pivot, on l'échange avec celui positionné à \code{petits} et on incrémente \code{petits} et \code{i}}
 \li{Sinon, on incrémente seulement \code{i}}

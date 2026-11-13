@@ -10,7 +10,7 @@
 } else {
   // branche 2
 }\stopverb}
-Ici, \code{condition} est une [valeur booléenne](000I). Si cette valeur est \code{true}, alors le code présent dans la branche 1 est exécuté, et sinon, le code présent dans la branche 2 est exécuté. Notons que l'on peut également ommettre la seconde branche, et écrire simplement:
+Ici, \code{condition} est une [valeur booléenne](000I). Si cette valeur est \code{true}, alors le code présent dans la branche 1 est exécuté, et sinon, le code présent dans la branche 2 est exécuté. Notons que l'on peut également omettre la seconde branche, et écrire simplement:
 \cppdisplay{
 \startverb if (condition) {
   // branche 1

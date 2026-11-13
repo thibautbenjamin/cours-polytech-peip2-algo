@@ -18,7 +18,7 @@ b = 123456789101113;
 cout << a * b;
 \stopverb
 }
-Pour initialiser un nombre avec une valeur supérieure à la valeur maximale d'un entier, on représentera ce nombre par une chaine de caractères:
+Pour initialiser un nombre avec une valeur supérieure à la valeur maximale d'un entier, on représentera ce nombre par une chaîne de caractères:
 \cppdisplay{
 \startverb
 ttmath::Int<100> c,d;
