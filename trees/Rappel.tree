@@ -4,7 +4,7 @@
 \date{2025-11-02T11:47:34Z}
 \import{basemacros}
 
-\p{Pour écrire un fichier \Cpp, on partira toujours de la base suivante
+\p{Pour programmer en \Cpp, vous pouvez utiliser l'environnement de développement en ligne [mycompiler](https://www.mycompiler.io/new/cpp).  Pour écrire un fichier \Cpp, on partira toujours de la base suivante
 \cppdisplay{
 #include <iostream>
 using namespace std;
@@ -18,7 +18,7 @@ int main (){
 }
 }
 }
-
+\transclude{007T}
 \transclude{0044}
 \transclude{0045}
 \transclude{004L}

@@ -1,0 +1,7 @@
+\title{Compiler votre premier programme}
+\taxon{Exercice}
+\author{thibautbenjamin}
+\date{2026-11-17T13:16:05Z}
+
+
+\p{Compiler et exécuter un programme qui affiche \code{Hello, World!} à l'écran.}

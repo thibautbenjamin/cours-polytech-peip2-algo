@@ -11,5 +11,5 @@
 \li{Evaluer la complexité de ces 3 algorithmes en fonction de #{n}.}
 \li{En utilisant le [générateur de tableau aléatoires](0044), générer un tableau puis le trier avec chacunes des 3 fonctions et et afficher les résultat pour vérifier qu'ils sont effectivement triés.}
 \li{En utilisant le [générateur de tableau aléatoires](0044), générer des tableaux de différentes tailles, et [afficher le temps](0045) mis par les fonctions \code{triBulles1}, \code{triBulles2} et \code{triBulles3} en fonction de la taille des tableaux en entrée sur une courbe.}
-\li{Comparer les courbes obtenues entre elles, et  avec la complexité théorique attendue.}
+\li{Tracer les courbe et les comparer avec la complexité théorique attendue. Pour tracer les courbes, vous pouvez utiliser [desmos](https://www.desmos.com/calculator).}
 }}

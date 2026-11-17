@@ -9,5 +9,5 @@
 \li{Evaluer la complexité de cette fonction, en fonction de #{n}.}
 \li{En utilisant le [générateur de tableau aléatoires](0044), générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.}
 \li{En utilisant le [générateur de tableau aléatoires](0044), générer des tableaux de différentes tailles, et [afficher le temps](0045) mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.}
-\li{Comparer la courbe obtenue avec la complexité théorique attendue.}
+\li{Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser [desmos](https://www.desmos.com/calculator).}
 }}

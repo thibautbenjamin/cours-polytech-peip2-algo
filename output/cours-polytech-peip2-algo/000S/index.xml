@@ -1697,7 +1697,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de cette fonction, en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
-<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1791,7 +1791,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[k]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[> k]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[k]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à la bonne place, de manière à ce qu'ensuite les <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
 <html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
@@ -1820,7 +1820,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
-<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -1944,7 +1944,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de ces 3 algorithmes en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier avec chacunes des 3 fonctions et et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par les fonctions <html:code>triBulles1</html:code>, <html:code>triBulles2</html:code> et <html:code>triBulles3</html:code> en fonction de la taille des tableaux en entrée sur une courbe.</html:li>
-<html:li>Comparer les courbes obtenues entre elles, et  avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer les courbe et les comparer avec la complexité théorique attendue. Pour tracer les courbes, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -4247,7 +4247,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de cette fonction, en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
-<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                             </html:p>
                           </fr:mainmatter>
                         </fr:tree>
@@ -4341,7 +4341,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
                           </fr:frontmatter>
                           <fr:mainmatter>
                             <html:p>
-                              <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+                              <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[k]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[> k]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[k]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à la bonne place, de manière à ce qu'ensuite les <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
 <html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
                             </html:p>
                           </fr:mainmatter>
@@ -4370,7 +4370,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
-<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                             </html:p>
                           </fr:mainmatter>
                         </fr:tree>
@@ -4494,7 +4494,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de ces 3 algorithmes en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier avec chacunes des 3 fonctions et et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par les fonctions <html:code>triBulles1</html:code>, <html:code>triBulles2</html:code> et <html:code>triBulles3</html:code> en fonction de la taille des tableaux en entrée sur une courbe.</html:li>
-<html:li>Comparer les courbes obtenues entre elles, et  avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer les courbe et les comparer avec la complexité théorique attendue. Pour tracer les courbes, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                             </html:p>
                           </fr:mainmatter>
                         </fr:tree>
@@ -5367,7 +5367,7 @@ Résoudre cette récurrence nous donne <fr:tex display="inline"><![CDATA[T(n) = 
                           </fr:frontmatter>
                           <fr:mainmatter>
                             <html:p>
-                              <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+                              <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[k]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[> k]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[k]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à la bonne place, de manière à ce qu'ensuite les <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
 <html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
                             </html:p>
                           </fr:mainmatter>
@@ -5562,7 +5562,7 @@ Bien sûr, si l'on ne complète pas la fonction de fusion de manière adéquate,
 <html:ol><html:li>Cette fonction est appelée dans la fonction <html:code>triFusionRec</html:code> après chacun des deux appels récursifs sur les deux sous-tableaux. Quelles sont les conditions que l'entrée de la fonction de fusion va toujours vérifier? (Dans cette question, on attend un description, il ne s'agit pas de vérifier par le code que les conditions sont vérifiées)</html:li>
 <html:li>Ecrire la fonction de fusion, en définissant un tableau annexe que l'on va construire au fur et à mesure, et dont on va ensuite recopier le contenu dans notre tableau original.</html:li>
 <html:li>Tester l'algorithme <html:code>triFusion</html:code> pour vérifier que l'on fait bien le tri.</html:li>
-<html:li>Mesurer le temps pris par l'algorithme sur <fr:tex display="inline"><![CDATA[5]]></fr:tex> tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">remplis aléatoirement</fr:link> dont les tailles vont de <fr:tex display="inline"><![CDATA[100]]></fr:tex> à <fr:tex display="inline"><![CDATA[10000]]></fr:tex>. Tracer la courbe correspondante.</html:li></html:ol></html:p>
+<html:li>Mesurer le temps pris par l'algorithme sur <fr:tex display="inline"><![CDATA[5]]></fr:tex> tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">remplis aléatoirement</fr:link> dont les tailles vont de <fr:tex display="inline"><![CDATA[100]]></fr:tex> à <fr:tex display="inline"><![CDATA[10000]]></fr:tex>. Tracer la courbe correspondante (vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>).</html:li></html:ol></html:p>
                           </fr:mainmatter>
                         </fr:tree>
                         <fr:tree show-metadata="false">
