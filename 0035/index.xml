@@ -184,7 +184,7 @@ Vous pouvez aussi <fr:link href="https://mszula.github.io/visual-sorting/?algori
 <html:li>Evaluer la complexité de cette fonction, en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer un tableau puis le trier et afficher les résultat pour vérifier qu'ils sont effectivement triés.</html:li>
 <html:li>En utilisant le <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générateur de tableau aléatoires</fr:link>, générer des tableaux de différentes tailles, et <fr:link href="/cours-polytech-peip2-algo/0045/" title="Calculer le temps mis pour exécuter une fonction" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/" display-uri="0045" type="local">afficher le temps</fr:link> mis par la fonction de tri, en fonction de la taille du tableau en entrée sur une courbe.</html:li>
-<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+<html:li>Tracer la courbe et la comparer avec la complexité théorique attendue. Pour tracer la courbe, vous pouvez utiliser <fr:link href="https://www.desmos.com/calculator" type="external">desmos</fr:link>.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>

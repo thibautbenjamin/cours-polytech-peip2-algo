@@ -95,7 +95,7 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>
-                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[k]]></fr:tex>, un tableau de taille <fr:tex display="inline"><![CDATA[> k]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[k]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à la bonne place, de manière à ce qu'ensuite les <fr:tex display="inline"><![CDATA[k+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
 <html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
                 </html:p>
               </fr:mainmatter>
